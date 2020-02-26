@@ -1,6 +1,5 @@
 (vl-load-com)
 (load "variantArrayConversion.lsp")
-(load "std-sleep.lsp")
 (load "polygonRanking.lsp")
 
 
@@ -437,9 +436,12 @@
 		returnValue
 		regions
 		owningSpace
+		tempGroupName
+		tempGroup
 	)
 	(setq acadObj (vlax-get-acad-object))
-    (setq doc (vla-get-ActiveDocument acadObj))
+    ;(setq doc (vla-get-ActiveDocument acadObj))
+    (setq doc (vla-get-Document polyline))
     (setq modelSpace (vla-get-ModelSpace doc))
 	(setq layers (vla-get-Layers doc))
 	(setq groups (vla-get-Groups doc))
@@ -477,6 +479,421 @@
 )
 ;===========
 
+(defun makeHatchFromRegion (region /
+		document
+		returnValue
+		owningSpace
+		hatch
+		e
+		explosionProduct
+		explosionProducts
+		tempGroup
+		tempGroupName
+		whiteSpace
+		commandString
+		waitCounter
+		wait
+		localActiveDocument
+		pathOfLocalActiveDocument
+		addslashes
+		result
+		remoteDocument
+	)
+	
+	(defun wait (seconds / stop)
+		(setq stop (+ (getvar "DATE") (/ seconds 86400.0)))
+		(while (> stop (getvar "DATE")))
+	) 
+	
+	;;I adapted the following addslashes function from Lee Mac's "escapeWildCards"
+	(defun addslashes ( str )
+		(vl-list->string
+			(apply 'append
+				(mapcar
+				   '(lambda ( c )
+						(if (member c (vl-string->list "\\"))
+							(list (car (vl-string->list "\\")) c)
+							(list c)
+						)
+					)
+					(vl-string->list str)
+				)
+			)
+		)
+	)
+	
+	(setq document (vla-get-Document region))
+	(setq owningSpace (vla-ObjectIDToObject  document (vla-get-OwnerID region)))
+	(setq localActiveDocument (vla-get-ActiveDocument (vlax-get-acad-object)))
+	(setq pathOfLocalActiveDocument (vla-get-FullName localActiveDocument))
+	
+	
+	;;the code in the following (if nil...) block ought to work, but it fails in case the region contains a hole.  But we know that the ui "HATCH" command 
+	;; behaves as desired.  Therefore, as a workaround, we will attempt to send commands to the document to create the hatch.
+	(if nil 
+		(progn
+			(setq hatch 
+				(vla-AddHatch owningSpace
+					1 			;; patternType
+					"SOLID" 	;; patternName
+					:vlax-false	;; associativity
+				)
+			)
+			(princ "now attempting to add a hatch to region with append outer loop. (")(princ (vla-get-Handle region))(princ ":")(princ (vla-get-ObjectName region))(princ ") : ")
+			(setq e 
+				(vl-catch-all-apply 
+					'vla-AppendOuterLoop (list hatch (gc:ObjectListToVariant (list region)))
+					;; this will throw an excpetion if region happens to be disjoint. (curiously the ui HATCH function allows you to select a disjoint region and works without error)
+					;; if that happens, the fix is to explode region, which produces multiple
+					;; non-disjoint regions.
+					;; We cannot just explode region in all cases, because exploding a non-disjoint region 
+					;; produces the boundary lines, arcs, etc. (Crazy)
+				)
+			)
+			(if (vl-catch-all-error-p  e)
+				(progn
+					(princ " failed with exception: ")(princ (vl-catch-all-error-message e))(princ "\n")
+					(princ "now attempting to add a hatch to region with append inner loop. (")(princ (vla-get-Handle region))(princ ":")(princ (vla-get-ObjectName region))(princ ") : ")
+					(setq e 
+						(vl-catch-all-apply 
+							'vla-AppendInnerLoop (list hatch (gc:ObjectListToVariant (list region)))
+							;; this will throw an excpetion if region happens to be disjoint. (curiously the ui HATCH function allows you to select a disjoint region and works without error)
+							;; if that happens, the fix is to explode region, which produces multiple
+							;; non-disjoint regions.
+							;; We cannot just explode region in all cases, because exploding a non-disjoint region 
+							;; produces the boundary lines, arcs, etc. (Crazy)
+						)
+					)
+				)
+			)
+			(if (vl-catch-all-error-p  e)
+				(progn
+					(princ " failed with exception: ")(princ (vl-catch-all-error-message e))(princ "\n")
+					;; if we get here, it means that vla-AppendOuterLoop threw an exception (presumably because the region is disjoint)
+					;; so, we need to explode the region and try again.			
+					(setq explosionProducts (gc:VariantToLispData (vla-Explode region)))
+					(foreach explosionProduct explosionProducts
+						(princ "now appending explosionProduct (")(princ (vla-get-Handle explosionProduct))(princ ":")(princ (vla-get-ObjectName explosionProduct))(princ ") as outer loop to hatch: ")
+						(setq e 
+							(vl-catch-all-apply 
+								'vla-AppendOuterLoop (list hatch (gc:ObjectListToVariant (list explosionProduct)))
+							)
+						)
+						(if (vl-catch-all-error-p  e)
+							(progn
+								(princ "failed with exception: ")(princ (vl-catch-all-error-message e))(princ "\n")
+							)
+							(progn 
+								(princ " succeeded.")(princ "\n")
+							)
+						)
+						(vla-Delete explosionProduct)
+					)
+					;; by making a copy of the region, then exploding the copy, and after creating the hatch, deleting the explosion poroducts, we are left with one hatch and one region (the original region) as desired.  If we did not create a copy of the region, we would be left with 5 regions, which breaks the pattern (Autocad is nice enough to deal intelligently with, and have a concept of, a disjoint region -- we might as well use this capability.)			)
+					;; actually, we do not need to make a copy of the region before exploding it because the vlax explode fuinction (unlike the UI EXPLODE function) preserves the original object.
+				)
+				(progn 
+					(princ " succeeded.")(princ "\n")
+				)
+			)
+		)
+	)
+	
+	
+	(if nil
+		(progn
+			(setq tempGroupName "TEMPGROUP")
+			;;(setq tempGroupName (GUID ))
+			;;(setq tempGroupName  (strcat "temp" (vl-string-subst "" "."  (rtos (getvar 'CDATE)))))
+			(setq tempGroup 
+				(vl-catch-all-apply 'vla-item (list (vla-get-Groups document) tempGroupName))
+			)
+			(if (vl-catch-all-error-p tempGroup)
+				(progn 
+					(setq tempGroup (vla-Add (vla-get-Groups document) tempGroupName))
+				)
+				(progn
+					;remove all items from the group, just in case it was left over
+					(vlax-for entity tempGroup
+						(vla-RemoveItems tempGroup (gc:ObjectListToVariant (list entity)))
+					)
+				)
+			)
+			(vla-AppendItems tempGroup (gc:ObjectListToVariant (list region)))
+			
+			
+			;; we will use the system variable "USERS1" (there are variables USERS1, USERS2, ... , USERS5 which serve as slots for custom data)
+			;; as a way to communicate with the document
+			(vla-SetVariable document "USERS1" "")
+			;;
+			(setq whiteSpace " ")
+			; (setq commandString 
+				; (strcat
+					; "(progn"                                                                                  whiteSpace
+						; "(setq dwl nil)"                                                                      whiteSpace
+						; "(vla-Activate "                                                                      whiteSpace
+							; "(cdr"                                                                            whiteSpace
+								; "(assoc (strcase \"" (addSlashes pathOfIntitiallyActiveDocument) "\")"        whiteSpace
+									; "(vlax-for doc (vla-get-documents (vlax-get-acad-object))"                whiteSpace              ;this evaluates to a dotted list whose elements are of the form (<documentName> . <documentObject>)
+										; "(setq dwl (cons (cons (strcase (vla-get-fullname doc)) doc) dwl))"   whiteSpace
+									; ")"                                                                       whiteSpace
+								; ")"                                                                           whiteSpace
+							; ")"                                                                               whiteSpace
+						; ")"                                                                                   whiteSpace
+                    ; ")"					                                                                      whiteSpace
+					; "\n"
+				; )
+			; )
+			; (princ "commandString: ") (princ commandString)(princ "\n")(princ)
+			; (if writeToLog
+				; (progn
+					; (writeToLog "\n")(writeToLog "commandString: ") (writeToLog commandString)(writeToLog "\n")
+				; )
+			; )
+			; (vla-SendCommand document commandString)
+			; (vla-Activate document)
+			
+			
+			(setq commandString 
+				(strcat
+					"(progn "
+					"("                                                                                  whiteSpace
+						"command"                                                                        whiteSpace 
+						;;"command-s"                                                                      whiteSpace 
+						;;"vl-cmdf"                                                                         whiteSpace 
+						"\"_-HATCH\""                                                                     whiteSpace
+						"\"Select\""                                                                      whiteSpace
+						"\"Group\""                                                                       whiteSpace
+						"\"" tempGroupName "\""                                                           whiteSpace
+						"\"\""                                                                            whiteSpace
+						"\"Properties\""                                                                  whiteSpace
+						"\"Solid\""                                                                       whiteSpace
+						"\"Advanced\""                                                                    whiteSpace
+						"\"Associativity\""                                                               whiteSpace
+						"\"No\""                                                                          whiteSpace
+						"\"Style\""                                                                       whiteSpace
+						"\"Normal\""                                                                      whiteSpace
+						"\"\""                                                                            whiteSpace
+						"\"\""                                                                            whiteSpace
+					")"	                                                                                  whiteSpace
+					"(setvar \"USERS1\" (vla-get-Handle (vlax-ename->vla-object (entlast))))"             whiteSpace
+					"(setq dwl nil)"                                                                      whiteSpace
+					"(vla-Activate "                                                                      whiteSpace
+						"(cdr"                                                                            whiteSpace
+							"(assoc (strcase \"" (addSlashes pathOfIntitiallyActiveDocument) "\")"        whiteSpace
+								"(vlax-for doc (vla-get-documents (vlax-get-acad-object))"                whiteSpace              ;this evaluates to a dotted list whose elements are of the form (<documentName> . <documentObject>)
+									"(setq dwl (cons (cons (strcase (vla-get-fullname doc)) doc) dwl))"   whiteSpace
+								")"                                                                       whiteSpace
+							")"                                                                           whiteSpace
+						")"                                                                               whiteSpace
+					")"                                                                                   whiteSpace
+					")"                                                                                   whiteSpace
+					;"\n"
+				)
+			)
+			(if writeToLog
+				(progn
+					(writeToLog "\n")(writeToLog "commandString: ") (writeToLog commandString)(writeToLog "\n")
+				)
+			)
+			;; I am sending a nested lisp call, rather than sending the "_-HATCH" command directly via document.SendCommand(), because based on the
+			;; description of the document::SendCommand() function in the manual ( http://help.autodesk.com/view/ACD/2016/ENU/?guid=GUID-E13A580D-04CA-46C1-B807-95BB461A0A57 ),
+			;; it seems that SendCommand would wait for user input if I tried to send the "_-HATCH" command directly.  Hopefully, sending as a lisp call to the lisp function 
+			;; "command-s" will prevent this from happening.  
+			;; Unfortunately, wrapping in the lisp "command-s" function does not prevent the returning upon the HATCH command wanting user input.
+			(setq finishMessage "aboutTo post command\n")
+			(vla-PostCommand document commandString)
+			(setq finishMessage "posted command\n")
+			;;(getint "enter any integer to continue")
+			;;(alert "have we done it?")
+			;;(vla-PostCommand document "(setvar \"USERS1\" (vla-get-Handle (vlax-ename->vla-object (entlast))))")
+			;;(getint "and again, enter any integer to continue")
+			;(alert "and again")
+			;; (princ "1  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "_-HATCH ")                                                                                               (princ "2  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Select ")                                                                                                (princ "3  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Group ")                                                                                                 (princ "4  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document (strcat tempGroupName whitespace))                                                                        (princ "5  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document " ")                                                                                                      (princ "6  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Properties ")                                                                                            (princ "7  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Solid ")                                                                                                 (princ "8  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Advanced ")                                                                                              (princ "9  CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Associativity ")                                                                                         (princ "10 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "No ")                                                                                                    (princ "11 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Style ")                                                                                                 (princ "12 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "Normal ")                                                                                                (princ "13 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document " ")                                                                                                      (princ "14 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "\n")                                                                                                     (princ "15 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document (strcat "(setvar\"USERS1\"\"" (vla-get-Handle (vlax-ename->vla-object (entlast))) "\" )"))                (princ "16 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			; (vla-PostCommand document "\n")                                                                                                     (princ "17 CMDNAMES: ")(princ "\"")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\"")(princ "\n")
+			
+			
+			;;(vla-SendCommand document "(setvar \"USERS1\" (vla-get-Handle (vlax-ename->vla-object (entlast))))\n")
+			
+			(setq waitCounter 0)
+			(while 
+				(and 
+					(= "" (vlax-variant-value (vla-GetVariable document "USERS1")))
+					(< waitCounter 3)
+				)
+				(if writeToLog
+					(progn
+						 (writeToLog "waiting for USERS1 to be set, with waitCounter=")(writeToLog waitCounter)(writeToLog "\n")
+					)
+				)
+				(wait 0.1)
+				(setq waitCounter (+ 1 waitCounter))
+			)
+			(if writeToLog 
+				(progn
+					(writeToLog "waited ")(writeToLog (itoa waitCounter))(writeToLog " times for USERS1 to become non-empty string, namely \"")(writeToLog (vlax-variant-value (vla-GetVariable document "USERS1")))(writeToLog "\"")(writeToLog "\n")
+				)
+			)
+			(princ "waited ")(princ (itoa waitCounter))(princ " times for USERS1 to become non-empty string, namely \"")(princ (vlax-variant-value (vla-GetVariable document "USERS1")))(princ "\"")(princ "\n")
+			;;(princ "CMDACTIVE: ")(princ (vlax-variant-value (vla-GetVariable document "CMDACTIVE")))(princ "\n")
+			;;(princ "CMDNAMES: ")(princ (vlax-variant-value (vla-GetVariable document "CMDNAMES")))(princ "\n")
+			(princ)
+			; (setq hatch 
+				; (vlax-ename->vla-object (entlast))
+			; )
+			
+			(if (/= "" (vlax-variant-value (vla-GetVariable document "USERS1")))
+				(progn
+					(setq hatch 
+						(vl-catch-all-apply 
+							'vla-HandleToObject (list document (vlax-variant-value (vla-GetVariable document "USERS1")))
+						)
+					)
+					(if (vl-catch-all-error-p hatch)
+						(progn
+							(princ "handleToObject failed with exception: ")(princ (vl-catch-all-error-message hatch))(princ "\n")
+							(setq hatch nil)
+						)
+						(progn
+							(princ "handleToObject succeeded and you should now have a hatch.\n")
+							(if writeToLog
+								(progn
+									(writeToLog "handleToObject succeeded and you should now have a hatch, namely ")(writeToLog hatch)(writeToLog "\n")
+								)
+							)
+						)
+					)
+				)
+			)
+			
+			;(vla-Delete tempGroup)
+		)
+	)
+	
+	(if T
+		(progn
+			;; in strategy 1 above, wherin we tried to orchestrate the generation of the hatch enitrely through calls to the ActiveX objects, we were stymied by the fact that the Hatch object's function for adding geometry to the hatch (AppendOuterLoop) does not accept a region that has a hole.
+			;; in strategy 2 above, wherein we attempted to send commands to the document containing the region for whih to create a hatch, we were stymied by the fact that the functions for sending commands to a document (SendCommand) and PostCommand) both cause the target document to become active, which in
+			;; turn causes this very script to stop running (or, with SendCommand (sort of), to pause and wait for its owning document to become active once again).
+			;; so here we are in strategy 3, wherein we will use Document::CopyObjects to copy the region into the currently active document, where we will generate the hatch by sending commands with the old-style autolisp (command-s ) function,
+			;; (which we know works), and then we will use copyobjects once again to copy the resultant hatch into the original document.
+			
+
+			(setq hatch 
+				(vla-AddHatch owningSpace
+					1 			;; patternType
+					"SOLID" 	;; patternName
+					:vlax-false	;; associativity
+				)
+			)
+			(princ "now attempting to add a hatch to region with append outer loop. (")(princ (vla-get-Handle region))(princ ":")(princ (vla-get-ObjectName region))(princ ") : ")
+			(setq e 
+				(vl-catch-all-apply 
+					'vla-AppendOuterLoop (list hatch (gc:ObjectListToVariant (list region)))
+					;; this will throw an excpetion if region happens to be disjoint. (curiously the ui HATCH function allows you to select a disjoint region and works without error)
+					;; if that happens, the fix is to explode region, which produces multiple
+					;; non-disjoint regions.
+					;; We cannot just explode region in all cases, because exploding a non-disjoint region 
+					;; produces the boundary lines, arcs, etc. (Crazy)
+				)
+			)
+			(if (vl-catch-all-error-p  e)
+				(progn
+					(princ " failed with exception: ")(princ (vl-catch-all-error-message e))(princ "\n")
+					(princ "now attempting to add a hatch to region using the copyObjects strategy using the currently active document as a workspace.\n")
+					; get rid of the failed hatch that we created above
+					(vla-Delete hatch)
+					(vlax-release-object hatch)
+					(setq hatch nil)	
+					(setq result 
+						(vla-CopyObjects 
+							(vla-get-Document region) 			        ; the database whose "CopyObjects" method we are calling (this is the database from which we are copying things)
+							(gc:ObjectListToVariant (list region))		; the list of objects to be copied
+							(vla-get-ModelSpace localActiveDocument) 	; the owner to whom thses objects will be copied
+						)
+					)
+					;;if everything worked as expected, result will be a variant array of the new entities, which should consist of exactly one entity (the newly created region).
+					(setq localRegion (nth 0 (gc:VariantToLispData result)))
+					
+					(setq tempGroupName "TEMPGROUP")
+					;;(setq tempGroupName (GUID ))
+					;;(setq tempGroupName  (strcat "temp" (vl-string-subst "" "."  (rtos (getvar 'CDATE)))))
+					(setq tempGroup 
+						(vl-catch-all-apply 'vla-item (list (vla-get-Groups localActiveDocument) tempGroupName))
+					)
+					(if (vl-catch-all-error-p tempGroup)
+						(progn 
+							(setq tempGroup (vla-Add (vla-get-Groups localActiveDocument) tempGroupName))
+						)
+						(progn
+							;remove all items from the group, just in case it was left over
+							(vlax-for entity tempGroup
+								(vla-RemoveItems tempGroup (gc:ObjectListToVariant (list entity)))
+							)
+						)
+					)
+					(vla-AppendItems tempGroup (gc:ObjectListToVariant (list localRegion)))
+					
+					(command-s    ;;"vl-cmdf"   ;;command                                                        
+						"_-HATCH"                                                                
+						"Select"                                                                 
+						"Group"                                                                  
+						tempGroupName                                                     
+						""                                                                       
+						"Properties"                                                             
+						"Solid"                                                                  
+						"Advanced"                                                               
+						"Associativity"                                                          
+						"No"                                                                     
+						"Style"                                                                  
+						"Normal"                                                                 
+						""                                                                       
+						""                                                                       
+					)
+					(setq localHatch (vlax-ename->vla-object (entlast))) ;;to do: record the initial value of entlast, and make sure that this value is different and that it corresponds to a region, as a check that the above command-s succeeded in creating a region.
+					(vla-Delete tempGroup)
+					
+					;;copy localHatch to the original document
+					(setq result 
+						(vla-CopyObjects 
+							(vla-get-Document localHatch) 						; the database whose "CopyObjects" method we are calling (this is the database from which we are copying things)
+							(gc:ObjectListToVariant (list localHatch))		     ; the list of objects to be copied
+							(vla-ObjectIdToObject (vla-get-Document region) (vla-get-OwnerID region)) 	; the owner to whom thses objects will be copied
+						)
+					)
+					;;if everything worked as expected, result will be a variant array of the new entities, which should consist of exactly one entity (the newly created hatch).
+					(setq hatch (nth 0 (gc:VariantToLispData result)))
+					;;delete localHatch and localRegion
+					(vla-Delete localHatch)
+					(vla-Delete localRegion)
+				)
+				(progn
+					(princ "succeeded.\n")
+				)
+			)
+		)
+	)
+	
+	
+	(setq returnValue hatch)
+	returnValue
+)
+
 ;; rankwiseCombineRegions() takes as an argument a set of regions, and produces as output a single region (not sure yet if the returned region should itself have a rank).
 ;; Actually, the input list can contain a mixture of regions and polylines.. each polyline will be converted into a region using convertPolylineToRegion.
 ;; rankwiseCombineRegions() reads the rank property (if defined -- see polygonRanking.lsp, rank is a custom property that I invented and am implementing using extended Data attached to each region.) 
@@ -513,336 +930,359 @@
 		newRankedRegions
 	)
 	
-	(setq acadObj (vlax-get-acad-object))
-    (setq doc (vla-get-ActiveDocument acadObj))
-    (setq modelSpace (vla-get-ModelSpace doc))
-	(setq layers (vla-get-Layers doc))
-	(setq groups (vla-get-Groups doc))
+
 	
 
 	;;we really ought to handle the case where regionsArg is empty.
 	;;(princ regionsArg)
 	;;(princ (mapcar '(lambda (x) (listp x)) regionsArg))
 	
-	(setq rankedRegions
-		(mapcar
-			'(lambda (x / rank object) 
-				(if (listp x)
-					(progn
-						(setq object (cadr x))
-						(setq rank (car x))
-					)
-					(progn
-						(setq object x)
-						(setq rank (getRank x))
+	; remove any element of regionsArg that is nil or ay element that is a list and has its second element being nil.
+	;(princ "before filtering nils, regionsArg: ")(princ regionsArg)(princ "\n")
+	(setq regionsArg
+		(vl-remove-if 
+			'(lambda (x) 
+				(or 
+					(not x) 
+					(and 
+						(= (type x) 'LIST)
+						(not (cadr x))
 					)
 				)
-				(list rank object)
 			)
 			regionsArg
 		)
 	)
-	;; at this point, rankedRegions is a list, each element of which is a list of the form {rank, object}, where object is a polyline (or circle) or region, and rank is the rank to be used for that object.
-
-	;; convert any polylines or circles into true regions
-	(setq rankedRegions
-		(mapcar
-			'(lambda 
-				(x / rank object) 
-				(setq rank (car x))
-				(setq object (cadr x))
-				(if 
-					(or
-						(= "AcDbPolyline" (vla-get-ObjectName object))
-						(= "AcDbCircle" (vla-get-ObjectName object))
+	;(princ "after filtering nils, regionsArg: ")(princ regionsArg)(princ "\n")
+	(if (> (length regionsArg) 0)
+		(progn	
+			(setq rankedRegions
+				(mapcar
+					'(lambda (x / rank object) 
+						(if (listp x)
+							(progn
+								(setq object (cadr x))
+								(setq rank (car x))
+							)
+							(progn
+								(setq object x)
+								(setq rank (getRank x))
+							)
+						)
+						(list rank object)
 					)
-					(progn
-						(setq object (convertPolylineToRegion object))
-					)
-				)
-				(list rank object)
-			)
-			rankedRegions
-		)
-	)
-	
-	;;remove any elements of rankedRegions which have a nil object (such objects could have been created above by convertPolylineToRegion)
-	(setq rankedRegions
-		(vl-remove-if
-			'(lambda (x) (not (cadr x)))
-			rankedRegions
-		)
-	)
-	
-	;; at this point, rankedRegions is a list, each element of which is a list of the form {rank, region}, where region is a region, and rank is the rank to be used for that region.
-	
-	(if nil (progn ;;deprecated code from prior to the advent of ranks that are lists
-		(setq regions regionsArg)
-		;; convert any polylines that are in regions into true regions.
-		(setq newRegions (list))
-		(foreach item regions 
-			(if 
-				(or
-					(= "AcDbPolyline" (vla-get-ObjectName item))
-					(= "AcDbCircle" (vla-get-ObjectName item))
-				)
-				(progn
-					(setq region (convertPolylineToRegion item))
-				)
-				(progn
-					(setq region item)
+					regionsArg
 				)
 			)
-			(if region ;; this 'if' here is to exclude a nil region that might have been generated by convertPolylineToRegion.
-				(setq newRegions
-					(append
-						newRegions
-						(list region)
-					)
-				)
-			)
-		)
-		
-		(setq regions newRegions)
-		
 			
-				; 
-		
-		(setq talliedRegions (list)) ;; talliedRegions will be a list, each element is of the form (<rank> . <listOfRegions>), where <listOFRegions> contains all the regions of the specified rank.
-		;;construct talliedRegions, which we want to be sorted by ascending rank, so that when we run foreach, 
-		;; below, we will process the regions starting with rank 0.
-		
-		;; populate ranks, a list of all ranks that appear in regions.
-		(setq ranks (list ))
-		(foreach region regions
-			(setq thisRank (getRank region))
-			(if (not (member thisRank ranks))
-				(setq ranks (cons thisRank ranks))
-			)
-		)
-		(setq ranks (vl-sort ranks '<)) ;; sort ranks ascending.
-		
-		(foreach rank ranks
-			(setq talliedRegions
-				(append
-					talliedRegions
-					(list (cons rank (list )))
+			;; at this point, rankedRegions is a list, each element of which is a list of the form {rank, object}, where object is a polyline (or circle) or region, and rank is the rank to be used for that object.
+			;;(setq doc (vla-get-ActiveDocument acadObj))
+			(setq doc (vla-get-Document (cadr (car rankedRegions))))
+			
+			(setq acadObj (vlax-get-acad-object))
+			(setq modelSpace (vla-get-ModelSpace doc))
+			(setq layers (vla-get-Layers doc))
+			(setq groups (vla-get-Groups doc))
+			;; convert any polylines or circles into true regions
+			(setq rankedRegions
+				(mapcar
+					'(lambda 
+						(x / rank object) 
+						(setq rank (car x))
+						(setq object (cadr x))
+						(if 
+							(or
+								(= "AcDbPolyline" (vla-get-ObjectName object))
+								(= "AcDbCircle" (vla-get-ObjectName object))
+							)
+							(progn
+								(setq object (convertPolylineToRegion object))
+							)
+						)
+						(list rank object)
+					)
+					rankedRegions
 				)
 			)
-		)
-		;;;(princ "\n")(princ talliedRegions)(princ "\n")(quit)
-		
-
-		;;at this point talliedRegions has all the ranks in order, but all the lists of regions belonging to each rank are empty and need to be filled in...
-		
-
-		
-		(foreach region regions
-			(setq thisRank (getRank region))
 			
-			;;add thisRegion to the appropriate sub list of talliedRegions.
-			(setq talliedRegions
-				(subst 
-					;; 1. replacement: 
-					(cons thisRank
-						(append
-							(cdr (assoc thisRank talliedRegions))
-							(list region)
+			;;remove any elements of rankedRegions which have a nil object (such objects could have been created above by convertPolylineToRegion)
+			(setq rankedRegions
+				(vl-remove-if
+					'(lambda (x) (not (cadr x)))
+					rankedRegions
+				)
+			)
+			;; at this point, rankedRegions is a list, each element of which is a list of the form {rank, region}, where region is a region, and rank is the rank to be used for that region.
+			
+			(if nil (progn ;;deprecated code from prior to the advent of ranks that are lists
+				(setq regions regionsArg)
+				;; convert any polylines that are in regions into true regions.
+				(setq newRegions (list))
+				(foreach item regions 
+					(if 
+						(or
+							(= "AcDbPolyline" (vla-get-ObjectName item))
+							(= "AcDbCircle" (vla-get-ObjectName item))
+						)
+						(progn
+							(setq region (convertPolylineToRegion item))
+						)
+						(progn
+							(setq region item)
 						)
 					)
-					
-					;; 2.  needle: 
-					(assoc thisRank talliedRegions)
-					
-					;; 3.  haystack:
-					talliedRegions 
+					(if region ;; this 'if' here is to exclude a nil region that might have been generated by convertPolylineToRegion.
+						(setq newRegions
+							(append
+								newRegions
+								(list region)
+							)
+						)
+					)
 				)
-			)
-		)
-		
-		;; At this point, talliedRegions is fully formed and ready to use.
-		;;;(princ "\n")(princ talliedRegions)(princ "\n")(quit)
-		
+				
+				(setq regions newRegions)
+				
+					
+						; 
+				
+				(setq talliedRegions (list)) ;; talliedRegions will be a list, each element is of the form (<rank> . <listOfRegions>), where <listOFRegions> contains all the regions of the specified rank.
+				;;construct talliedRegions, which we want to be sorted by ascending rank, so that when we run foreach, 
+				;; below, we will process the regions starting with rank 0.
+				
+				;; populate ranks, a list of all ranks that appear in regions.
+				(setq ranks (list ))
+				(foreach region regions
+					(setq thisRank (getRank region))
+					(if (not (member thisRank ranks))
+						(setq ranks (cons thisRank ranks))
+					)
+				)
+				(setq ranks (vl-sort ranks '<)) ;; sort ranks ascending.
+				
+				(foreach rank ranks
+					(setq talliedRegions
+						(append
+							talliedRegions
+							(list (cons rank (list )))
+						)
+					)
+				)
+				;;;(princ "\n")(princ talliedRegions)(princ "\n")(quit)
+				
+
+				;;at this point talliedRegions has all the ranks in order, but all the lists of regions belonging to each rank are empty and need to be filled in...
+				
+
+				
+				(foreach region regions
+					(setq thisRank (getRank region))
+					
+					;;add thisRegion to the appropriate sub list of talliedRegions.
+					(setq talliedRegions
+						(subst 
+							;; 1. replacement: 
+							(cons thisRank
+								(append
+									(cdr (assoc thisRank talliedRegions))
+									(list region)
+								)
+							)
+							
+							;; 2.  needle: 
+							(assoc thisRank talliedRegions)
+							
+							;; 3.  haystack:
+							talliedRegions 
+						)
+					)
+				)
+				
+				;; At this point, talliedRegions is fully formed and ready to use.
+				;;;(princ "\n")(princ talliedRegions)(princ "\n")(quit)
+				
+					
+				
+			))
+			;===========
 			
-		
-	))
-	;===========
-	
-	;primeRanks will be a list of all the first elements of the ranks
-	(setq primeRanks
-		(LM:Unique
-			(mapcar 
-				'(lambda (x / rank) 
-					(setq rank (car x))
-					(car rank)
-				)
-				rankedRegions
-			)
-		)
-	)
-	(setq primeRanks (vl-sort primeRanks '<)) ;; sort primeRanks ascending.
-	;;(princ "primeRanks: ")(princ primeRanks)(princ "\n")
-	
-	;==========
-	
-	;;sweep through primeRanks, and for each primeRank, deal with all the elements of rankedRegions that belong to that primeRank.
-	(setq talliedRegions
-		(mapcar
-			'(lambda (primeRank / rankedRegionsHavingTheSpecifiedPrimeRank subRankedRegions theseRegions)
-				;; collect all the regions in rankedRegions that have primeRank as the first element of their rank.
-				(setq rankedRegionsHavingTheSpecifiedPrimeRank
-					(vl-remove-if-not
-						'(lambda (x / rank) (setq rank (car x)) (= primeRank (car rank)))
+			;primeRanks will be a list of all the first elements of the ranks
+			(setq primeRanks
+				(LM:Unique
+					(mapcar 
+						'(lambda (x / rank) 
+							(setq rank (car x))
+							(car rank)
+						)
 						rankedRegions
 					)
 				)
-				
-				;; theseRegions will be a list of regions.  theseRegions will consist of all the elements of subRankedRegions with a rank of length 1, and 
-				;; one additional region which is the rankwiseCombine of the subRankedRegions whose rank has length > 1 (with the primeRank stripped).
-				
-				;; scan through rankedRegionsHavingTheSpecifiedPrimeRank and accumulate two lists:
-				;;		theseRegions: Any regions whose rank contained only one element (namely primeRank) will go into theseRegions
-				;;		subRankedRegions: Any regions whose rank contains more than one element will have the first element stripped from their rank (to form subrank), and then the {subrank, region} pair 
-				;;			will be appended to subRankedRegions.
-				;;			subRankedRegions will be suitable for passing into rankwiseCombineRegions (yes, this very function (it's re-entrant))
-				(setq theseRegions (list ))
-				(setq subRankedRegions (list ))
-				(mapcar 
-					'(lambda (x / rank subrank region) 
-						(setq rank (car x)) ;;we already know that the first element of rank is primeRank, because of the filtering that we did above
-						(setq subrank (cdr rank)) ;;subrank is the rest of rank (i.e. we strip the first element). Subrank may very well be nil (this happens if the length of rank is 1.)
-						(setq region (cadr x))
-						(if (> (length subrank) 0) ; if the length of the subrank is greater than zero (i.e. if the rank had more than one element)
-							(progn
-								;; append the {subrank, object} pair to subRankedRegions
-								(setq subRankedRegions
-									(append subRankedRegions
-										(list 
-											(list subrank region)
+			)
+			(setq primeRanks (vl-sort primeRanks '<)) ;; sort primeRanks ascending.
+			;;(princ "primeRanks: ")(princ primeRanks)(princ "\n")
+			;==========
+			
+			;;sweep through primeRanks, and for each primeRank, deal with all the elements of rankedRegions that belong to that primeRank.
+			(setq talliedRegions
+				(mapcar
+					'(lambda (primeRank / rankedRegionsHavingTheSpecifiedPrimeRank subRankedRegions theseRegions)
+						;; collect all the regions in rankedRegions that have primeRank as the first element of their rank.
+						(setq rankedRegionsHavingTheSpecifiedPrimeRank
+							(vl-remove-if-not
+								'(lambda (x / rank) (setq rank (car x)) (= primeRank (car rank)))
+								rankedRegions
+							)
+						)
+						
+						;; theseRegions will be a list of regions.  theseRegions will consist of all the elements of subRankedRegions with a rank of length 1, and 
+						;; one additional region which is the rankwiseCombine of the subRankedRegions whose rank has length > 1 (with the primeRank stripped).
+						
+						;; scan through rankedRegionsHavingTheSpecifiedPrimeRank and accumulate two lists:
+						;;		theseRegions: Any regions whose rank contained only one element (namely primeRank) will go into theseRegions
+						;;		subRankedRegions: Any regions whose rank contains more than one element will have the first element stripped from their rank (to form subrank), and then the {subrank, region} pair 
+						;;			will be appended to subRankedRegions.
+						;;			subRankedRegions will be suitable for passing into rankwiseCombineRegions (yes, this very function (it's re-entrant))
+						(setq theseRegions (list ))
+						(setq subRankedRegions (list ))
+						(mapcar 
+							'(lambda (x / rank subrank region) 
+								(setq rank (car x)) ;;we already know that the first element of rank is primeRank, because of the filtering that we did above
+								(setq subrank (cdr rank)) ;;subrank is the rest of rank (i.e. we strip the first element). Subrank may very well be nil (this happens if the length of rank is 1.)
+								(setq region (cadr x))
+								(if (> (length subrank) 0) ; if the length of the subrank is greater than zero (i.e. if the rank had more than one element)
+									(progn
+										;; append the {subrank, object} pair to subRankedRegions
+										(setq subRankedRegions
+											(append subRankedRegions
+												(list 
+													(list subrank region)
+												)
+											)
+										)
+									)
+									(progn
+										;; in this case, the length of subrank is zero (i.e. the rank contained only one element (namely, primeRank))
+										;; append the region to theseRegions
+										(setq theseRegions
+											(append theseRegions
+												(list 
+													region
+												)
+											)
 										)
 									)
 								)
 							)
+							rankedRegionsHavingTheSpecifiedPrimeRank
+						)
+						;==== 
+						
+						;; apply rankwiseCombine to the subRnkedRegions (if there are any), and append the result to theseRegions
+						;; Oops.  That is not generally correct, because if the subRanked regions are subtractive, a rankwiseCombine produces a null region (or, in practice, exceptions, because null regions are not handled very well)
+						;;  The correct approach is to rankwise combine all the subranked regions together with theseRegions (using rank zero for each of theseRegions).
+						;; In other words, if we have some regions with rank (3), some regions with rank (3 4), and some regions with rank (3 4 5),
+						;; we want to treat the rank (3) as rank (3 0 0) and the rank (3 4) as rank (3 4 0).
+						(if (> (length subRankedRegions) 0) 
+							;;generate consolidatedRegion, which will take the place of all theseRegions and all the subrankedregions in the final talliedList.
 							(progn
-								;; in this case, the length of subrank is zero (i.e. the rank contained only one element (namely, primeRank))
-								;; append the region to theseRegions
-								(setq theseRegions
-									(append theseRegions
-										(list 
-											region
+								;;(princ "rankwiseCombineRegions is recursing with primeRank ")(princ primeRank)(princ ".\n")
+								(setq consolidatedRegion
+									(rankwiseCombineRegions  ;; THIS IS THE RE-ENTRY
+										(append
+												(mapcar '(lambda (x) (list (list 0) x)) theseRegions)
+												subRankedRegions
 										)
 									)
+									;;as rankwiseCombineRegions calls itself recursively, we will eventually reach a level where (length subRankedRegions) will be zero.
+									;; This is guaranteed to eventually happen because we are stripping off the first element of the ranks on each iteration (i.e. reducing their length by 1).
+									;; Once we get to the iteration where (length subRankedRegions) is zero, the above 'IF' condition will evaluate to false, and so we will stop recursing.
 								)
+								(setq theseRegions (list consolidatedRegion))
+							)
+							(progn
+								;;(princ "rankwiseCombineRegions is skipping recursion for primeRank ")(princ primeRank)(princ ".\n")
 							)
 						)
+						;=======
+						
+						; (list primeRank theseRegions)
+						;;to my mind, the above makes more sense as an element of talliedRegions, but I will use the below to stay compatible with the rest of the code.
+						(cons primeRank theseRegions)
 					)
-					rankedRegionsHavingTheSpecifiedPrimeRank
-				)
-				;==== 
-				
-				;; apply rankwiseCombine to the subRnkedRegions (if there are any), and append the result to theseRegions
-				;; Oops.  That is not generally correct, because if the subRanked regions are subtractive, a rankwiseCombine produces a null region (or, in practice, exceptions, because null regions are not handled very well)
-				;;  The correct approach is to rankwise combine all the subranked regions together with theseRegions (using rank zero for each of theseRegions).
-				;; In other words, if we have some regions with rank (3), some regions with rank (3 4), and some regions with rank (3 4 5),
-				;; we want to treat the rank (3) as rank (3 0 0) and the rank (3 4) as rank (3 4 0).
-				(if (> (length subRankedRegions) 0) 
-					;;generate consolidatedRegion, which will take the place of all theseRegions and all the subrankedregions in the final talliedList.
-					(progn
-						;;(princ "rankwiseCombineRegions is recursing with primeRank ")(princ primeRank)(princ ".\n")
-						(setq consolidatedRegion
-							(rankwiseCombineRegions  ;; THIS IS THE RE-ENTRY
-								(append
-										(mapcar '(lambda (x) (list (list 0) x)) theseRegions)
-										subRankedRegions
-								)
-							)
-							;;as rankwiseCombineRegions calls itself recursively, we will eventually reach a level where (length subRankedRegions) will be zero.
-							;; This is guaranteed to eventually happen because we are stripping off the first element of the ranks on each iteration (i.e. reducing their length by 1).
-							;; Once we get to the iteration where (length subRankedRegions) is zero, the above 'IF' condition will evaluate to false, and so we will stop recursing.
-						)
-						(setq theseRegions (list consolidatedRegion))
-					)
-					(progn
-						;;(princ "rankwiseCombineRegions is skipping recursion for primeRank ")(princ primeRank)(princ ".\n")
-					)
-				)
-				;=======
-				
-				; (list primeRank theseRegions)
-				;;to my mind, the above makes more sense as an element of talliedRegions, but I will use the below to stay compatible with the rest of the code.
-				(cons primeRank theseRegions)
+					primeRanks
+				)	
 			)
-			primeRanks
-		)	
-	)
-	;=========
-	;; Beyond this point, the code did not need to be modified at all during the expansion from the single-integer rank concept to the list-of-integers rank concept.
-	;; When we added the implementation of the list-of-integers rank concept, the construction of talliedRegions became a bit more complicated (requiring recursion, for instance), but 
-	;; the modified code produces the same sort of talliedRegions list as the original code, and so the rest of the program digests the talliedRegions list
-	;; just like it always has.
-	;;(princ "talliedRegions: ")(princ talliedRegions)(princ "\n")
-	
-	
-	(setq returnRegionHasBeenInitialized nil )
-	(foreach item talliedRegions
-		(setq thisRank (car item))
-		(setq theseRegions (cdr item))
-		
-		(if (= 0 (rem thisRank 2)) ;;if thisRank is even...
-			(progn ;; then we need to boolean add theseRegions
-				;;initialise returnRegion if necessary
-				(if (not returnRegionHasBeenInitialized)
-					(progn
-						(setq returnRegion (car theseRegions))
-						(setq returnRegionHasBeenInitialized T)
-						;; (setq theseRegions (cdr theseRegions))
-						;;actually, the above discarding of the first member of theseRegions is not necessary --
-						;; it doesn't hurt to boolean add the same region twice.
-						;;ACTUALLY, Autocad complains when you try to union a region with itself, so we better trim the first element after all.
-						(setq theseRegions (cdr theseRegions))
-					)
-				)
-				(foreach  region theseRegions
-					(vla-Boolean returnRegion acUnion region)
-				)
-			)
-			(progn ;; else thisRank must be odd, in which case, we need to boolean subtract theseRegions
-				(if (not returnRegionHasBeenInitialized)
-					(progn
-						;;in this case, we are trying to subtract regions from an empty region, which is perfectly valid, but does at least deserve a warning.
-						(princ 	
-							(strcat 
-								"Warning: (rankwiseCombineRegions) was asked to subtract " 
-								(itoa (length theseRegions)) " rank " (itoa thisRank) 
-								" region(s) from a non-existent/empty region.  "
-								"This subtraction request has been ignored." "\n"
+			;=========
+			;; Beyond this point, the code did not need to be modified at all during the expansion from the single-integer rank concept to the list-of-integers rank concept.
+			;; When we added the implementation of the list-of-integers rank concept, the construction of talliedRegions became a bit more complicated (requiring recursion, for instance), but 
+			;; the modified code produces the same sort of talliedRegions list as the original code, and so the rest of the program digests the talliedRegions list
+			;; just like it always has.
+			;;(princ "talliedRegions: ")(princ talliedRegions)(princ "\n")
+			
+			
+			(setq returnRegionHasBeenInitialized nil )
+			(foreach item talliedRegions
+				(setq thisRank (car item))
+				(setq theseRegions (cdr item))
+				
+				(if (= 0 (rem thisRank 2)) ;;if thisRank is even...
+					(progn ;; then we need to boolean add theseRegions
+						;;initialise returnRegion if necessary
+						(if (not returnRegionHasBeenInitialized)
+							(progn
+								(setq returnRegion (car theseRegions))
+								(setq returnRegionHasBeenInitialized T)
+								;; (setq theseRegions (cdr theseRegions))
+								;;actually, the above discarding of the first member of theseRegions is not necessary --
+								;; it doesn't hurt to boolean add the same region twice.
+								;;ACTUALLY, Autocad complains when you try to union a region with itself, so we better trim the first element after all.
+								(setq theseRegions (cdr theseRegions))
 							)
 						)
-					)
-					(progn
-						;;in this case, returnRegion has been initialized, so our task is to boolean subtract each of theseRegions from it.
 						(foreach  region theseRegions
-							(vla-Boolean returnRegion acSubtraction region)
-						)	
+							(vla-Boolean returnRegion acUnion region)
+						)
+					)
+					(progn ;; else thisRank must be odd, in which case, we need to boolean subtract theseRegions
+						(if (not returnRegionHasBeenInitialized)
+							(progn
+								;;in this case, we are trying to subtract regions from an empty region, which is perfectly valid, but does at least deserve a warning.
+								(princ 	
+									(strcat 
+										"Warning: (rankwiseCombineRegions) was asked to subtract " 
+										(itoa (length theseRegions)) " rank " (itoa thisRank) 
+										" region(s) from a non-existent/empty region.  "
+										"This subtraction request has been ignored." "\n"
+									)
+								)
+							)
+							(progn
+								;;in this case, returnRegion has been initialized, so our task is to boolean subtract each of theseRegions from it.
+								(foreach  region theseRegions
+									(vla-Boolean returnRegion acSubtraction region)
+								)	
+							)	
+						)
 					)	
 				)
-			)	
+			)
+			
+			;;at this point, returnRegion is the result that we were hoping for (note: returnRegion will be nil
+			;; if there were no additive (i.e. even) rank regions in regions.  Autocad does not seem to have the concept
+			;; of an empty region, which is what I really would prefere to return in that case, so nill will have to suffice.)
+			
+			;;I haven't yet considered what is to become of the input regions.  
+			;; Ideally, I would want (rankwiseCombineRegions) to leave the input regions untouched.
+			;; The acad documentation seems to imply that Region.Boolean() does not
+			;; modify its argument, but that does not always appear to be the case -- specifically for subtrction operations, the region that is subtracted 
+			;; seems to be consumed (i.e. becomes deleted) in the process.
+			;; Perhaps I should
+			;; create a working copy of input regions and build the returnRegion from this working copy, then delete the workingcCopy,
+			;; in order to guard against the possibility that Region.Boolean() modifies its argument.
+			(setq returnValue returnRegion)
 		)
 	)
-	
-	;;at this point, returnRegion is the result that we were hoping for (note: returnRegion will be nil
-	;; if there were no additive (i.e. even) rank regions in regions.  Autocad does not seem to have the concept
-	;; of an empty region, which is what I really would prefere to return in that case, so nill will have to suffice.)
-	
-	;;I haven't yet considered what is to become of the input regions.  
-	;; Ideally, I would want (rankwiseCombineRegions) to leave the input regions untouched.
-	;; The acad documentation seems to imply that Region.Boolean() does not
-	;; modify its argument, but that does not always appear to be the case -- specifically for subtrction operations, the region that is subtracted 
-	;; seems to be consumed (i.e. becomes deleted) in the process.
-	;; Perhaps I should
-	;; create a working copy of input regions and build the returnRegion from this working copy, then delete the workingcCopy,
-	;; in order to guard against the possibility that Region.Boolean() modifies its argument.
-	(setq returnValue returnRegion)
+
 	returnValue	
 )
 ;=============
