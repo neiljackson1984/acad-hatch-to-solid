@@ -1,0 +1,9 @@
+{
+  "autocad_block_library_utility": {
+    "url": "https://github.com/neiljackson1984/autocad_block_library_utility",
+    "remote": "master/braid/autocad_block_library_utility",
+    "branch": "master",
+    "squashed": true,
+    "revision": "9a63b13a8d2da8cf9a718afa395dab8912f8e92f"
+  }
+}

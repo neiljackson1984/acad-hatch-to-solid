@@ -1,0 +1,10 @@
+{
+  "config_version": 1,
+  "mirrors": {
+    "braids/as-built-tools": {
+      "url": "https://gitlab.com/neiljackson1984/as-built-tools",
+      "branch": "master",
+      "revision": "3a8e41940de8767fbec8ea276a0a357b8bb6d613"
+    }
+  }
+}

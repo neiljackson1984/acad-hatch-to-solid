@@ -1,0 +1,2320 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>]
+"UserName"="neil"
+"NFWState"=dword:00000001
+"WorkspaceNameAtProfileSave"="AutoCAD Classic"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\AcSeek]
+"Server"="acadseekstore.autodesk.com:80"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Application Menu]
+"DocumentView"="Icons"
+"DocumentGroupBy"="Ordered"
+"DocumentListType"="RecentDocuments"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Application Menu\AcPublish]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Application Menu\AcPublish\SeekMenu]
+""=""
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Camera]
+"Model glyphs color"=dword:00FF6633
+"Layout glyphs color"=dword:00AB7035
+"Parallel glyphs color"=dword:009C6630
+"Perspective glyphs color"=dword:009C6630
+"Model frustrum color"=dword:006666FF
+"Layout frustrum color"=dword:006666FF
+"Parallel frustrum color"=dword:006666FF
+"Perspective frustrum color"=dword:006666FF
+"Model clipping color"=dword:00F0CAA6
+"Layout clipping color"=dword:00F0CAA6
+"Parallel clipping color"=dword:00F0CAA6
+"Perspective clipping color"=dword:00F0CAA6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Command Line Windows]
+"CmdLine.BackColor"=dword:00FFFFFF
+"TextWindow.ForeColor"=dword:00000000
+"TextWindow.BackColor"=dword:00C8C8C8
+"CmdLine.ForeColor"=dword:00000000
+"CmdLine.TempPromptBkColor"=dword:00666666
+"CmdLine.TempPromptTextColor"=dword:00FFFFFF
+"CmdLine.CmdOptKeywordColor"=dword:00FF0000
+"CmdLine.CmdOptBkColor"=dword:00D2D2D2
+"CmdLine.CmdOptHighlightedColor"=dword:00B3B3B3
+"CmdLine.FontFace"="Consolas"
+"CmdLine.FontHeight"=dword:0000000A
+"CmdLine.FontWeight"=dword:00000190
+"CmdLine.FontItalic"=dword:00000000
+"CmdLine.FontPitchAndFamily"=dword:000000EB
+"TextWindow.FontFace"="Consolas"
+"TextWindow.FontHeight"=dword:0000000A
+"TextWindow.FontWeight"=dword:00000190
+"TextWindow.FontItalic"=dword:00000000
+"TextWindow.FontPitchAndFamily"=dword:000000EB
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Defaults]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Defaults\AecBase70]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Defaults\AecBase70\DwgSetup]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Defaults\AecBase70\DwgSetup\Imperial]
+"LayerFile"="AecLayerStd.dwg"
+"ScaleOnInsert"=dword:00000001
+"LinearUnit"=dword:0000001F
+"LinearDispFormat"=dword:00000004
+"LinearPrec"=dword:00000004
+"AngularDispFormat"=dword:00000000
+"AngularAzimuth"=dword:00000000
+"AngularPrec"=dword:00000002
+"ElevationPrec"=dword:00000002
+"CoordinatePrec"=dword:00000004
+"AecDwgBasePtX"="0.000000"
+"AecDwgBasePtY"="0.000000"
+"AecDwgBasePtZ"="0.000000"
+"AecBasePtNEX"="0.000000"
+"AecBasePtNEY"="0.000000"
+"AecBasePtNEZ"="0.000000"
+"AecNorthRotation"="0.000000"
+"VerticalScale"="4.000000"
+"TextHeight"="0.125000"
+"AreaDisplayUnit"=dword:00000038
+"AreaPrec"=dword:00000002
+"AreaSuffix"=" Sq.Ft."
+"VolumeDisplayUnit"=dword:00000082
+"VolumePrec"=dword:00000002
+"VolumeSuffix"=" Cu.Ft."
+"CivilStateFlag1"=dword:00000000
+"CivilStateFlag2"=dword:00001000
+"CivilStateFlag3"=dword:00000000
+"CivilDimaltd"=dword:00000002
+"CivilTextStyle"="L120"
+"CivilDimpost"="'"
+"CivilDimapost"="m"
+"CivilDimexo"="0.062500"
+"CivilDimscale"="96.000000"
+"CivilDimaltf"="0.304800"
+"LayerStandard"="AIA (256 Color)"
+"FacetDev"="0.500000"
+"SuperScript"=dword:00000001
+"SuperScriptZeroSupression"=dword:00000001
+"ElevationLabelPlus"=dword:00000001
+"ElevationLabelPlusMinus"=dword:00000001
+"CurrentDimUnit"=dword:0000001F
+"MaxFacetsOnCircle"=dword:000001F4
+"CreateDimOverride"=dword:00000001
+"AlwaysUpdateLayerKeyStyle"=dword:00000000
+"IndependentLayerOnOff"=dword:00000001
+"GeometrySharingEnable"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Defaults\AecBase70\DwgSetup\Metric]
+"ScaleOnInsert"=dword:00000001
+"LinearUnit"=dword:00000019
+"LinearDispFormat"=dword:00000002
+"LinearPrec"=dword:00000003
+"AngularDispFormat"=dword:00000000
+"AngularAzimuth"=dword:00000000
+"AngularPrec"=dword:00000002
+"ElevationPrec"=dword:00000003
+"CoordinatePrec"=dword:00000004
+"AecDwgBasePtX"="0.000000"
+"AecDwgBasePtY"="0.000000"
+"AecDwgBasePtZ"="0.000000"
+"AecBasePtNEX"="0.000000"
+"AecBasePtNEY"="0.000000"
+"AecBasePtNEZ"="0.000000"
+"AecNorthRotation"="0.000000"
+"VerticalScale"="50.000000"
+"TextHeight"="3.175000"
+"AreaDisplayUnit"=dword:00000037
+"AreaPrec"=dword:00000002
+"AreaSuffix"="m2"
+"VolumeDisplayUnit"=dword:00000060
+"VolumePrec"=dword:00000002
+"VolumeSuffix"="m3"
+"CivilStateFlag1"=dword:00000000
+"CivilStateFlag2"=dword:00001000
+"CivilStateFlag3"=dword:00000000
+"CivilDimaltd"=dword:00000003
+"CivilTextStyle"="5MM"
+"CivilDimpost"="m"
+"CivilDimapost"="'"
+"CivilDimexo"="1.587500"
+"CivilDimscale"="100.000000"
+"CivilDimaltf"="3.280840"
+"LayerStandard"="BS1192 Descriptive (256 color)"
+"FacetDev"="10.000000"
+"LayerFile"="AecLayerStd.dwg"
+"SuperScript"=dword:00000001
+"SuperScriptZeroSupression"=dword:00000001
+"ElevationLabelPlus"=dword:00000001
+"ElevationLabelPlusMinus"=dword:00000001
+"CurrentDimUnit"=dword:00000002
+"MaxFacetsOnCircle"=dword:000001F4
+"CreateDimOverride"=dword:00000001
+"AlwaysUpdateLayerKeyStyle"=dword:00000000
+"IndependentLayerOnOff"=dword:00000001
+"GeometrySharingEnable"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs]
+"CloudReset"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\3dDwf]
+"DefaultDwfFormat"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-101]
+"X"=dword:000002C3
+"Y"=dword:00000181
+"Width"=dword:00000102
+"Height"=dword:0000014E
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-105]
+"X"=dword:00000302
+"Y"=dword:00000178
+"Width"=dword:0000017C
+"Height"=dword:00000144
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-131]
+"FileNameMRU0"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\RCDD Stamp MHS 12-31-17 - Crop.pdf"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-2112]
+"X"=dword:0000031C
+"Y"=dword:000001C7
+"Width"=dword:00000149
+"Height"=dword:000000A6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-306]
+"X"=dword:00000329
+"Y"=dword:000001E5
+"Width"=dword:0000012E
+"Height"=dword:0000006A
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-356]
+"X"=dword:0000030C
+"Y"=dword:000001BF
+"Width"=dword:00000168
+"Height"=dword:000000E7
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-707]
+"X"=dword:000002D7
+"Y"=dword:000001C3
+"Width"=dword:00000158
+"Height"=dword:000000E6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\acad-888]
+"X"=dword:00000286
+"Y"=dword:000001A0
+"Width"=dword:000001C7
+"Height"=dword:000000CC
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcBattman]
+"ShowDups"=dword:00000001
+"EditRefs"=dword:00000001
+"Columns"=dword:0000000F
+"X"=dword:000002D7
+"Y"=dword:0000019B
+"Width"=dword:000001D2
+"Height"=dword:000000FF
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcBattman\ListView-1001]
+"Column1"=dword:00000050
+"Column2"=dword:00000078
+"Column3"=dword:00000068
+"Column4"=dword:0000002D
+"Column5"=dword:0000003C
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcBattman:Edit]
+"AutoPreview"=dword:00000001
+"LastActiveTab"=dword:00000000
+"X"=dword:000002E4
+"Y"=dword:00000195
+"Width"=dword:000001B9
+"Height"=dword:0000010A
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcCamera]
+"GlyphSize"=dword:00000032
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcDim:DimstyleFormat]
+"ActiveTab"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcEAttEdit]
+"X"=dword:0000041F
+"Y"=dword:0000017E
+"Width"=dword:000001BB
+"Height"=dword:0000011F
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcEAttEdit\ListView-1001]
+"Column1"=dword:00000050
+"Column2"=dword:00000078
+"Column3"=dword:00000068
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Acet:Att]
+"FileNameMRU0"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\x_sheet1_title_block.txt"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Acet:RText]
+"FileNameMRU0"="J:\\___COLORADO BACKUP___\\Preferred Safety\\ECO40165-po008329\\scratchpad.txt"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\___COLORADO BACKUP___\\Preferred Safety\\ECO40165-po008329\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcFdUi:FieldDialog]
+"X"=dword:0000008C
+"Y"=dword:000000E5
+"Width"=dword:00000260
+"Height"=dword:0000020B
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcFdUi:FieldFormatDialog]
+"X"=dword:000003EF
+"Y"=dword:0000011E
+"Width"=dword:00000113
+"Height"=dword:000001DF
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcLayerApps:LayerStatesManager]
+"Expanded"=dword:00000001
+"X"=dword:00000267
+"Y"=dword:00000144
+"Width"=dword:000002B2
+"Height"=dword:000001DD
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcLayerApps:LayerStatesManager\ListView-1002]
+"Column1"=dword:00000090
+"Column2"=dword:00000032
+"Column3"=dword:00000024
+"Column4"=dword:0000007E
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcLayerApps:SaveLayerStatesDialog]
+"X"=dword:0000046F
+"Y"=dword:00000134
+"Width"=dword:0000019A
+"Height"=dword:000000EC
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcPublish : Publish]
+"X"=dword:0000023B
+"Y"=dword:000000EB
+"Width"=dword:0000030A
+"Height"=dword:0000028E
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcPublish : Publish\ListView-4551]
+"Column1"=dword:00000176
+"Column2"=dword:0000004A
+"Column3"=dword:00000095
+"Column4"=dword:00000095
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcPublish : Publish\ListView-5167]
+"Column1"=dword:00000064
+"Column2"=dword:000000B6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcPublish:PlotandPublishDetails]
+"X"=dword:0000029E
+"Y"=dword:000000EE
+"Width"=dword:00000244
+"Height"=dword:00000258
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcPublishDlg]
+"DefaultDwfFormat"=dword:00000001
+"IncludeModel"=dword:00000001
+"IncludeLayout"=dword:00000001
+"DlgExpanded"=dword:00000001
+"IncludePlotStamp"=dword:00000000
+"VIEWFILE"=dword:00000001
+"PublishToFormat"=dword:00000000
+"PublishInReverseOrder"=dword:00000000
+"PrefixedWithFileName"=dword:00000001
+"DefaultEPlotFormat"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcPublishDlg\MRU Sheet List]
+"MRU"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AcViewManager]
+"PresetViewExpand"=dword:00000001
+"ModelViewExpand"=dword:00000002
+"SheetViewExpand"=dword:00000002
+"X"=dword:00000297
+"Y"=dword:00000172
+"Width"=dword:00000251
+"Height"=dword:0000017F
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AdColor:Color Picker]
+"X"=dword:00000301
+"Y"=dword:000000E6
+"Width"=dword:00000170
+"Height"=dword:00000175
+"MostRecentColorModel"=dword:00000000
+"MostRecentColorBook"="DIC COLOR GUIDE(R)"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AddPageSetupDialog]
+"X"=dword:0000031B
+"Y"=dword:000001E9
+"Width"=dword:0000014A
+"Height"=dword:00000093
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AddParameterDialog]
+"DialogRectangle"="791,349,338,426"
+"ColumnWidths"="150,150"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\AllAnavDialogs]
+"PlacesOrder0"="AcCloud"
+"PlacesOrder0Display"="Autodesk 360"
+"PlacesOrder0Ext"=""
+"PlacesOrder1"="History"
+"PlacesOrder1Display"="History"
+"PlacesOrder1Ext"=""
+"PlacesOrder2"="Personal"
+"PlacesOrder2Display"="Documents"
+"PlacesOrder2Ext"=""
+"PlacesOrder3"="Favorites"
+"PlacesOrder3Display"="Favorites"
+"PlacesOrder3Ext"=""
+"PlacesOrder4"="Desktop"
+"PlacesOrder4Display"="Desktop"
+"PlacesOrder4Ext"=""
+"PlacesOrder5"="FTPSites"
+"PlacesOrder5Display"="FTP"
+"PlacesOrder5Ext"=""
+"PlacesOrder6"="ACPROJECT"
+"PlacesOrder6Display"="Buzzsaw"
+"PlacesOrder6Ext"=""
+"PlacesOrder7"=""
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ALLopenDialog]
+"FileNameMRU0"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\ITG-Logo-bit tag Inf Tran Solution 04-10-11.bmp"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\attribute_definition_dialog]
+"X"=dword:000002D9
+"Y"=dword:00000164
+"Width"=dword:000001CE
+"Height"=dword:0000019C
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.AuthoringEnvironment.AddParameterDialog]
+"Bounds"="791, 349, 338, 426"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.AuthoringEnvironment.BESettingsWindow]
+"Bounds"="66,66,500,428"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.AuthoringEnvironment.LookupDialog]
+"Bounds"="247, 180, 576, 416"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm]
+"Bounds"="1386, 179, 308, 249"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings]
+"ExpandMode"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings\Groups]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings\Groups\Number_Pad]
+"IsCollapsed"="False"
+"IsHidden"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings\Groups\Scientific]
+"IsCollapsed"="True"
+"IsHidden"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings\Groups\Units_Conversion]
+"IsCollapsed"="True"
+"IsHidden"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings\Groups\Variables]
+"IsCollapsed"="True"
+"IsHidden"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.CalculatorUI.CalculatorForm\QCalcUiSettings\HistoryColors]
+"HistoryColor1"="WindowText"
+"HistoryColor2"="Red"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.Customization.MainForm]
+"Location"="597, 194"
+"Size"="725, 735"
+"CustPageLeftTopPanelExpanded"="True"
+"CustPageLeftBottomPanelExpanded"="True"
+"ToolbarPreviewHeight"="-1"
+"PanelPreviewHeight"="-1"
+"WorkspaceContentHeight"="231"
+"MiscControlPanelHeight"="168"
+"ImpPageSplitterRatio"="0.477241367"
+"CustPageSplitterRatio"="0.477241367"
+"CustPageLeftVerSplitterRatio"="0.5015674"
+"CustPageRightVerSplitterRatio"="0.374608159"
+"ShowEmptyRibbonTabSelector"="True"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.LayerManager.PaletteHost]
+"ResetDefaults"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.LayerManager.PaletteHost\ModelessPrefs]
+"SplitPosition"="200"
+"ShowFilterTree"="True"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.LayerManager.PaletteHost\ModelessPrefs\GlobalColumnSets]
+"IsUsedWidth"="24"
+"IsUsedVisible"="True"
+"IsUsedIndex"="0"
+"IsUsedFrozen"="True"
+"NameWidth"="238"
+"NameVisible"="True"
+"NameIndex"="1"
+"NameFrozen"="True"
+"IsOnWidth"="72"
+"IsOnVisible"="True"
+"IsOnIndex"="2"
+"IsOnFrozen"="False"
+"IsFrozenWidth"="41"
+"IsFrozenVisible"="True"
+"IsFrozenIndex"="3"
+"IsFrozenFrozen"="False"
+"IsLockedWidth"="31"
+"IsLockedVisible"="True"
+"IsLockedIndex"="4"
+"IsLockedFrozen"="False"
+"ColorWidth"="78"
+"ColorVisible"="True"
+"ColorIndex"="5"
+"ColorFrozen"="False"
+"LinetypeNameWidth"="64"
+"LinetypeNameVisible"="True"
+"LinetypeNameIndex"="6"
+"LinetypeNameFrozen"="False"
+"LineWeightWidth"="168"
+"LineWeightVisible"="True"
+"LineWeightIndex"="7"
+"LineWeightFrozen"="False"
+"TransparencyWidth"="56"
+"TransparencyVisible"="True"
+"TransparencyIndex"="8"
+"TransparencyFrozen"="False"
+"PlotStyleNameWidth"="54"
+"PlotStyleNameVisible"="True"
+"PlotStyleNameIndex"="9"
+"PlotStyleNameFrozen"="False"
+"IsPlottableWidth"="25"
+"IsPlottableVisible"="True"
+"IsPlottableIndex"="10"
+"IsPlottableFrozen"="False"
+"ViewportVisibilityDefaultWidth"="24"
+"ViewportVisibilityDefaultVisible"="True"
+"ViewportVisibilityDefaultIndex"="11"
+"ViewportVisibilityDefaultFrozen"="False"
+"DescriptionWidth"="218"
+"DescriptionVisible"="True"
+"DescriptionIndex"="12"
+"DescriptionFrozen"="False"
+"FillColumnWidth"="2"
+"FillColumnVisible"="True"
+"FillColumnIndex"="13"
+"FillColumnFrozen"="False"
+"ViewportVisibilityCurrentWidth"="24"
+"ViewportVisibilityCurrentVisible"="True"
+"ViewportVisibilityCurrentIndex"="13"
+"ViewportVisibilityCurrentFrozen"="False"
+"ViewportColorWidth"="48"
+"ViewportColorVisible"="True"
+"ViewportColorIndex"="14"
+"ViewportColorFrozen"="False"
+"ViewportLinetypeNameWidth"="64"
+"ViewportLinetypeNameVisible"="True"
+"ViewportLinetypeNameIndex"="15"
+"ViewportLinetypeNameFrozen"="False"
+"ViewportLineWeightWidth"="68"
+"ViewportLineWeightVisible"="True"
+"ViewportLineWeightIndex"="16"
+"ViewportLineWeightFrozen"="False"
+"ViewportTransparencyWidth"="54"
+"ViewportTransparencyVisible"="True"
+"ViewportTransparencyIndex"="17"
+"ViewportTransparencyFrozen"="False"
+"ViewportPlotStyleNameWidth"="54"
+"ViewportPlotStyleNameVisible"="True"
+"ViewportPlotStyleNameIndex"="18"
+"ViewportPlotStyleNameFrozen"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.LayerManager.PaletteHost\ModelessPrefs\ViewportColumnSets]
+"IsUsedWidth"="48"
+"IsUsedVisible"="True"
+"IsUsedIndex"="0"
+"IsUsedFrozen"="True"
+"NameWidth"="140"
+"NameVisible"="True"
+"NameIndex"="1"
+"NameFrozen"="True"
+"IsOnWidth"="30"
+"IsOnVisible"="True"
+"IsOnIndex"="2"
+"IsOnFrozen"="False"
+"IsFrozenWidth"="49"
+"IsFrozenVisible"="True"
+"IsFrozenIndex"="3"
+"IsFrozenFrozen"="False"
+"IsLockedWidth"="37"
+"IsLockedVisible"="True"
+"IsLockedIndex"="4"
+"IsLockedFrozen"="False"
+"ColorWidth"="87"
+"ColorVisible"="True"
+"ColorIndex"="5"
+"ColorFrozen"="False"
+"LinetypeNameWidth"="63"
+"LinetypeNameVisible"="True"
+"LinetypeNameIndex"="6"
+"LinetypeNameFrozen"="False"
+"LineWeightWidth"="71"
+"LineWeightVisible"="True"
+"LineWeightIndex"="7"
+"LineWeightFrozen"="False"
+"TransparencyWidth"="82"
+"TransparencyVisible"="True"
+"TransparencyIndex"="8"
+"TransparencyFrozen"="False"
+"PlotStyleNameWidth"="61"
+"PlotStyleNameVisible"="True"
+"PlotStyleNameIndex"="9"
+"PlotStyleNameFrozen"="False"
+"IsPlottableWidth"="34"
+"IsPlottableVisible"="True"
+"IsPlottableIndex"="10"
+"IsPlottableFrozen"="False"
+"ViewportVisibilityDefaultWidth"="88"
+"ViewportVisibilityDefaultVisible"="True"
+"ViewportVisibilityDefaultIndex"="11"
+"ViewportVisibilityDefaultFrozen"="False"
+"ViewportVisibilityCurrentWidth"="64"
+"ViewportVisibilityCurrentVisible"="True"
+"ViewportVisibilityCurrentIndex"="13"
+"ViewportVisibilityCurrentFrozen"="False"
+"ViewportColorWidth"="87"
+"ViewportColorVisible"="True"
+"ViewportColorIndex"="14"
+"ViewportColorFrozen"="False"
+"ViewportLinetypeNameWidth"="72"
+"ViewportLinetypeNameVisible"="True"
+"ViewportLinetypeNameIndex"="15"
+"ViewportLinetypeNameFrozen"="False"
+"ViewportLineWeightWidth"="82"
+"ViewportLineWeightVisible"="True"
+"ViewportLineWeightIndex"="16"
+"ViewportLineWeightFrozen"="False"
+"ViewportTransparencyWidth"="97"
+"ViewportTransparencyVisible"="True"
+"ViewportTransparencyIndex"="17"
+"ViewportTransparencyFrozen"="False"
+"ViewportPlotStyleNameWidth"="76"
+"ViewportPlotStyleNameVisible"="True"
+"ViewportPlotStyleNameIndex"="18"
+"ViewportPlotStyleNameFrozen"="False"
+"DescriptionWidth"="69"
+"DescriptionVisible"="True"
+"DescriptionIndex"="12"
+"DescriptionFrozen"="False"
+"FillColumnWidth"="2"
+"FillColumnVisible"="True"
+"FillColumnIndex"="19"
+"FillColumnFrozen"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.ScaleList.ObjectScaleListAddForm]
+"Bounds"="2260, 286, 303, 298"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.ScaleList.ObjectScaleListForm]
+"Bounds"="2221, 282, 381, 307"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.ScaleList.ScaleListAdd]
+"Bounds"="811, 420, 298, 235"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.ScaleList.ScaleListForm]
+"Bounds"="782, 378, 356, 320"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Autodesk.AutoCAD.Underlay.AttachUnderlayDialog]
+"Bounds"="672, 337, 576, 455"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Bhatch]
+"X"=dword:000003BD
+"Y"=dword:000000A9
+"PickMode"=dword:00000001
+"LastHatchType"=dword:00000000
+"Expanded"=dword:00000000
+"Width"=dword:000001FE
+"Height"=dword:00000276
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Bhatch\Custom]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Bhatch\Predef]
+"Pattern1"="SOLID"
+"Pattern2"="ANSI34"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\BhatchPaletteDialog]
+"ActiveTab"=dword:00000002
+"X"=dword:000005BC
+"Y"=dword:0000013E
+"Width"=dword:0000017C
+"Height"=dword:000001B5
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\block_definition_dialog]
+"X"=dword:0000034A
+"Y"=dword:00000212
+"Width"=dword:0000023F
+"Height"=dword:00000191
+"ObjectsPostprocessing"=dword:00000000
+"PreviewIconPreference"=dword:00000001
+"OpenInBEdit"=dword:00000001
+"ScaleUniform"=dword:00000001
+"Explode"=dword:00000001
+"BasePointOnScreen"=dword:00000000
+"ObjectsOnScreen"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\BrowseforDrawingFileBlkDlg]
+"FileNameMRU0"="J:\\_Jackson, Neil\\2015-12-15_beacon_hill_rehab_asbuilt\\door.dwg"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\_Jackson, Neil\\2015-12-15_beacon_hill_rehab_asbuilt\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\BrowseropenDialog]
+"InitialDirectory"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\"
+"FileNameMRU0"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\xUWB - Upper Suite.dwg"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"PreviewVisible"=dword:00000001
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+"FileNameMRU1"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\xITG_2436tb.dwg"
+"FileNameMRU2"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\x_sheet1_title_block.dwg"
+"FileNameMRU3"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\ITG_2436tb.dwg"
+"FileNameMRU4"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\RCDD Stamp MHS 12-31-17 - Crop.pdf"
+"FileNameMRU5"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\itg-logo_block.dwg"
+"FileNameMRU6"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\ITG-Logo-bit tag Inf Tran Solution 04-10-11.bmp"
+"FileNameMRU7"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\_Received\\2015.08.26\\UWB Lower Suite.dwg"
+"FileNameMRU8"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\_Received\\2015.08.26\\UWB Upper Suite.dwg"
+"FileNameMRU9"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\Conf Table.dwg"
+"FileNameMRU10"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\xUWCB - Lower Suite.dwg"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ChangeDictonariesDialog]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ChangesToPrinterConfigurationFileDialog]
+"X"=dword:00000315
+"Y"=dword:000001CE
+"Width"=dword:00000156
+"Height"=dword:000000C9
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ConstraintSettings]
+"ActiveTab"=dword:00000001
+"X"=dword:000002E2
+"Y"=dword:00000154
+"Width"=dword:000001BC
+"Height"=dword:000001BC
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ConstraintSettings\Autoconstrain]
+"DistanceTolerance"=hex:9A,99,99,99,99,99,A9,3F
+"AngleTolerance"=hex:00,00,00,00,00,00,F0,3F
+"ConstraintStateFlag"=hex:FF,FA,FF,FF
+"ConstraintPriority"=hex:00,00,00,00,01,00,00,00,02,00,00,00,03,00,00,00,04,00,\
+  00,00,05,00,00,00,06,00,00,00,07,00,00,00,08,00,00,00
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ConstraintSettings\DisplaySetings]
+"ShowOnlyForCurrentUCS"=hex:00,00,00,00
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\CustomizeDialog]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\CustomizeDialog\SortOrderCommandListControl]
+"Column"="1"
+"Ascending"="True"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\CustomizeDialog\SortOrderShortcutsGroup]
+"Column"="1"
+"Ascending"="True"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\CustomizeDialog\TabExtensions]
+"acmgd.dll"="acmgd.dll"
+"AcTp.arx"="AcTp.arx"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\direction_control_dialog]
+"X"=dword:00000346
+"Y"=dword:0000019F
+"Width"=dword:000000F5
+"Height"=dword:000000F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\DrawingSettingsDialog]
+"ActiveTab"=dword:00000002
+"X"=dword:000002D0
+"Y"=dword:00000136
+"Width"=dword:000001E0
+"Height"=dword:000001C9
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\DrawingSettingsDialog\TabExtensions]
+"acmgd.dll"="acmgd.dll"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\DrawingWindowColorsDialog]
+"X"=dword:00000201
+"Y"=dword:00000061
+"Width"=dword:00000236
+"Height"=dword:00000216
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\drawing_units_dialog]
+"X"=dword:000002D4
+"Y"=dword:00000122
+"Width"=dword:00000162
+"Height"=dword:0000019F
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\DWFNavDlg]
+"FileNameMRU0"="J:\\seatac_inn\\as-built-drawings\\campus.pdf"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\seatac_inn\\as-built-drawings\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000027B
+"Y"=dword:00000137
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\EditAttributeDefinitionDialog]
+"X"=dword:0000020A
+"Y"=dword:00000187
+"Width"=dword:00000179
+"Height"=dword:000000A7
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\edit_attributes_dialog]
+"X"=dword:000002E1
+"Y"=dword:00000180
+"Width"=dword:000001BE
+"Height"=dword:00000165
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Export Data]
+"InitialFilterIndex"=dword:00000000
+"FileNameMRU0"="J:\\Wille Design\\PCRC\\WilleDesign.PCRC-Floor.Plans.dwf"
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\Wille Design\\PCRC\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+"FileNameMRU1"="%UserProfileFolder%\\Desktop\\WilleDesign.PCRC-Floor.Plans.dwf"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\FieldFormatList]
+"Date"="HH:mm:ss"
+"String"=""
+"Filename"=""
+"Lineweight"="%.2f mm%lw1"
+"Point"="%lu6"
+"LUnits"="%lu6"
+"Bytes"="%.2f%by2"
+"Scale"="%lu2%qf2816"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\FieldUpdateDialog]
+"X"=dword:0000031B
+"Y"=dword:000001BC
+"Width"=dword:0000014A
+"Height"=dword:000000BD
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Import File]
+"FileNameMRU0"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\level0-planter-container^campus.DXF"
+"InitialFilterIndex"=dword:00000014
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000027B
+"Y"=dword:00000120
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+"FileNameMRU1"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\ITG_2436tb.dwg"
+"FileNameMRU2"="J:\\Mantec\\2015-08-21 Boxes - Hole Location Drawings\\_received\\2015-08-21\\Label-03 [Converted].pdf"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\insert_dialog]
+"LocationOnScreen"=dword:00000000
+"RotationOnScreen"=dword:00000000
+"ScaleOnScreen"=dword:00000000
+"ScaleUniformly"=dword:00000001
+"Explode"=dword:00000000
+"X"=dword:000002A8
+"Y"=dword:00000177
+"Width"=dword:000001EA
+"Height"=dword:00000140
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LayerFilterProperties]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LayerFilterProperties\ViewportColumnSets]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LayerManager]
+"ShowModeless"="False"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LayerManager\ModelessPrefs]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LayerSettingDialog]
+"Bounds"="773, 207, 374, 662"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LayerTools]
+"ISO_Vpfreeze"="2"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\lineweight_dialog]
+"X"=dword:00000388
+"Y"=dword:00000138
+"Width"=dword:00000114
+"Height"=dword:00000159
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\LookupDialog]
+"DialogRectangle"="247,180,576,416"
+"InputGridWidth"=dword:00000112
+"InputGridColumnWidths"=""
+"OutputGridColumnWidths"="100"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\OpenSaveAnavDialogs]
+"InitialDirectory"="J:\\seatac_inn\\as-built-drawings\\"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\OptionsDialog]
+"ActiveTab"=dword:00000001
+"X"=dword:0000012D
+"Y"=dword:00000076
+"Width"=dword:000002C8
+"Height"=dword:00000226
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\OptionsDialog\TabExtensions]
+"acmgd.dll"="acmgd.dll"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\OptionsDialog_DisplayTab]
+"COLORSCHEME"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Overkill]
+"Tolerance"="0.000001"
+"Ignore"=dword:00000000
+"OptimizePolylines"=dword:00000001
+"IgnorePolylineWidths"=dword:00000000
+"MaintainPolylines"=dword:00000000
+"CombinePartialOverlaps"=dword:00000001
+"CombineEndToEnd"=dword:00000001
+"MaintainAssociativities"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PageSetupDlg]
+"X"=dword:00000260
+"Y"=dword:00000123
+"Width"=dword:000002C0
+"Height"=dword:0000021E
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PageSetupMgrDialog]
+"X"=dword:000002D9
+"Y"=dword:0000014A
+"Width"=dword:000001CF
+"Height"=dword:000001D0
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PDFopenDialog]
+"InitialDirectory"="J:\\Mantec\\2015-08-21 Boxes - Hole Location Drawings\\_received\\2015-08-21"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Plot Stamp]
+"PlotStamp"=dword:00000000
+"SaveChangeToLayout"="false"
+"PSPFilename"="%RoamableRootFolder%\\support\\Inches.pss"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PlotDlg]
+"Expanded"=dword:00000001
+"X"=dword:0000024A
+"Y"=dword:0000011F
+"Width"=dword:000002ED
+"Height"=dword:00000226
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PlotterConfigurationEditorDialog]
+"X"=dword:000002ED
+"Y"=dword:0000012D
+"Width"=dword:000001A6
+"Height"=dword:0000020B
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ProfileExportFileDialog]
+"FileNameMRU0"="U:\\autocad_profile\\Drawing1.arg"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="U:\\autocad_profile\\"
+"PreviewVisible"=dword:00000000
+"X"=dword:0000014C
+"Y"=dword:0000008E
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PropertiesDialog]
+"ActiveTab"=dword:00000003
+"X"=dword:00000574
+"Y"=dword:0000012E
+"Width"=dword:0000016E
+"Height"=dword:000001D0
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PropertiesDialog_CustomTab]
+"X"=dword:00000328
+"Y"=dword:000001C5
+"Width"=dword:00000131
+"Height"=dword:000000AB
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ProxyInfoDialog]
+"X"=dword:0000031B
+"Y"=dword:00000175
+"Width"=dword:0000014B
+"Height"=dword:0000014B
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\PurgeDialog]
+"X"=dword:00000303
+"Y"=dword:0000010E
+"Width"=dword:0000017B
+"Height"=dword:00000219
+"Nested"=dword:00000001
+"Confirm"=dword:00000000
+"EmptyObj"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\QuickSelect]
+"Apply"=dword:00000000
+"Type"=dword:00000003
+"Properties"=dword:0000000F
+"Operators"=dword:00000000
+"VarColor"=dword:00000000
+"VarLWeight"=dword:00000000
+"VarLType"=dword:00000000
+"VarLayer"=dword:00000000
+"VarMaterial"=dword:00000000
+"VarDimStyle"=dword:FFFFFFFF
+"VarDirection"=dword:00000000
+"VarPlot"=dword:00000000
+"VarArrow"=dword:00000000
+"VarGradientName"=dword:00000000
+"Exclude"=dword:00000000
+"Accumulate"=dword:00000000
+"Sort"=dword:00000001
+"X"=dword:00000314
+"Y"=dword:0000012B
+"Width"=dword:00000158
+"Height"=dword:000001DF
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\RefeditDialog]
+"UniqueSymbolNames"=dword:00000001
+"DisplayAttDefs"=dword:00000000
+"LockObjects"=dword:00000001
+"SelectNested"=dword:00000000
+"X"=dword:000002F2
+"Y"=dword:00000166
+"Width"=dword:0000019C
+"Height"=dword:00000168
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Save Drawing As]
+"FileNameMRU0"="U:\\2015-12-15_beacon_hill_rehab_asbuilt\\rooms.dwg"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="U:\\2015-12-15_beacon_hill_rehab_asbuilt\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:00000177
+"Y"=dword:00000070
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+"FileNameMRU1"="J:\\seatac_inn\\as-built-drawings\\campus - sans door constraints.dwg"
+"FileNameMRU2"="J:\\seatac_inn\\as-built-drawings\\campus.dwg"
+"FileNameMRU3"="J:\\___COLORADO BACKUP___\\Preferred Safety\\ECO40165-po008329\\I_ECO40165-neil.DWG"
+"FileNameMRU4"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\autoscan-created-2.dwg"
+"FileNameMRU5"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\autoscan-created.dwg"
+"FileNameMRU6"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\UW Chancellor Building - ITG-01.dwg"
+"FileNameMRU7"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\xITG_2436tb.dwg"
+"FileNameMRU8"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\itg-logo_block.dwg"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Select File]
+"FileNameMRU0"="J:\\seatac_inn\\as-built-drawings\\campus.dwg"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\seatac_inn\\as-built-drawings\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:0000027B
+"Y"=dword:00000137
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Select Page Setup From File]
+"FileNameMRU0"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\UW Bothell - Chancellor Building - Lower Suite.dwg"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Select template]
+"FileNameMRU0"="%LocalRootFolder%\\template\\acad.dwt"
+"InitialFilterIndex"=dword:00000000
+"ViewMode"=dword:00000004
+"InitialDirectory"="%LocalRootFolder%\\Template\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:000001F3
+"Y"=dword:000000CD
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\SelectDrawingFileBlkDlg]
+"FileNameMRU0"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level1-window-container^xxx.DXF"
+"InitialFilterIndex"=dword:00000001
+"ViewMode"=dword:00000004
+"InitialDirectory"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\"
+"PreviewVisible"=dword:00000001
+"X"=dword:0000027B
+"Y"=dword:0000011F
+"Width"=dword:0000028A
+"Height"=dword:000001F6
+"FileNameMRU1"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level1-wall-container^xxx.DXF"
+"FileNameMRU2"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level1-door-container^xxx.DXF"
+"FileNameMRU3"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level2-window-container^xxx.DXF"
+"FileNameMRU4"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level2-wall-container^xxx.DXF"
+"FileNameMRU5"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level2-door-container^xxx.DXF"
+"FileNameMRU6"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level0-window-container^xxx.DXF"
+"FileNameMRU7"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level0-wall-container^xxx.DXF"
+"FileNameMRU8"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\nameModified\\level0-door-container^xxx.DXF"
+"FileNameMRU9"="J:\\seatac_inn\\as-built-drawings\\exportedDXFs\\level0-door-container^campus.DXF"
+"FileNameMRU10"="J:\\seatac_inn\\as-built-drawings\\doorBlock.dwg"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Sheet Set Wizard]
+"MethodThroughWizard"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\Smart Blocks : Visibility Sets Dialog]
+"X"=dword:0000029B
+"Y"=dword:00000173
+"Width"=dword:0000019D
+"Height"=dword:00000126
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\SpellSettingsDialog]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\System.Windows.Window]
+"Bounds"="0,0,6,6"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\TextstyleDialog]
+"StyleSelection"=dword:00000000
+"X"=dword:0000028A
+"Y"=dword:00000152
+"Width"=dword:0000026C
+"Height"=dword:00000190
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ViewPlotDetailsDlg]
+"ViewSelection"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\ViewportsDialog]
+"X"=dword:000002A3
+"Y"=dword:0000014E
+"Width"=dword:0000023A
+"Height"=dword:000001C8
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\write_block_dialog]
+"X"=dword:000002F2
+"Y"=dword:00000140
+"Width"=dword:0000019D
+"Height"=dword:000001B5
+"ObjectsPostprocessing"=dword:00000000
+"MRUPathListItemCount"=dword:00000003
+"MRUPathListItem0"="J:\\_Jackson, Neil\\2015-12-15_beacon_hill_rehab_asbuilt\\door.dwg"
+"MRUFormatListItem0"=dword:0000003C
+"MRUPathListItem1"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\wblock_result"
+"MRUFormatListItem1"=dword:0000003C
+"MRUPathListItem2"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\Conf Table"
+"MRUFormatListItem2"=dword:0000003C
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dialogs\XattachDialog]
+"X"=dword:000002A2
+"Y"=dword:0000013B
+"Width"=dword:0000023C
+"Height"=dword:000001BE
+"LocationOnScreen"=dword:00000000
+"ScaleOnScreen"=dword:00000000
+"UniformScale"=dword:00000000
+"RotationOnScreen"=dword:00000000
+"PathType"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Drawing Recovery]
+""=""
+"LoggedFileCount"=dword:00000000
+"TopToWholeRatioPercent"=dword:0000004D
+"TopToWholeRatioPercentUpper"=dword:00000028
+"MinFilesGroup"=dword:00000000
+"MinDetailGroup"=dword:00000000
+"MinPreviewGroup"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Drawing Recovery\Unresolved]
+""=""
+"LoggedFile1"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\I-FP-01.dwg"
+"LoggedFileCount"=dword:00000004
+"LoggedFile3"="J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\ITG_2436tb.dwg"
+"LoggedFile5"="J:\\Integrated Technologies Group, Inc\\UW Medicine ITS WAP\\ITG_2436tb.dwg"
+"LoggedFile4"="J:\\_Jackson, Neil\\2015-12-15_beacon_hill_rehab_asbuilt\\campus.dwg"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Drawing Window]
+"FontFace"="MS Sans Serif"
+"FontHeight"=dword:00000008
+"FontWeight"=dword:00000190
+"FontPitchAndFamily"=dword:00000000
+"FontItalic"=dword:00000000
+"Background"=dword:00000000
+"Layout background"=dword:00FFFFFF
+"Parallel background"=dword:00302821
+"Perspective sky zenith"=dword:002D2925
+"Perspective sky horizon"=dword:00FFE5E5
+"Perspective ground origin"=dword:002D2925
+"Perspective ground horizon"=dword:00AAA097
+"Perspective sub-surface azimuth"=dword:00666666
+"Perspective sub-surface horizon"=dword:00666666
+"BEditBackground"=dword:00000000
+"Plot preview background"=dword:00FFFFFF
+"XhairPickboxEtc"=dword:00FFFFFF
+"LayoutXhairPickboxEtc"=dword:00000000
+"Parallel Xhair color"=dword:00FFFFFF
+"Perspective Xhair color"=dword:00FFFFFF
+"BEdit Xhair color"=dword:00FFFFFF
+"2D Model grid major lines color"=dword:00694F49
+"Layout grid major lines color"=dword:00EAB09D
+"Parallel grid major lines color"=dword:00694F49
+"Perspective grid major lines color"=dword:00694F49
+"BEdit grid major lines color"=dword:0032150B
+"2D Model grid minor lines color"=dword:00483732
+"Layout grid minor lines color"=dword:00EAB09D
+"Parallel grid minor lines color"=dword:00483732
+"Perspective grid minor lines color"=dword:00483732
+"BEdit grid minor lines color"=dword:001D0C06
+"2D Model grid axis lines color"=dword:005D4D47
+"Layout grid axis lines color"=dword:00EAB09D
+"Parallel grid axis lines color"=dword:005D4D47
+"Perspective grid axis lines color"=dword:005D4D47
+"BEdit grid axis lines color"=dword:008C8C8C
+"Autotracking vector"=dword:00808080
+"Model ATrack vector"=dword:00FFFFFF
+"Layout ATrack vector"=dword:0001CC01
+"Parallel ATrack vector"=dword:00019801
+"Perspective ATrack vector"=dword:00019801
+"BEdit ATrack vector"=dword:0001CC01
+"Control vertices hull color"=dword:003B4E8C
+"MonoVectors"=dword:00000000
+"Model Xhair use tint"=dword:00000000
+"Layout Xhair use tint"=dword:00000000
+"Parallel Xhair use tint"=dword:00000001
+"Perspective Xhair use tint"=dword:00000001
+"BEdit Xhair use tint"=dword:00000000
+"Model ATrack use tint"=dword:00000000
+"Layout ATrack use tint"=dword:00000000
+"Parallel ATrack use tint"=dword:00000000
+"Perspective ATrack use tint"=dword:00000000
+"BEdit ATrack use tint"=dword:00000000
+"2D Model grid major lines tint"=dword:00000000
+"Layout grid major lines tint"=dword:00000000
+"Parallel grid major lines tint"=dword:00000000
+"Perspective grid major lines tint"=dword:00000000
+"BEdit grid major lines tint"=dword:00000000
+"2D Model grid minor lines tint"=dword:00000000
+"Layout grid minor lines tint"=dword:00000000
+"Parallel grid minor lines tint"=dword:00000000
+"Perspective grid minor lines tint"=dword:00000000
+"BEdit grid minor lines tint"=dword:00000000
+"2D Model grid axis lines tint"=dword:00000001
+"Layout grid axis lines tint"=dword:00000000
+"Parallel grid axis lines tint"=dword:00000001
+"Perspective grid axis lines tint"=dword:00000001
+"BEdit grid axis lines tint"=dword:00000000
+"ShowTabs"=dword:00000001
+"LayLockFadeCtl"=dword:00000014
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Dynamic Dimension]
+"Model Dynamic Dimension Line Color"=dword:00DCC7C7
+"Layout Dynamic Dimension Line color"=dword:00CCCCCC
+"Parallel Dynamic Dimension Line Color"=dword:009A9C96
+"Perspective Dynamic Dimension Line color"=dword:009A9C96
+"BEdit Dynamic Dimension Line color"=dword:00B4B8B8
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Editor Configuration]
+"EmergencyFont"="simplex.shx"
+"CustomDictionary"="%RoamableRootFolder%\\support\\sample.cus"
+"FontMappingFile"="%RoamableRootFolder%\\support\\acad.fmp"
+"XrefLoadPath"="%TempFolder%\\"
+"SaveFilePath"="%TempFolder%\\"
+"LogFilePath"="%LocalRootFolder%\\"
+"PSOUT_PrologFileName"=""
+"MainDictionary"="enu"
+"MTextEditor"="Internal"
+"BActionColor"="7"
+"BGripObjColor"="141"
+"BParameterColor"="170"
+"BParameterFont"="Simplex.shx"
+"ACADLspAsDoc"=dword:00000000
+"XCROSSHAIRLABEL"="X"
+"YCROSSHAIRLABEL"="Y"
+"ZCROSSHAIRLABEL"="Z"
+"MENUBAR"=dword:00000001
+"AnnoAutoScale"=dword:00000004
+"AnnoAutoScaleLayout"=dword:00000004
+"ConstraintNameFormat"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\General]
+"AlternativePageSetUpsTemplate"="%LocalRootFolder%\\template\\sheetsets\\architectural imperial.dwt"
+"PrinterConfigDir"="R:\\Plotters"
+"PrinterDescDir"="r:\\plotters\\pmp;%RoamableRootFolder%\\plotters\\pmp files"
+"PrinterStyleSheetDir"="r:\\plot styles;%RoamableRootFolder%\\plotters\\plot styles"
+"SheetSetTemplatePath"="%LocalRootFolder%\\template"
+"ACAD"="%RoamableRootFolder%\\support;%InstallFolder%\\support;%InstallFolder%\\support\\en-us;%InstallFolder%\\fonts;%InstallFolder%\\help;%InstallFolder%\\express;%InstallFolder%\\support\\color;c:\\program files\\autodesk\\applicationplugins\\fusionplugin2013.bundle\\contents\\resources;"
+"TemplatePath"="%LocalRootFolder%\\template"
+"ToolPalettePath"="%RoamableRootFolder%\\support\\ToolPalette"
+"PlotLogPath"="%LocalRootFolder%\\"
+"ColorBookLocation"="%InstallFolder%\\support\\color;%RoamableRootFolder%\\support\\color;"
+"DatabaseWorkSpacePath"="%RoamableRootFolder%\\data links"
+"AVEMAPS"="C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\Materials\\Textures\\1\\Mats"
+"ACTRECPATH"="%RoamableRootFolder%\\support\\actions"
+"DGNMAPPINGPATH"="%RoamableRootFolder%\\support"
+"IESWEB"="%AllUserFolder%\\WebFiles\\"
+"DwfxFormat"=dword:00000001
+"ACADDRV"="%InstallFolder%\\drv"
+"NewStyleSheet"=""
+"ACADHELP"="%InstallFolder%\\help\\index.html"
+"DefaultFormatForSave"=dword:0000003C
+"LastModifiedConfig"="HP LaserJet 1012"
+"MRUConfig"="HP LaserJet 1012"
+"ACET-ACETMAIN-MENULOADED"="1"
+"ACADLOGFILE"="%LocalRootFolder%\\acad.log"
+"MaxDwg"=dword:00000000
+"PlotToFilePath"="%UserProfileFolder%\\documents"
+"DefaultPlotStyle"="ByLayer"
+"DefaultLayerZeroPlotStyle"="Normal"
+"LineWeightUnits"=dword:00000001
+"LWDEFAULT"=dword:00000019
+"Delobj"=dword:00000003
+"MTextJigString"="abc"
+"ProfileStorage"="%RoamableRootFolder%\\support\\profiles\\unnamed profile\\profile.aws"
+"LayerPMode"="1"
+"AuthorPalettePath"="%RoamableRootFolder%\\Support\\AuthorPalette"
+"RegisteredToolsPath"="%RoamableRootFolder%\\Support\\RegisteredTools"
+"Scrollbars"=dword:00000001
+"XrefType"=dword:00000001
+"PLQUIET"=dword:00000000
+"DisplayPlotBubble"=dword:00000001
+"SelectionPreview"=dword:00000000
+"ACET.PROPULATE-TEMPLATE"="STR__J:\\Integrated Technologies Group, Inc\\UW Chancellor Building\\customProperties.prp"
+"ACET.PROPULATE-LASTPATH"="STR__."
+"ACET.PROPULATE-LASTNAME"="STR__customProperties.prp"
+"ACET.PROPULATE-SUBDIRS"="INT__0"
+"Osmode"=dword:0000006B
+"AcBattman:LastBlock"="STR__WAP SYM annotative"
+"AcBattman:LastAttribute"="STR__ID"
+"ACET.BREAKLINE-BLOCK"="STR__BRKLINE.DWG"
+"ACET.BREAKLINE-BLKSIZE"="REAL_10.0"
+"ACET.BREAKLINE-BLKEXE"="REAL_0.18"
+"DefaultConfig"="RICOH Aficio SP C821DN - ledger"
+"WSCURRENT"="AutoCAD Classic"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\General Configuration]
+"EnterpriseMenuFile"="."
+"MenuFile"="%RoamableRootFolder%\\support\\acad"
+"TempDirectory"="%TempFolder%\\"
+"ModeBits"=dword:FFFFFFFE
+"PlotSpoolerDirectory"="%TempFolder%\\"
+"DefaultLoginName"=""
+"IsavePercent"=dword:00000032
+"NetLocation"="http://www.autodesk.com"
+"IconFilePath"="%RoamableRootFolder%\\support\\icons"
+"FACETERDEVSURFACE"=hex:FC,A9,F1,D2,4D,62,50,3F
+"FACETERDEVNORMAL"=hex:87,44,E7,4A,18,57,E6,3F
+"FACETERGRIDRATIO"=hex:00,00,00,00,00,00,00,00
+"FACETERMAXEDGELENGTH"=hex:00,00,00,00,00,00,00,00
+"ThumbSave"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Light]
+"Model glyphs color"=dword:00FFFFFF
+"Layout glyphs color"=dword:000066CC
+"Parallel glyphs color"=dword:00007DFA
+"Perspective glyphs color"=dword:00007DFA
+"BEdit glyphs color"=dword:000066CC
+"Model hotspot color"=dword:00FFFFFF
+"Layout hotspot color"=dword:000057FF
+"Parallel hotspot color"=dword:009DFFFF
+"Perspective hotspot color"=dword:009DFFFF
+"BEdit hotspot color"=dword:000057FF
+"Model falloff color"=dword:000057FF
+"Layout falloff color"=dword:009DFFFF
+"Parallel falloff color"=dword:000057FF
+"Perspective falloff color"=dword:000057FF
+"BEdit falloff color"=dword:009DFFFF
+"Model start color"=dword:00F2E2B3
+"Layout start color"=dword:00F2E2B3
+"Parallel start color"=dword:00F2E2B3
+"Perspective start color"=dword:00F2E2B3
+"BEdit start color"=dword:00F2E2B3
+"Model end color"=dword:00AB7035
+"Layout end color"=dword:00AB7035
+"Parallel end color"=dword:00AB7035
+"Perspective end color"=dword:00AB7035
+"BEdit end color"=dword:00AB7035
+"Model Web color"=dword:0000E5FF
+"Layout Web color"=dword:0000FFFF
+"Parallel Web color"=dword:0000FFFF
+"Perspective Web color"=dword:0000FFFF
+"BEdit Web color"=dword:0000FFFF
+"Model Web(missing file) color"=dword:000000FF
+"Layout Web(missing file) color"=dword:000000FF
+"Parallel Web(missing file) color"=dword:000000FF
+"Perspective Web(missing file) color"=dword:000000FF
+"BEdit Web(missing file) color"=dword:000000FF
+"Model Web shape color"=dword:00FFBF7F
+"Layout Web shape color"=dword:00FFBF7F
+"Parallel Web shape color"=dword:00FFBF7F
+"Perspective Web shape color"=dword:00FFBF7F
+"BEdit Web shape color"=dword:00FFBF7F
+"Model lux at distance color"=dword:00757035
+"Layout lux at distance color"=dword:00AB7035
+"Parallel lux at distance color"=dword:00757035
+"Perspective lux at distance color"=dword:00757035
+"BEdit lux at distance color"=dword:00AB7035
+"Glyph size"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Menus]
+"Group1"="CUSTOM custom"
+"Pop1"="ACAD pop1"
+"Pop2"="ACAD pop2"
+"Pop3"="ACAD pop3"
+"Pop4"="ACAD pop4"
+"Pop5"="ACAD pop5"
+"Pop6"="ACAD pop6"
+"Pop7"="ACAD pop7"
+"Pop8"="ACAD pop8"
+"Pop9"="ACAD pop9"
+"Pop10"="ACAD pop10"
+"Pop11"="ACAD pop11"
+"Pop12"="ACAD pop12"
+"Pop500"="ACAD pop500"
+"Pop501"="ACAD pop501"
+"Pop502"="ACAD pop502"
+"Pop503"="ACAD pop503"
+"pop13"="EXPRESS pop1"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\MLeader]
+""=""
+"CreatedMode"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Preferences]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Preferences\AecBase70]
+"ViewManagementSystemDiagnostics"=dword:00000000
+"GeometryDiagnostics"=dword:00000000
+"QuickOsnaps"=dword:00000000
+"DisplayEnhancedReferenceObjRelMsgs"=dword:00000000
+"ObjectRelationshipGraphDiagnostics"=dword:00000000
+"MaintainExplodedObjectBlockProps"=dword:00000001
+"EnableProgressiveUpdate"=dword:00000001
+"LegacyDwgUnitMode"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Preferences\AecCore70]
+"UseCommonPositionForSimilarDialogs"=dword:00000001
+"UseCommonViewerPositionForSimilarDialogs"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Previous plot settings]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Previous plot settings\Layout]
+"Setting Name"="good2"
+"Cfg Name"="Bullzip PDF (temporary).pc3"
+"Papersize desc"="11x17"
+"Paper XMin"="3.175000"
+"Paper YMin"="3.175000"
+"Paper XMax"="3.174988"
+"Paper YMax"="3.174988"
+"Paper width"="279.399994"
+"Paper height"="431.799988"
+"Origin X"="0.000000"
+"Origin Y"="0.000000"
+"Paper units"=dword:00000000
+"Viewport borders"=dword:00000000
+"Plot plotstyles"=dword:00000001
+"Show plotstyles"=dword:00000000
+"Plot rotation"=dword:00000001
+"Plot centered"=dword:00000000
+"Plot hidden"=dword:00000000
+"Plot type"=dword:00000005
+"Window XMin"="0.000000"
+"Window YMin"="0.000000"
+"Window XMax"="0.000000"
+"Window YMax"="0.000000"
+"Use standard scale"=dword:00000001
+"Print scale numerator"="1.000000"
+"Print scale denominator"="1.000000"
+"Style sheet"=""
+"Scale type"=dword:00000010
+"Standard scale"="1.000000"
+"Scale lineweights"=dword:00000000
+"Print lineweights"=dword:00000001
+"Viewports first"=dword:00000001
+"Model type"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Previous plot settings\Model]
+"Setting Name"=""
+"Cfg Name"="Bullzip PDF"
+"Papersize desc"="User155"
+"Paper XMin"="3.175000"
+"Paper YMin"="3.175000"
+"Paper XMax"="3.174988"
+"Paper YMax"="3.174988"
+"Paper width"="609.600037"
+"Paper height"="914.400024"
+"Origin X"="-6.350000"
+"Origin Y"="-25.400000"
+"Paper units"=dword:00000000
+"Viewport borders"=dword:00000000
+"Plot plotstyles"=dword:00000000
+"Show plotstyles"=dword:00000000
+"Plot rotation"=dword:00000001
+"Plot centered"=dword:00000000
+"Plot hidden"=dword:00000000
+"Plot type"=dword:00000002
+"Window XMin"="0.000000"
+"Window YMin"="0.000000"
+"Window XMax"="0.000000"
+"Window YMax"="0.000000"
+"Use standard scale"=dword:00000001
+"Print scale numerator"="1.000000"
+"Print scale denominator"="97.010518"
+"Style sheet"=""
+"Scale type"=dword:00000000
+"Standard scale"="0.010308"
+"Scale lineweights"=dword:00000000
+"Print lineweights"=dword:00000001
+"Viewports first"=dword:00000001
+"Model type"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Project Settings]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\QuickProperties]
+"LocationQuadrant"=dword:00000000
+"LocationDistance"=dword:00000032
+"AutoExpand"=dword:00000000
+"DefaultHeight"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\SelectionCycling]
+"LocationQuadrant"=dword:00000002
+"LocationDistance"=dword:00000019
+"LocationStatic"=dword:00000000
+"ShowTitleBar"=dword:00000001
+"ShowCyclingListBox"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\StatusBar]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\StatusBar\Application]
+"CursorCoordinatesPane"=dword:00000001
+"InferRelationshipPane"=dword:00000001
+"SnapPane"=dword:00000001
+"GridPane"=dword:00000001
+"OrthoPane"=dword:00000001
+"PolarPane"=dword:00000001
+"OSnapPane"=dword:00000001
+"3DOSnapPane"=dword:00000001
+"OTrackPane"=dword:00000001
+"DynamicUCSPane"=dword:00000001
+"DynInputPane"=dword:00000001
+"LineweightPane"=dword:00000001
+"TransparencyPane"=dword:00000001
+"QuickProperties"=dword:00000001
+"SelectionCycling"=dword:00000001
+"AnnoMonitor"=dword:00000001
+"Paper/ModelPane"=dword:00000001
+"ModelIconPane"=dword:00000001
+"LayoutIconPane"=dword:00000001
+"QuickViewLayoutsPane"=dword:00000001
+"QuickViewDrawingsPane"=dword:00000001
+"QVAnnoSpacerPane"=dword:00000001
+"TabletPane"=dword:00000001
+"FloatPane"=dword:00000001
+"SpacerPane"=dword:00000001
+"VpMaxPrevPane"=dword:00000001
+"VpMaxPane"=dword:00000001
+"VpMaxNextPane"=dword:00000001
+"WorkspaceSwitchingIconPane"=dword:00000001
+"WorkspaceLockIconPane"=dword:00000001
+"WorkspacePerformanceIconPane"=dword:00000001
+"CleanScreenPane"=dword:00000001
+"AnnotationScales"=dword:00000001
+"ViewportScales"=dword:00000001
+"ViewportLockState"=dword:00000001
+"AnnotationVisibility"=dword:00000001
+"AutoScale"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Toolbars]
+"ACAD.AC_SMOOTH_MESH"="hide float 200 225 1"
+"ACAD.AC_SMOOTH_MESH_PRIMITIVES"="hide float 200 200 1"
+"ACAD.TB_DIMENSION"="hide float 100 130 1"
+"ACAD.TB_DRAW"="show left 0 0"
+"ACAD.TB_DRAWORDER"="show right 0 1"
+"ACAD.TB_INQUIRY"="hide float 100 170 1"
+"ACAD.TB_INSERT"="hide float 100 190 1"
+"ACAD.TB_LAYOUTS"="hide float 100 350 1"
+"ACAD.TB_MODIFY"="show right 0 0"
+"ACAD.TB_MODIFY_II"="hide float 100 270 1"
+"ACAD.TB_OBJECT_PROPERTIES"="show top 2 1"
+"ACAD.TB_LAYER"="show top 1 1"
+"ACAD.TB_STYLES"="show top 1 0"
+"ACAD.TB_OBJECT_SNAP"="hide float 100 210 1"
+"ACAD.TB_3DNAV"="hide float 100 350 1"
+"ACAD.TB_REFEDIT"="hide float 100 170 1"
+"ACAD.TB_REFERENCE"="hide float 100 370 1"
+"ACAD.TB_RENDER"="hide float 100 230 1"
+"ACAD.TB_SOLIDS"="hide float 100 250 1"
+"ACAD.TB_SOLIDS2"="hide float 100 250 1"
+"ACAD.TB_SURFACE_CREATION_FLYOUT"="hide float 0 250 1"
+"ACAD.TB_SURFACE_CREATION"="hide float 200 200 1"
+"ACAD.TB_SURFACE_Editing"="hide float 200 250 1"
+"ACAD.STANDARD_ANNOTATION"="hide top 0 0"
+"ACAD.TB_STANDARD"="show top 0 0"
+"ACAD.TB_STANDARDS"="hide float 100 380 1"
+"ACAD.TB_TEXT"="hide float 100 320 1"
+"ACAD.TB_UCS"="hide float 100 310 1"
+"ACAD.TB_UCSII"="hide float 100 300 1"
+"ACAD.TB_WORKSPACES"="show top 0 1"
+"ACAD.TB_VIEWPOINT"="hide float 100 330 1"
+"ACAD.TB_VIEWPORTS"="hide float 100 350 1"
+"ACAD.TB_WEB"="hide float 100 380 1"
+"ACAD.TB_ZOOM"="hide float 100 350 1"
+"ACAD.TB_LAYER2"="hide float 310 325 1"
+"ACAD.TB_LIGHTS"="hide float 200 200 1"
+"ACAD.TB_MATMAPPING"="hide float 200 200 1"
+"ACAD.TB_VISUALSTYLE"="hide float 200 200 1"
+"ACAD.TB_ORBIT"="hide float 200 200 1"
+"ACAD.TB_CAMERA_ADJUSTMENT"="hide float 200 200 1"
+"ACAD.TB_WALKANDFLY"="hide float 200 200 1"
+"ACAD.TB_MLEADER"="hide float 200 200 1"
+"ACAD.TB_FIND_TEXT"="hide float 200 200 1"
+"ACAD.TB_MEASUREMENT_TOOLS"="hide float 200 200 1"
+"ACAD.PARAMETRIC_TOOLBAR"="hide float 200 200 1"
+"ACAD.TB_GEOMCONSTRAINT"="hide float 200 200 1"
+"ACAD.TB_DIMCONSTRAINT"="hide float 200 200 1"
+"ACAD.TB_DRAWORDER_ANNOTATION_TO_FRONT"="hide float 200 200 1"
+"ACAD.TB_GROUP"="hide float 200 300 1"
+"ACAD.Array_Toolbar"="hide float 200 200 1"
+"ACAD.TB_ARRAYEDIT"="hide float 100 170 1"
+"ACAD.TB_POINTCLOUD"="hide float 100 190 1"
+"ACFUSION.Toolbar1"="hide float 200 200 1"
+"AUTODESKSEEK.SEEKTOOLBAR"="hide float 200 200 1"
+"LargeButtons"="no"
+"ToolTips"="yes"
+"ShowShortcuts"="yes"
+"ShowCommandLine"="yes"
+"ShowUserTags"="yes"
+"ShowExtended"="yes"
+"ExtendAfter"="2"
+"EXPRESS.TB_EXPRESS_TOOLS_TEXT_TOOLBAR"="hide float 310 145 1"
+"EXPRESS.TB_EXPRESS_TOOLS_BLOCK_TOOLBAR"="hide float 310 205 1"
+"EXPRESS.TB_EXPRESS_TOOLS_STANDARD_TOOLBAR"="hide float 310 265 1"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Tooltip]
+"Model color"=dword:0078C7C7
+"Layout color"=dword:007F7F7F
+"Parallel color"=dword:00000000
+"Perspective color"=dword:00000000
+"BEdit color"=dword:007F7F7F
+"Model contour color"=dword:0078C7C7
+"Layout contour color"=dword:00E5E5E5
+"Parallel contour color"=dword:00000000
+"Perspective contour color"=dword:00000000
+"BEdit contour color"=dword:00CFCCCA
+"Model bk color"=dword:00571416
+"Layout bk color"=dword:00FFFFFF
+"Parallel bk color"=dword:00999999
+"Perspective bk color"=dword:00999999
+"BEdit bk color"=dword:00FFFFFF
+"Model bk use tint"=dword:00000000
+"Layout bk use tint"=dword:00000000
+"Parallel bk use tint"=dword:00000001
+"Perspective bk use tint"=dword:00000001
+"BEdit bk use tint"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Variables]
+"IMAGEFRAME"="0"
+"SELECTIONCYCLING"="-2"
+"NAVBARDISPLAY"="0"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Vault]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\Profiles\<<Unnamed Profile>>\Vault\ESW]
+"LVColumnWidths"="25 18 222 197 59 72 108 67 125 268 "
+"LowerGroupRatio"="70"
+"LowerGroupMinimized"="false"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Application Window]
+"Show"=dword:00000003
+"Position"="2 56 1680 918"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Command Line Windows]
+"TextWindow.Show"=dword:00000001
+"TextWindow.Position"="2157 604 2725 1028"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands]
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-ARCHIVE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-ATTEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-COLOR]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-ETRANSMIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-GROUP]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-HATCHEDIT]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-IMAGE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-INSERT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-LAYER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-STYLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-TABLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-VIEW]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\-VPORTS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\3DCONFIG]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\3DMOVE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\3DOSNAP]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\3DROTATE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ABOUT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARCHIVE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARRAY]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARRAYEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARRAYPATH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARRAYPOLAR]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARRAYRECT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ARX]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ATTDEF]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ATTEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ATTEXT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BCLOSE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BHATCH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BLOCK]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BOUNDARY]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BOX]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BPARAMETER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BPOLY]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BSAVEAS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BVSTATE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\BWBLOCKAS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CHAMFER]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CHAMFEREDGE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CLASSICIMAGE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CLASSICXREF]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\COLOR]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CONVERT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CONVERTCTB]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CONVERTPSTYLES]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CONVTOMESH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CONVTOSOLID]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CONVTOSURFACE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\COPY]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\COPYTOLAYER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CUILOAD]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\CUIUNLOAD]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DDEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DIM]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DIMEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DIMSTYLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DTEXT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DWGCONVERT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DXFIN]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\DXFOUT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\EDITTABLECELL]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ETRANSMIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\EXECUTETOOL]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\EXPLODE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\EXTRUDE]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\FILLET]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\GROUP]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\HATCH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\HATCHEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\HELIX]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\HIDE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\IMAGE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\IMAGEADJUST]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\INSERT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\JOIN]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LAYDEL]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LAYER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LAYISO]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LAYMCH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LAYMRG]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LAYOUT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LINETYPE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LOFT]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\LWEIGHT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MASSPROP]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MENULOAD]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MENUUNLOAD]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MESHSMOOTH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MLEADER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MLEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MOVE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MTEXT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\MVIEW]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\OPENDWFMARKUP]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\OSNAP]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PAN]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PLANESURF]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PLOTSTAMP]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PLOTSTYLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PSETUPIN]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PSOUT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PURGE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\PYRAMID]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\QUICKCALC]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\RENAME]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\RENDER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\REVOLVE]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\ROTATE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SCALE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SELECT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SHADE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SHADEMODE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SKETCH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SOLIDEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SPLINE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SPLINEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\STRETCH]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\STYLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\SWEEP]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\TABLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\TABLEDIT]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\TABLESTYLE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\TOOLBAR]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\UCS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\UNITS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VBALOAD]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VBARUN]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VIEW]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VIEWBASE]
+"DefaultVersion"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VIEWPORTS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VPLAYER]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\VPORTS]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\WBLOCK]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\WSSAVE]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\XBIND]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Commands\XREF]
+"DefaultVersion"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Drawing Window]
+"Show"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\Editor Configuration]
+"SDF_AttributeExtractTemplateFile"=""
+"AutoSnapPolarAng"="1.5707963267948966"
+"AutoSnapPolarDistance"="0"
+"AutoSnapPolarAddAng"=""
+"Model AutoSnap Color"=dword:007FBFFF
+"Layout AutoSnap Color"=dword:0001CC01
+"Parallel AutoSnap Color"=dword:00019801
+"Perspective AutoSnap Color"=dword:00019801
+"BEdit AutoSnap Color"=dword:0001CC01
+"Model 3d AutoSnap Color"=dword:00FF3F00
+"Layout 3d AutoSnap Color"=dword:00FF3F00
+"Parallel 3d AutoSnap Color"=dword:00FF3F00
+"Perspective 3d AutoSnap Color"=dword:00FF3F00
+"BEdit 3d AutoSnap Color"=dword:00FF3F00
+"2D Model viewport control color"=dword:00FFFFFF
+"Parallel viewport control color"=dword:00FFFFFF
+"Perspective viewport control color"=dword:00FFFFFF
+"AutoSnapControl"=dword:00000027
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\General]
+"FavoriteMaterialLibrary"="%RoamableRootFolder%\\Materials\\FavoriteMaterials.adsklib"
+"ToolTipInitialDelay"="500"
+"ActUI"=dword:00000006
+"ANSIHatch"="acad.pat"
+"ANSILinetype"="acad.lin"
+"ISOHatch"="acadiso.pat"
+"ISOLinetype"="acadiso.lin"
+"MeshMaxFaceValue"=dword:00000001
+"Measureinit"=dword:00000000
+"InsertUnitsDefSource"=dword:00000001
+"InsertUnitsDefTarget"=dword:00000001
+"ProfileStorage"="%RoamableRootFolder%\\support\\profiles\\fixedprofile.aws"
+"TaskBar"=dword:00000001
+"LastTemplate"="%LocalRootFolder%\\template\\acad.dwt"
+"AcetRText:type"="File"
+"acedChangeCmdEchoWithoutUndo"="0"
+
+[HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R19.0\ACAD-B001:409\FixedProfile\General Configuration]
+"DYNMODE"=dword:00000000
+
+__BEGIN_FIXED_PROFILE_STORAGE_R16__
+
+<Profile><StorageRoot><AcApData><HideableDialogs><HideableDialog id="MText.UnsavedChanges" title="Multiline Text - Unsaved Changes" category="Multiline Text" application="" result="1001"><Preview><TaskDialog Source="/AcTaskDialogs;component/TaskDialogs.xaml" Id="MText.UnsavedChanges" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"></TaskDialog></Preview></HideableDialog><HideableDialog id="AecUiBase.PreviousVersionOpen" title="Open Drawing - Previous Version AEC Objects Detected" category="Version Conflict Warning" application="AutoCAD 2013 - English" result="8"><Preview>C:\Users\Admin\AppData\Local\Temp\AecUiBase.PreviousVersionOpen.xaml</Preview></HideableDialog><HideableDialog id="Acad.UnresolvedReferenceFiles" title="Always ignore unresolved references and continue" category="External References" application="AutoCAD" result="1002"><Preview><TaskDialog Source="/AcTaskDialogs;component/TaskDialogs.xaml" Id="Acad.UnresolvedReferenceFiles" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"></TaskDialog></Preview></HideableDialog><HideableDialog id="DWGRecovery.DrawingRecovery" title="Drawing Recovery" category="Drawing Recovery" application="" result="8"><Preview><TaskDialog Source="/AcTaskDialogs;component/TaskDialogs.xaml" Id="DWGRecovery.DrawingRecovery" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"/></Preview></HideableDialog><HideableDialog id="AnnotationScaling.SelectAnnotationScale" title="Select Annotation Scale" category="Annotation Scale" application="" result="0"/><HideableDialog id="ACAD_DYK_HATCH" title="Edit nonassociative hatch boundary grips" category="InfoCenter Did You Know Balloons" application="" result="1"/><HideableDialog id="ScaleList.LargeScaleAlert" title="Annotation Scale - Large Number of Scales" category="Annotation Scale" application="" result="7"><Preview><TaskDialog Source="/AcTaskDialogs;component/TaskDialogs.xaml" Id="ScaleList.LargeScaleAlert" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"/></Preview></HideableDialog><HideableDialog id="Constraint.DynamicBlockGripsWillBeHidden" title="Constrained Dynamic Blocks" category="Constraint" application="" result="1"><Preview><TaskDialog Source="/AcTaskDialogs;component/TaskDialogs.xaml" Id="Constraint.DynamicBlockGripsWillBeHidden" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"/></Preview></HideableDialog><HideableDialog id="Plot.ProcessingBackgroundJob" title="Plot - Processing Background Job" category="Plot" application="" result="8"><Preview><TaskDialog Source="/AcTaskDialogs;component/TaskDialogs.xaml" Id="Plot.ProcessingBackgroundJob" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"/></Preview></HideableDialog></HideableDialogs></AcApData><AcBrowser><HelpBrowser Maximized="1"/>
+			<WelcomeScreenBrowser Top="176" ShowOnStartup="0" Left="176"/>
+		</AcBrowser></StorageRoot><Name>*Fixed_Profile</Name><Description></Description></Profile>
+
+__END_FIXED_PROFILE_STORAGE_R16__
+
+__BEGIN_PROFILE_STORAGE_R16__
+
+<Profile>
+	<Name>&lt;&lt;Unnamed Profile&gt;&gt;</Name>
+	<Description></Description>
+	<StorageRoot>
+		<ToolPaletteScheme>
+			<ToolPaletteSets>
+				<ToolPaletteSet><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="773" Top="102" Width="172" Height="598"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="1" AutoRollup="0" Name="Tool Palettes - All Palettes" Style="126" Opacity="100" RolloverOpacity="100" Visible="0"/><CAcTcUiToolPaletteSet ID="{B17B40A6-2761-4BCC-BC48-2B8A465AA5EB}"><ToolPalettes><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{9D9EA038-9802-4C13-AEA9-DB48467403CE}"><ToolSource><Palette ID="{9D9EA038-9802-4C13-AEA9-DB48467403CE}">New Palette</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{B9980809-845F-4639-AC88-5263BF6D767F}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{D6BC41CF-FCAA-4FF7-8CDD-64D952C632E0}"><ToolSource><Palette ID="{D6BC41CF-FCAA-4FF7-8CDD-64D952C632E0}">Modeling</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{9D7A9A9F-320F-4E3B-9266-E7C0D28C3F2C}"/><Tool ID="{AB741E04-A733-4A8F-9947-295DAED23DD8}"/><Tool ID="{76A00F1F-7C75-4AA7-AF87-B43616D15C12}"/><Tool ID="{A56082F6-E82C-4975-9A01-BDA82930B56E}"/><Tool ID="{DA699A7F-E281-4DDC-82F2-30CCE5D3DBCA}"/><Tool ID="{21A4A999-5FF8-489F-A588-DD4F7B538E55}"/><Tool ID="{13367C5B-9D4D-4BEA-B868-879A7387CDBB}"/><Tool ID="{74A5539F-5A37-411C-BEC9-49FEC3BC9AD3}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{E1188229-8701-4068-84FC-F966150B965C}"><ToolSource><Palette ID="{E1188229-8701-4068-84FC-F966150B965C}">Constraints</Palette></ToolSource><Image SizeCX="24" SizeCY="24"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{A0CCA60A-AB56-4EFD-83A5-8764BC08CDA8}"><ToolSource><Palette ID="{A0CCA60A-AB56-4EFD-83A5-8764BC08CDA8}">Annotation</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{498DE575-CB69-4B2A-A12B-33012D265464}"><ToolSource><Palette ID="{498DE575-CB69-4B2A-A12B-33012D265464}">Architectural</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}"><ToolSource><Palette ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}">Mechanical</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}"><ToolSource><Palette ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}">Electrical</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}"><ToolSource><Palette ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}">Civil</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}"><ToolSource><Palette ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}">Structural</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{3D96B628-B9A6-4BE7-9A54-4063288C5CE6}"><ToolSource><Palette ID="{3D96B628-B9A6-4BE7-9A54-4063288C5CE6}">Hatches and Fills</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>458752</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{3B3603EA-7EB6-42D5-AFB9-C094F24CD71E}"><ToolSource><Palette ID="{3B3603EA-7EB6-42D5-AFB9-C094F24CD71E}">Tables</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{4BE848C7-50A4-41BF-929E-ECE60FE5422F}"><ToolSource><Palette ID="{4BE848C7-50A4-41BF-929E-ECE60FE5422F}">Command Tool Samples</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{92CDB627-A8DF-4466-AFBD-FD5DC1351ED1}"><ToolSource><Palette ID="{92CDB627-A8DF-4466-AFBD-FD5DC1351ED1}">Leaders</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{8331A300-122F-4425-A7FF-467A42D79166}"><ToolSource><Palette ID="{8331A300-122F-4425-A7FF-467A42D79166}">Draw</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{2DCDEF9A-7358-4CA4-837C-9AC674AE5317}"><ToolSource><Palette ID="{2DCDEF9A-7358-4CA4-837C-9AC674AE5317}">Modify</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{0937C731-E045-4C09-8487-7E84CB5DB6DC}"><ToolSource><Palette ID="{0937C731-E045-4C09-8487-7E84CB5DB6DC}">Generic Lights</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{B45C75E1-94A1-4461-B78A-1D97964A5120}"><ToolSource><Palette ID="{B45C75E1-94A1-4461-B78A-1D97964A5120}">Fluorescent</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{01533F50-BCB3-42E4-B111-985FEC4D5D0A}"><ToolSource><Palette ID="{01533F50-BCB3-42E4-B111-985FEC4D5D0A}">High Intensity Discharge</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{7EF257FB-3DA2-4091-9C6E-412C05465869}"><ToolSource><Palette ID="{7EF257FB-3DA2-4091-9C6E-412C05465869}">Incandescent</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{31032267-7792-4ED9-996A-6750949C3364}"><ToolSource><Palette ID="{31032267-7792-4ED9-996A-6750949C3364}">Low Pressure Sodium</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{07E218EF-7B2F-4BE5-9C28-39565D0E477A}"><ToolSource><Palette ID="{07E218EF-7B2F-4BE5-9C28-39565D0E477A}">Cameras</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{775C6DF8-BCB6-48BA-8F98-9D4621E908F5}"><ToolSource><Palette ID="{775C6DF8-BCB6-48BA-8F98-9D4621E908F5}">Visual Styles</Palette></ToolSource><Image SizeCX="64" SizeCY="64"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette></ToolPalettes><ToolPaletteGroup><Name resource="157" src="AcTcUiRes.dll"/><ActivePaletteIndex>-1</ActivePaletteIndex><Contents><ToolPaletteGroup><Name resource="156" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{A0CCA60A-AB56-4EFD-83A5-8764BC08CDA8}"/><ToolPalette ID="{498DE575-CB69-4B2A-A12B-33012D265464}"/><ToolPalette ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}"/><ToolPalette ID="{3D96B628-B9A6-4BE7-9A54-4063288C5CE6}"/><ToolPalette ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}"/><ToolPalette ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}"/><ToolPalette ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="179" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{E1188229-8701-4068-84FC-F966150B965C}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="180" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{498DE575-CB69-4B2A-A12B-33012D265464}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="181" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="182" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="183" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="184" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="164" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{D6BC41CF-FCAA-4FF7-8CDD-64D952C632E0}"/><ToolPalette ID="{8331A300-122F-4425-A7FF-467A42D79166}"/><ToolPalette ID="{2DCDEF9A-7358-4CA4-837C-9AC674AE5317}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="177" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{3B3603EA-7EB6-42D5-AFB9-C094F24CD71E}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="178" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{92CDB627-A8DF-4466-AFBD-FD5DC1351ED1}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="166" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{0937C731-E045-4C09-8487-7E84CB5DB6DC}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="176" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{B45C75E1-94A1-4461-B78A-1D97964A5120}"/><ToolPalette ID="{01533F50-BCB3-42E4-B111-985FEC4D5D0A}"/><ToolPalette ID="{7EF257FB-3DA2-4091-9C6E-412C05465869}"/><ToolPalette ID="{31032267-7792-4ED9-996A-6750949C3364}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="168" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{07E218EF-7B2F-4BE5-9C28-39565D0E477A}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="167" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{775C6DF8-BCB6-48BA-8F98-9D4621E908F5}"/></Contents></ToolPaletteGroup></Contents></ToolPaletteGroup></CAcTcUiToolPaletteSet></ToolPaletteSet></ToolPaletteSets>
+		</ToolPaletteScheme>
+		<AuthorPaletteScheme>
+			<ToolPaletteSets>
+				<ToolPaletteSet><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="50" Top="150" Width="172" Height="433"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="Block Authoring Palettes - All Palettes" Style="126" Opacity="100" RolloverOpacity="100" Visible="0"/><CAcTcUiToolPaletteSet ID="{1783040D-79F6-44EA-9779-CE4FD0C232A8}"><ToolPalettes><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{3FED4826-E179-42F5-9802-AE8A357D7FCF}"><ToolSource><Palette ID="{3FED4826-E179-42F5-9802-AE8A357D7FCF}">Parameters</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{4E8B342C-DFD5-40F9-8CD4-2E4B5DDEC08E}"/><Tool ID="{3B97E139-D74A-4A8F-9B45-CAB318DCE2AF}"/><Tool ID="{C6095040-2ACC-4C35-B422-2F3B34B47F49}"/><Tool ID="{53F46DC8-D918-4F82-AD58-EC7AE73EE3F4}"/><Tool ID="{4CB1A19D-7569-4DFD-8F6E-0B97C2B46BCF}"/><Tool ID="{0FCC6040-8870-4ACA-90DF-CBD7AA6297B5}"/><Tool ID="{182ED753-00B7-443E-90A9-807A99DF74FF}"/><Tool ID="{30766565-DC12-4FE9-81F1-5B804735F6D8}"/><Tool ID="{70492938-085B-40C6-A2BB-6401473B368F}"/><Tool ID="{5064D0F5-53B1-4EF8-AD24-C41D1FA3944A}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{0334BDA1-AF4B-444E-841E-D236CBBF7EA1}"><ToolSource><Palette ID="{0334BDA1-AF4B-444E-841E-D236CBBF7EA1}">Actions</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{662B9978-1663-45BD-8A36-D2B70016021F}"/><Tool ID="{C34D09BC-9973-4608-927C-77886DE51DC6}"/><Tool ID="{5BD676EB-AA26-4346-9708-41990A605EB6}"/><Tool ID="{25CE9279-D850-46AB-8ECA-CF25CA5A447B}"/><Tool ID="{0144DB09-0DA7-4594-8037-C9043F4AB847}"/><Tool ID="{AD47FB9B-48B8-42EB-82AF-58622573F66F}"/><Tool ID="{A4A74905-5DFF-4C66-8055-4EC7215F7E75}"/><Tool ID="{A303E85F-F2FA-4F17-97CC-7100432EB053}"/><Tool ID="{A303E85F-F2FA-4F17-97CC-7100432EB053}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{A4AF9185-BD8E-41D5-BBBA-2F2D8397230E}"><ToolSource><Palette ID="{A4AF9185-BD8E-41D5-BBBA-2F2D8397230E}">Parameter Sets</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{381C4246-1F3B-463F-9B29-0276A6FE8FA2}"/><Tool ID="{710A8DC7-DB03-4453-ACB2-5F80C2CCC9C4}"/><Tool ID="{470123E4-3862-491F-9BB6-80F649B8BC1C}"/><Tool ID="{BED2DE88-360A-480B-B01F-390F13251B6B}"/><Tool ID="{D05801DC-1338-457D-989F-676B13CC5601}"/><Tool ID="{7AF08B13-59BC-430B-B39A-60047856D031}"/><Tool ID="{3015D9CC-8359-4A5F-BE2A-01A9657822C6}"/><Tool ID="{9EDB0652-1BB6-4D4B-A638-35D9C306DE32}"/><Tool ID="{C2AE2AA6-39CA-4EB6-A825-A43E41D58529}"/><Tool ID="{9FD21C03-4935-4307-89CB-4FFD251DE7E2}"/><Tool ID="{C85A5760-7008-46F3-8CC5-D7CD24C0E7ED}"/><Tool ID="{DD649B06-C0BB-4950-BA65-02412D0D04C6}"/><Tool ID="{7F88C08B-3BC7-4782-B03B-97614E1F6812}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{A9D9D29A-5C8D-4C6A-B08B-19BD559E3E35}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{F7E90983-852E-4241-BD20-82B991FD6878}"><ToolSource><Palette ID="{F7E90983-852E-4241-BD20-82B991FD6878}">Constraints</Palette></ToolSource><Image SizeCX="24" SizeCY="24"/><Style>493570</Style><ToolOrder><Tool ID="{0C9F96D4-7F50-4CD3-9EC7-ABD311ACA162}"/><Tool ID="{5D79A0D2-080C-4226-975B-0E73B63C952D}"/><Tool ID="{2AC651F8-1D5F-4B18-94A9-D449864A3544}"/><Tool ID="{16F8F2AC-F0A8-4F9E-9DFB-22E8E11ABB84}"/><Tool ID="{22159589-363F-4812-9C1F-8305A4317715}"/><Tool ID="{9CD84AB4-19FE-47A5-A20F-3427463CCEDD}"/><Tool ID="{A7CFA609-7D37-4B86-88B0-E12D1C700815}"/><Tool ID="{9EB39983-20BF-4267-8B4C-5C0609D5C44C}"/><Tool ID="{2C715255-7538-4556-B47C-3126F0B829E1}"/><Tool ID="{041B003A-3B54-41A8-A5D0-D084793DCA35}"/><Tool ID="{2B582510-E25D-4F7E-8A22-E30F1B5CAF53}"/><Tool ID="{05A4E87F-2831-46F3-908C-D0028F8A87C2}"/><Tool ID="{D9AE2B56-A21A-45E4-A204-5B935A8A38F9}"/><Tool ID="{B6FA76B6-728D-4CBF-B7D4-5E753BF9938C}"/><Tool ID="{43D88A73-1465-4424-B0A2-006B45D4E5E0}"/><Tool ID="{4F08F93F-70DC-4372-91DE-732A1B23B432}"/><Tool ID="{40AFBF9A-664F-4389-8301-EC73ED309238}"/><Tool ID="{272DC13A-D39A-41EE-9964-EE85D425FD54}"/><Tool ID="{4F1DB798-A659-48C1-99D6-45C2C633A916}"/><Tool ID="{3ED4DC65-1E8E-402F-8D81-3170D8EE1A9F}"/><Tool ID="{0DD55DEC-E884-420E-A209-FE8DBA3A480B}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette></ToolPalettes></CAcTcUiToolPaletteSet></ToolPaletteSet></ToolPaletteSets>
+		</AuthorPaletteScheme>
+		<AcApData><AdUiTools><ToolsInfo><Tool CLSID="{B1AC3ED0-9573-4569-A97A-D9CAE382F5D2}"><CAdUiDockControlBar Orientation="59419" AllowDocking="1"><FloatInfo Left="50" Top="50" Width="300" Height="300"/><DockInfo Left="0" Top="45" Width="1920" Height="120" MRUDockID="59419"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="Ribbon" Style="38438" Opacity="100" RolloverOpacity="100" Visible="0"/></Tool><Tool CLSID="{D5CF410D-3E11-4D0C-AE69-A75C9B788C47}"><CAdUiDockControlBar Orientation="59422" AllowDocking="1"><FloatInfo Left="268" Top="349" Width="800" Height="97"/><DockInfo Left="0" Top="985" Width="1920" Height="117" MRUDockID="59422"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="CLI PaletteSet" Style="36864" Opacity="100" RolloverOpacity="100" Visible="1"/></Tool><Tool CLSID="{F1517EC6-62B7-4600-A00C-127FA2170291}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="2179" Top="229" Width="1006" Height="880"/><DockInfo Left="7839" Top="5706" Width="300" Height="892" MRUDockID="59420"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="1" AutoRollup="0" Name="Layer Properties Manager" Style="4110" Opacity="100" RolloverOpacity="100" Visible="1"/></Tool><Tool CLSID="{5E0DE86A-1323-46AB-BE47-04AC3B69D260}"><AcParameterManagerPaletteSet name="BLOCK"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="2382" Top="339" Width="1205" Height="618"/><DockInfo Left="1867" Top="4815" Width="1670" Height="256" MRUDockID="59419"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="1" AutoRollup="0" Name="Parameters Manager" Style="4142" Opacity="100" RolloverOpacity="100" Visible="1"/><CAdUiPalette PaletteStyle="0"/><AcParameterManagerPalette Filter="0"><ListControl><Header name="Name" tooltip="Displays name of the parameter" hidden="0" index="0" width="286"/><Header name="Expression" tooltip="Displays the expression or value entered" hidden="0" index="1" width="310"/><Header name="Value" tooltip="Displays the value of the parameter" hidden="0" index="2" width="125"/><Header name="Type" tooltip="Displays the type of the parameter" hidden="0" index="3" width="75"/><Header name="Show" tooltip="Controls whether the parameter appears in the Properties palette for the block reference" hidden="0" index="4" width="43"/><Header name="Order" tooltip="Displays the order the parameter appears in the Properties palette for the block reference" hidden="0" index="5" width="75"/><Header name="Description" tooltip="Displays a description for the parameter" hidden="0" index="6" width="75"/></ListControl></AcParameterManagerPalette></AcParameterManagerPaletteSet><AcParameterManagerPaletteSet name="DRAWING"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="10" Top="118" Width="387" Height="539"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="Parameters Manager" Style="46" Opacity="100" RolloverOpacity="100" Visible="0"/><CAdUiPalette PaletteStyle="0"/><AcParameterManagerPalette Filter="0"><ListControl><Header name="Name" tooltip="Displays name of the parameter" hidden="0" index="0" width="75"/><Header name="Expression" tooltip="Displays the expression or value entered" hidden="0" index="1" width="75"/><Header name="Value" tooltip="Displays the value of the parameter" hidden="0" index="2" width="75"/><Header name="Type" tooltip="Displays the type of the parameter" hidden="0" index="3" width="75"/><Header name="Description" tooltip="Displays a description for the parameter" hidden="0" index="4" width="75"/></ListControl></AcParameterManagerPalette></AcParameterManagerPaletteSet></Tool><Tool CLSID="{57EBDB4A-B0D1-4081-A68B-F06CCA7FCBDB}"><CAdUiDockControlBar Orientation="59420" AllowDocking="1"><FloatInfo Left="39" Top="129" Width="300" Height="600"/><DockInfo Left="0" Top="102" Width="150" Height="998" MRUDockID="59420"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="Drawing Recovery Manager" Style="4142" Opacity="100" RolloverOpacity="100" Visible="0"/><CAdUiPalette PaletteStyle="0"/></Tool><Tool CLSID="{1A11B0B9-1AA0-4E71-95D1-C77737444340}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="634" Top="112" Width="421" Height="543"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="External References" Style="46" Opacity="100" RolloverOpacity="100" Visible="0"/><XREF_PALETTESET><XREF_PALETTE TopToWholeRatio="0.7"><CAdUiPalette PaletteStyle="0"/><REFERENCE_VIEW Type="0"/><DETAILS_VIEW Type="0"/><TooltipSettings TooltipStyle="3" TooltipSize="1" ShowDetail="1"/></XREF_PALETTE></XREF_PALETTESET></Tool><Tool CLSID="{6D32A2D9-832E-11D2-A83C-0060B0872C0B}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="2070" Top="250" Width="419" Height="870"/><DockInfo Left="109297" Top="6243" Width="337" Height="950" MRUDockID="59421"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="1" AutoRollup="0" Name="Properties" Style="4142" Opacity="100" RolloverOpacity="100" Visible="1"/><PROP_STATE><PALETTE PALETTE_NAME="Design"><STYLE FLAGS="1375797495" COLUMNWIDTH="0.480769230769231"/><OBJECT NAME="{CFEC3461-7B68-44C6-B227-59E364E8CC39}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="{BC71DEA1-D6FB-48B8-AB06-D151C81BBCDD}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="BlockZeroSelect"><CATEGORY NAME="General0" STATE="-1"/><CATEGORY NAME="3D Visualization0" STATE="0"/><CATEGORY NAME="Layout0" STATE="-1"/><CATEGORY NAME="Plot style0" STATE="0"/><CATEGORY NAME="View0" STATE="-1"/><CATEGORY NAME="Misc0" STATE="-1"/><CATEGORY NAME="Block1975" STATE="-1"/></OBJECT><OBJECT NAME="{7548AA0C-CF1A-460F-B236-B17A15704EF4}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{2345FE45-2295-4141-8AB9-A3472ADBE7B7}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{9A2B5ED0-7D3C-435D-8790-45D20435B9DB}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="ZeroSelect"><CATEGORY NAME="General0" STATE="-1"/><CATEGORY NAME="3D Visualization0" STATE="-1"/><CATEGORY NAME="Layout0" STATE="-1"/><CATEGORY NAME="Plot style0" STATE="-1"/><CATEGORY NAME="View0" STATE="-1"/><CATEGORY NAME="Misc0" STATE="-1"/><CATEGORY NAME="Block1975" STATE="-1"/></OBJECT><OBJECT NAME="{1143D075-F1F5-4EFC-A6FB-B18279042696}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="General0" STATE="-1"/><CATEGORY NAME="Attributes2941" STATE="-1"/><CATEGORY NAME="Custom2942" STATE="-1"/></OBJECT><OBJECT NAME="{FA44D186-B2E8-4EEE-A3A7-0DA88257F9AB}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="{93C1A226-ACA2-4670-B92E-F2E335D75846}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Constraint6" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Fit-21" STATE="-1"/><CATEGORY NAME="Primary Units-19" STATE="-1"/><CATEGORY NAME="Alternate Units-20" STATE="-1"/><CATEGORY NAME="Tolerances-23" STATE="-1"/></OBJECT><OBJECT NAME="{85560793-E8A5-4957-83CC-445E0F600911}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Overrides3" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{B9714567-1AF7-4F36-9CAE-5A0A64D4786C}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{44A52280-AE56-490D-890C-89FB7279ED6B}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{6C38F1CD-4EA6-4668-BE49-4F06A8C866B7}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{8A291FAD-8467-4293-8BA8-F781DCA01A2E}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{4D3A74BF-D729-40C7-B543-67CB83F068DB}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Value Set1" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{67338E82-30A1-468F-862A-7728F7AC4E04}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{0D3897F5-B1C6-44A1-A0D8-7F645F6BB980}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Constraint6" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Fit-21" STATE="-1"/><CATEGORY NAME="Primary Units-19" STATE="-1"/><CATEGORY NAME="Alternate Units-20" STATE="-1"/><CATEGORY NAME="Tolerances-23" STATE="-1"/></OBJECT><OBJECT NAME="{CE75F892-6AA0-4E4F-8CDA-1ED57C28B669}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{39801984-F2A2-470A-AEEA-3BD935835115}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="{D86B6C47-11F2-4D95-B635-EA575F0892FC}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{2FFBA100-00C4-487E-9CE4-BBD9D4914E1D}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Stretch frame4" STATE="-1"/><CATEGORY NAME="Overrides3" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{9FFB97D4-55B4-42DA-8C11-9A6196D19206}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Constraint6" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Fit-21" STATE="-1"/><CATEGORY NAME="Primary Units-19" STATE="-1"/><CATEGORY NAME="Alternate Units-20" STATE="-1"/><CATEGORY NAME="Tolerances-23" STATE="-1"/></OBJECT><OBJECT NAME="{6A7E8842-FAD8-4548-8B1C-8C27B0EE4C4B}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{4EF1F485-A272-4F84-8552-FAD25A3B7EDD}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{7C378249-6A4E-4447-88D9-0B15AFF038B5}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="General0" STATE="-1"/></OBJECT><OBJECT NAME="{B2AA85F6-64F6-418E-AE97-FD0B3125A315}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/></OBJECT><OBJECT NAME="{CBF5B240-F2CA-46B3-9598-BC5752C1F940}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{85452F88-5071-492E-B850-2E3C586DCBD8}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{BBF6A206-CB04-479D-96AE-349E1E83319A}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{ED2CE5BC-808D-4F6D-9C30-A311D0B92DB6}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{BF4CC07E-E9BB-40D6-873F-855B211033B9}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{FABB88BC-F9CB-422C-8397-D180B3AAA87B}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Underlay Adjust-27" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{C242F211-25FA-4F6F-B558-7F990145A463}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Image Adjust-17" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{D8449ECF-F172-46F3-A132-D56E7E86C08E}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="{BB804E3F-871C-4C93-9EF0-DC8C8C25A973}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{F8FC5F1F-2BB2-4C9F-8F8C-EB61594883B5}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{20EA8E69-D28E-47C4-9A41-DE499E72ADD6}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="{A6A9E823-A6C6-416A-B23F-FCA328EACB39}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{FE718E8F-C3AA-4F30-9103-432450CF1DA1}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Pattern-14" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="0"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/></OBJECT><OBJECT NAME="{2C74F89E-7421-46B4-BA54-F86F1BD9F237}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{F5642C17-04BD-461B-BB44-B43FB191FBAB}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Data Points-15" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{B7A54C49-EF7A-46F8-AFCC-F8DADEF9194D}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{829BE586-28BB-4C1B-B78B-F884AF6E7139}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{9CB436A2-2AE4-4AEC-9A63-8E148906CABD}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Constraint6" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Value Set1" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{A9765A6D-19DA-42AE-BEDB-A0AB53D92D39}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="-1"/><CATEGORY NAME="Text-9" STATE="-1"/><CATEGORY NAME="Fit-21" STATE="-1"/></OBJECT><OBJECT NAME="{D73AAA40-0892-4C45-8311-F8C7C36940C7}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{ABBE3F83-D585-4A50-9B69-198B0F566F2E}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="0"/><CATEGORY NAME="Lines &amp; Arrows-22" STATE="0"/><CATEGORY NAME="Text-9" STATE="0"/><CATEGORY NAME="Fit-21" STATE="0"/><CATEGORY NAME="Primary Units-19" STATE="0"/><CATEGORY NAME="Alternate Units-20" STATE="0"/><CATEGORY NAME="Tolerances-23" STATE="0"/></OBJECT><OBJECT NAME="{F5BBD54B-3D4F-4600-8BF3-3FC49B2EECA8}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Image Adjust-17" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{CBECB295-246A-4A97-8FF8-4E6C7FE3E149}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{E23A9445-E89E-44D3-BD7B-6B07D9730E9E}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT><OBJECT NAME="{A709D51C-3517-4C70-9E72-E6595F9F79E0}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Property Labels2" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/><CATEGORY NAME="Value Set1" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{21A1F483-4634-41C7-8379-837D24759837}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="Pattern-14" STATE="-1"/><CATEGORY NAME="Geometry-25" STATE="-1"/></OBJECT><OBJECT NAME="{82A6B685-6316-4A73-B287-CC2C59BFB642}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/><CATEGORY NAME="Misc-2" STATE="-1"/></OBJECT><OBJECT NAME="{DFE38E50-3209-424E-872B-DDB23BCD4CFC}"><CATEGORY NAME="General-12" STATE="-1"/><CATEGORY NAME="3D Visualization-31" STATE="-1"/><CATEGORY NAME="Geometry5" STATE="-1"/></OBJECT></PALETTE></PROP_STATE></Tool><Tool CLSID="{B371F8AA-7FF7-11D2-BA58-0060B0B5E151}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="2291" Top="473" Width="1152" Height="600"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="1" AutoRollup="0" Name="DesignCenter" Style="46" Opacity="100" RolloverOpacity="100" Visible="0"/></Tool><Tool CLSID="{1783040D-79F6-44EA-9779-CE4FD0C232A8}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="50" Top="150" Width="172" Height="433"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="Block Authoring Palettes - All Palettes" Style="126" Opacity="100" RolloverOpacity="100" Visible="0"/><CAcTcUiToolPaletteSet ID="{1783040D-79F6-44EA-9779-CE4FD0C232A8}"><ToolPalettes><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{3FED4826-E179-42F5-9802-AE8A357D7FCF}"><ToolSource><Palette ID="{3FED4826-E179-42F5-9802-AE8A357D7FCF}">Parameters</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{4E8B342C-DFD5-40F9-8CD4-2E4B5DDEC08E}"/><Tool ID="{3B97E139-D74A-4A8F-9B45-CAB318DCE2AF}"/><Tool ID="{C6095040-2ACC-4C35-B422-2F3B34B47F49}"/><Tool ID="{53F46DC8-D918-4F82-AD58-EC7AE73EE3F4}"/><Tool ID="{4CB1A19D-7569-4DFD-8F6E-0B97C2B46BCF}"/><Tool ID="{0FCC6040-8870-4ACA-90DF-CBD7AA6297B5}"/><Tool ID="{182ED753-00B7-443E-90A9-807A99DF74FF}"/><Tool ID="{30766565-DC12-4FE9-81F1-5B804735F6D8}"/><Tool ID="{70492938-085B-40C6-A2BB-6401473B368F}"/><Tool ID="{5064D0F5-53B1-4EF8-AD24-C41D1FA3944A}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{0334BDA1-AF4B-444E-841E-D236CBBF7EA1}"><ToolSource><Palette ID="{0334BDA1-AF4B-444E-841E-D236CBBF7EA1}">Actions</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{662B9978-1663-45BD-8A36-D2B70016021F}"/><Tool ID="{C34D09BC-9973-4608-927C-77886DE51DC6}"/><Tool ID="{5BD676EB-AA26-4346-9708-41990A605EB6}"/><Tool ID="{25CE9279-D850-46AB-8ECA-CF25CA5A447B}"/><Tool ID="{0144DB09-0DA7-4594-8037-C9043F4AB847}"/><Tool ID="{AD47FB9B-48B8-42EB-82AF-58622573F66F}"/><Tool ID="{A4A74905-5DFF-4C66-8055-4EC7215F7E75}"/><Tool ID="{A303E85F-F2FA-4F17-97CC-7100432EB053}"/><Tool ID="{A303E85F-F2FA-4F17-97CC-7100432EB053}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{A4AF9185-BD8E-41D5-BBBA-2F2D8397230E}"><ToolSource><Palette ID="{A4AF9185-BD8E-41D5-BBBA-2F2D8397230E}">Parameter Sets</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{381C4246-1F3B-463F-9B29-0276A6FE8FA2}"/><Tool ID="{710A8DC7-DB03-4453-ACB2-5F80C2CCC9C4}"/><Tool ID="{470123E4-3862-491F-9BB6-80F649B8BC1C}"/><Tool ID="{BED2DE88-360A-480B-B01F-390F13251B6B}"/><Tool ID="{D05801DC-1338-457D-989F-676B13CC5601}"/><Tool ID="{7AF08B13-59BC-430B-B39A-60047856D031}"/><Tool ID="{3015D9CC-8359-4A5F-BE2A-01A9657822C6}"/><Tool ID="{9EDB0652-1BB6-4D4B-A638-35D9C306DE32}"/><Tool ID="{C2AE2AA6-39CA-4EB6-A825-A43E41D58529}"/><Tool ID="{9FD21C03-4935-4307-89CB-4FFD251DE7E2}"/><Tool ID="{C85A5760-7008-46F3-8CC5-D7CD24C0E7ED}"/><Tool ID="{DD649B06-C0BB-4950-BA65-02412D0D04C6}"/><Tool ID="{7F88C08B-3BC7-4782-B03B-97614E1F6812}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{A9D9D29A-5C8D-4C6A-B08B-19BD559E3E35}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/><Tool ID="{857E96FD-8E0F-436D-B4B1-E12ED500B97D}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{F7E90983-852E-4241-BD20-82B991FD6878}"><ToolSource><Palette ID="{F7E90983-852E-4241-BD20-82B991FD6878}">Constraints</Palette></ToolSource><Image SizeCX="24" SizeCY="24"/><Style>493570</Style><ToolOrder><Tool ID="{0C9F96D4-7F50-4CD3-9EC7-ABD311ACA162}"/><Tool ID="{5D79A0D2-080C-4226-975B-0E73B63C952D}"/><Tool ID="{2AC651F8-1D5F-4B18-94A9-D449864A3544}"/><Tool ID="{16F8F2AC-F0A8-4F9E-9DFB-22E8E11ABB84}"/><Tool ID="{22159589-363F-4812-9C1F-8305A4317715}"/><Tool ID="{9CD84AB4-19FE-47A5-A20F-3427463CCEDD}"/><Tool ID="{A7CFA609-7D37-4B86-88B0-E12D1C700815}"/><Tool ID="{9EB39983-20BF-4267-8B4C-5C0609D5C44C}"/><Tool ID="{2C715255-7538-4556-B47C-3126F0B829E1}"/><Tool ID="{041B003A-3B54-41A8-A5D0-D084793DCA35}"/><Tool ID="{2B582510-E25D-4F7E-8A22-E30F1B5CAF53}"/><Tool ID="{05A4E87F-2831-46F3-908C-D0028F8A87C2}"/><Tool ID="{D9AE2B56-A21A-45E4-A204-5B935A8A38F9}"/><Tool ID="{B6FA76B6-728D-4CBF-B7D4-5E753BF9938C}"/><Tool ID="{43D88A73-1465-4424-B0A2-006B45D4E5E0}"/><Tool ID="{4F08F93F-70DC-4372-91DE-732A1B23B432}"/><Tool ID="{40AFBF9A-664F-4389-8301-EC73ED309238}"/><Tool ID="{272DC13A-D39A-41EE-9964-EE85D425FD54}"/><Tool ID="{4F1DB798-A659-48C1-99D6-45C2C633A916}"/><Tool ID="{3ED4DC65-1E8E-402F-8D81-3170D8EE1A9F}"/><Tool ID="{0DD55DEC-E884-420E-A209-FE8DBA3A480B}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette></ToolPalettes></CAcTcUiToolPaletteSet></Tool><Tool CLSID="{B17B40A6-2761-4BCC-BC48-2B8A465AA5EB}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="773" Top="102" Width="172" Height="598"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="1" AutoRollup="0" Name="Tool Palettes - All Palettes" Style="126" Opacity="100" RolloverOpacity="100" Visible="0"/><CAcTcUiToolPaletteSet ID="{B17B40A6-2761-4BCC-BC48-2B8A465AA5EB}"><ToolPalettes><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{9D9EA038-9802-4C13-AEA9-DB48467403CE}"><ToolSource><Palette ID="{9D9EA038-9802-4C13-AEA9-DB48467403CE}">New Palette</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{B9980809-845F-4639-AC88-5263BF6D767F}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{D6BC41CF-FCAA-4FF7-8CDD-64D952C632E0}"><ToolSource><Palette ID="{D6BC41CF-FCAA-4FF7-8CDD-64D952C632E0}">Modeling</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder><Tool ID="{9D7A9A9F-320F-4E3B-9266-E7C0D28C3F2C}"/><Tool ID="{AB741E04-A733-4A8F-9947-295DAED23DD8}"/><Tool ID="{76A00F1F-7C75-4AA7-AF87-B43616D15C12}"/><Tool ID="{A56082F6-E82C-4975-9A01-BDA82930B56E}"/><Tool ID="{DA699A7F-E281-4DDC-82F2-30CCE5D3DBCA}"/><Tool ID="{21A4A999-5FF8-489F-A588-DD4F7B538E55}"/><Tool ID="{13367C5B-9D4D-4BEA-B868-879A7387CDBB}"/><Tool ID="{74A5539F-5A37-411C-BEC9-49FEC3BC9AD3}"/></ToolOrder></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{E1188229-8701-4068-84FC-F966150B965C}"><ToolSource><Palette ID="{E1188229-8701-4068-84FC-F966150B965C}">Constraints</Palette></ToolSource><Image SizeCX="24" SizeCY="24"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{A0CCA60A-AB56-4EFD-83A5-8764BC08CDA8}"><ToolSource><Palette ID="{A0CCA60A-AB56-4EFD-83A5-8764BC08CDA8}">Annotation</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{498DE575-CB69-4B2A-A12B-33012D265464}"><ToolSource><Palette ID="{498DE575-CB69-4B2A-A12B-33012D265464}">Architectural</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}"><ToolSource><Palette ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}">Mechanical</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}"><ToolSource><Palette ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}">Electrical</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}"><ToolSource><Palette ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}">Civil</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}"><ToolSource><Palette ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}">Structural</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{3D96B628-B9A6-4BE7-9A54-4063288C5CE6}"><ToolSource><Palette ID="{3D96B628-B9A6-4BE7-9A54-4063288C5CE6}">Hatches and Fills</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>458752</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{3B3603EA-7EB6-42D5-AFB9-C094F24CD71E}"><ToolSource><Palette ID="{3B3603EA-7EB6-42D5-AFB9-C094F24CD71E}">Tables</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{4BE848C7-50A4-41BF-929E-ECE60FE5422F}"><ToolSource><Palette ID="{4BE848C7-50A4-41BF-929E-ECE60FE5422F}">Command Tool Samples</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{92CDB627-A8DF-4466-AFBD-FD5DC1351ED1}"><ToolSource><Palette ID="{92CDB627-A8DF-4466-AFBD-FD5DC1351ED1}">Leaders</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{8331A300-122F-4425-A7FF-467A42D79166}"><ToolSource><Palette ID="{8331A300-122F-4425-A7FF-467A42D79166}">Draw</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{2DCDEF9A-7358-4CA4-837C-9AC674AE5317}"><ToolSource><Palette ID="{2DCDEF9A-7358-4CA4-837C-9AC674AE5317}">Modify</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{0937C731-E045-4C09-8487-7E84CB5DB6DC}"><ToolSource><Palette ID="{0937C731-E045-4C09-8487-7E84CB5DB6DC}">Generic Lights</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{B45C75E1-94A1-4461-B78A-1D97964A5120}"><ToolSource><Palette ID="{B45C75E1-94A1-4461-B78A-1D97964A5120}">Fluorescent</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{01533F50-BCB3-42E4-B111-985FEC4D5D0A}"><ToolSource><Palette ID="{01533F50-BCB3-42E4-B111-985FEC4D5D0A}">High Intensity Discharge</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{7EF257FB-3DA2-4091-9C6E-412C05465869}"><ToolSource><Palette ID="{7EF257FB-3DA2-4091-9C6E-412C05465869}">Incandescent</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{31032267-7792-4ED9-996A-6750949C3364}"><ToolSource><Palette ID="{31032267-7792-4ED9-996A-6750949C3364}">Low Pressure Sodium</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>493570</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{07E218EF-7B2F-4BE5-9C28-39565D0E477A}"><ToolSource><Palette ID="{07E218EF-7B2F-4BE5-9C28-39565D0E477A}">Cameras</Palette></ToolSource><Image SizeCX="32" SizeCY="32"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette><ToolPalette><CAdUiPalette PaletteStyle="1"/><CAcTcUiToolPalette><CatalogView ID="{775C6DF8-BCB6-48BA-8F98-9D4621E908F5}"><ToolSource><Palette ID="{775C6DF8-BCB6-48BA-8F98-9D4621E908F5}">Visual Styles</Palette></ToolSource><Image SizeCX="64" SizeCY="64"/><Style>491522</Style><ToolOrder/></CatalogView></CAcTcUiToolPalette></ToolPalette></ToolPalettes><ToolPaletteGroup><Name resource="157" src="AcTcUiRes.dll"/><ActivePaletteIndex>-1</ActivePaletteIndex><Contents><ToolPaletteGroup><Name resource="156" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{A0CCA60A-AB56-4EFD-83A5-8764BC08CDA8}"/><ToolPalette ID="{498DE575-CB69-4B2A-A12B-33012D265464}"/><ToolPalette ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}"/><ToolPalette ID="{3D96B628-B9A6-4BE7-9A54-4063288C5CE6}"/><ToolPalette ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}"/><ToolPalette ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}"/><ToolPalette ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="179" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{E1188229-8701-4068-84FC-F966150B965C}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="180" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{498DE575-CB69-4B2A-A12B-33012D265464}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="181" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{5E3BD7D5-5F44-422D-8643-64C5C033202C}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="182" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{1BAC5354-C9CD-42E2-BD35-300929BC6140}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="183" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{5B6AC051-A4D1-4191-A86C-DFD866841B64}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="184" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{EA899C91-EF57-45F1-9CEB-2CE79A3B09EC}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="164" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{D6BC41CF-FCAA-4FF7-8CDD-64D952C632E0}"/><ToolPalette ID="{8331A300-122F-4425-A7FF-467A42D79166}"/><ToolPalette ID="{2DCDEF9A-7358-4CA4-837C-9AC674AE5317}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="177" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{3B3603EA-7EB6-42D5-AFB9-C094F24CD71E}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="178" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{92CDB627-A8DF-4466-AFBD-FD5DC1351ED1}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="166" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{0937C731-E045-4C09-8487-7E84CB5DB6DC}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="176" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{B45C75E1-94A1-4461-B78A-1D97964A5120}"/><ToolPalette ID="{01533F50-BCB3-42E4-B111-985FEC4D5D0A}"/><ToolPalette ID="{7EF257FB-3DA2-4091-9C6E-412C05465869}"/><ToolPalette ID="{31032267-7792-4ED9-996A-6750949C3364}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="168" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{07E218EF-7B2F-4BE5-9C28-39565D0E477A}"/></Contents></ToolPaletteGroup><ToolPaletteGroup><Name resource="167" src="AcTcUiRes.dll"/><ActivePaletteIndex>0</ActivePaletteIndex><Contents><ToolPalette ID="{775C6DF8-BCB6-48BA-8F98-9D4621E908F5}"/></Contents></ToolPaletteGroup></Contents></ToolPaletteGroup></CAcTcUiToolPaletteSet></Tool><Tool CLSID="{BEBBB318-2898-4C03-ADA2-360DC6B7AA69}"><CAdUiDockControlBar Orientation="-1" AllowDocking="1"><FloatInfo Left="343" Top="129" Width="300" Height="600"/><DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0"/></CAdUiDockControlBar><CAdUiPaletteSet ActivePaletteIndex="0" TitleBarLocation="0" AutoRollup="0" Name="Sheet Set Manager" Style="46" Opacity="100" RolloverOpacity="100" Visible="0"/><MRU_FILES/><SSM_PALETTESET><SSM_PALETTE paletteName="Sheet List" topToWholeRatio="0.4"><CAdUiPalette PaletteStyle="0"/><GROUPCTRL_TOP btnSelIndex="0" minimized="0" style="1"/><GROUPCTRL_BOTTOM btnSelIndex="0" minimized="0" style="1"/><TooltipSettings TooltipStyle="3" TooltipSize="1" ShowDetail="0"/></SSM_PALETTE><SSM_PALETTE paletteName="Sheet Views" topToWholeRatio="0.4"><CAdUiPalette PaletteStyle="0"/><GROUPCTRL_TOP btnSelIndex="1" minimized="0" style="1"/><GROUPCTRL_BOTTOM btnSelIndex="0" minimized="0" style="1"/><TooltipSettings TooltipStyle="3" TooltipSize="1" ShowDetail="0"/></SSM_PALETTE><SSM_PALETTE paletteName="Model Views" topToWholeRatio="0.4"><CAdUiPalette PaletteStyle="0"/><GROUPCTRL_TOP btnSelIndex="0" minimized="0" style="1"/><GROUPCTRL_BOTTOM btnSelIndex="0" minimized="0" style="1"/><TooltipSettings TooltipStyle="3" TooltipSize="1" ShowDetail="0"/></SSM_PALETTE></SSM_PALETTESET></Tool></ToolsInfo><StartupInfo><Tool ToolName="CLI PaletteSet" Command="COMMANDLINE"/><CAdUiAnchorBar><LeftAnchorBar ActiveAnchorTab="-1" JustifyAnchorTabs="1" AnchorTabsDisplayText="1"/><RightAnchorBar ActiveAnchorTab="-1" JustifyAnchorTabs="1" AnchorTabsDisplayText="1"/></CAdUiAnchorBar><Tool ToolName="Layer" Command="Layer"/><Tool ToolName="acopm.arx" Command="properties"/></StartupInfo></AdUiTools></AcApData><NavigationTools><NavigationBar><NavigationBar2DSettings CubeTool="true" WheelTool="true" PanTool="true" ZoomTool="true" OrbitTool="true" DXTool="true" ShowMotionTool="true" Visibility="false" Location="3" PosOffset="0" NegOffset="0" LinkToViewCube="false"/><NavigationBar3DSettings CubeTool="true" WheelTool="true" PanTool="true" ZoomTool="true" OrbitTool="true" DXTool="true" ShowMotionTool="true" Visibility="false" Location="0" PosOffset="0" NegOffset="0" LinkToViewCube="true"/></NavigationBar></NavigationTools><QuickAccessToolbar Workspace="AutoCAD Classic"><QuickAccessToolbarItems ToolbarId="ACAD.QAT_TOOLBAR1" Orientation="Above"/></QuickAccessToolbar><Ribbon Workspace="AutoCAD Classic"><WSRibbonRoot AutoHideMode="None" LockMode="None" ShowPanelTitleInHorizontalOrientation="true" ShowPanelTitleInVerticalOrientation="true">
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabHome" Show="true" IsActive="true" UID="ID_WSR1">
+					<ModifiedRev MajorVersion="18" MinorVersion="2" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelDraw" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0090">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelModify" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0091">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelLayers" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0092">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelBasicAnnotation" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0093">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelHome_Blocks" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0094">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelStandard_Properties" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0095">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelGroup" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0179">
+						<ModifiedRev MajorVersion="18" MinorVersion="2" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelStandard_Clipboard" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0096">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="RBN_00011049" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0181">
+						<ModifiedRev MajorVersion="18" MinorVersion="2" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabInsert" Show="true" IsActive="false" UID="ID_WSR_00081">
+					<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="1"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelInsert_Block" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0097">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelAttributes" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0098">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelInsert_Reference" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0099">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelInsert_Import" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0100">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelInsert_Data" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0101">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelInsert_DataLink" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0102">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="AUTODESKSEEK.ID_PanelContent_Search" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="WSRU_190_46250">
+						<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="1"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelInsert_PointCloud" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabAnnotate" Show="true" IsActive="false" UID="ID_WSR_00151">
+					<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelText" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0103">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelDimensions" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0104">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelMultileaders" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0105">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelTables" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0106">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelMarkup" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0107">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelAnnotationScaling" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0108">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabParametric" Show="true" IsActive="false" UID="ID_WSR_0085">
+					<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelParametricGeometricConstraints" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0088">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelParametricDimensionalConstraints" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0110">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelParametricManage" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0111">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabView" Show="true" IsActive="false" UID="ID_WSR_00301">
+					<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelViewNavigate2D" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0112">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelNamedViews" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0122">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelCoord" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0123">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelViewports" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0126">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelPalettes" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0118">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelWindow" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0119">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelVisualStyles" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabManage" Show="true" IsActive="false" UID="ID_WSR_00221">
+					<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelActionRecorder" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0109">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelCustomization" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0113">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelScriptsAndMacros" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0114">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelCADStandards" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0115">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabOutput" Show="true" IsActive="false" UID="ID_WSR_00361">
+					<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelPlot" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0121">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelExportPDFDWF2D" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0120">
+						<ModifiedRev MajorVersion="18" MinorVersion="1" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="RBN_00012112" Show="true" IsActive="false" UID="WSR_0817">
+					<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="1"/>
+					<WSRibbonPanelSourceReference PanelId="CONTENTEXPLORER.ID_PanelContentExplorer_Search" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="WSRU_190_45C90">
+						<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="1"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ACFUSION.RBN_EDITINFUSION_PANEL" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="WSRU_190_659E7">
+						<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="1"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="ACAD" TabId="ID_TabCloud" Show="true" IsActive="false" UID="ID_WSR_Classic">
+					<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="0"/>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelOnlineDocuments" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0192">
+						<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelCustomizationSync" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0193">
+						<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+					<WSRibbonPanelSourceReference PanelId="ID_PanelShareCollaborate" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100" UID="ID_WSR_0194">
+						<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="0"/>
+					</WSRibbonPanelSourceReference>
+				</WSRibbonTabSourceReference>
+				<WSRibbonTabSourceReference MenuGroup="EXPRESS" TabId="RBN_0047" Show="true" IsActive="false" UID="WSRU_190_7E5BB">
+					<ModifiedRev MajorVersion="19" MinorVersion="0" UserVersion="1"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0001" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0022" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0041" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0051" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0065" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0072" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0100" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+					<WSRibbonPanelSourceReference PanelId="RBN_0113" Orientation="Docked" Show="true" xval="0" yval="0" FloatingGroup="0" FloatingOrder="0" FloatingOrientation="Vertical" PanelResizeOrder="100"/>
+				</WSRibbonTabSourceReference>
+			</WSRibbonRoot></Ribbon><CommandLineControl Workspace="AutoCAD Classic"><CLI Dock="DockedInESW" Location="268,349" Size="800,97" HistorySize="1149.6,300" DockedSize="1920,117" InactiveOpacity="0.7" RolloverOpacity="1"/></CommandLineControl></StorageRoot>
+</Profile>
+
+__END_PROFILE_STORAGE_R16__
