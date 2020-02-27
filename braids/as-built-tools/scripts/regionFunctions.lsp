@@ -905,7 +905,350 @@
 ;; From this, subtract all rank 3 regions.
 ;; etc. (continue the pattern until all regions in the set have been accounted for.)
 
+(defun makeRegionFromHatch (hatch /
+		acadObj
+		doc
+		modelSpace
+		originalPickFirst
+		originalPickAdd
+		i
+		originalLayerOfHatch
+		tempLayer
+		tempLayerName
+		layers
+		newRegionsSelectionSet
+		newRegions
+		groups
+		item
+		originalActiveLayer
+        returnValue
+	)
+	(setq acadObj (vlax-get-acad-object))
+    (setq doc (vla-get-ActiveDocument acadObj))
+    (setq modelSpace (vla-get-ModelSpace doc))
+	(setq layers (vla-get-Layers doc))
+	(setq groups (vla-get-Groups doc))
+
+    ; save current values for later restoration:
+    (setq originalActiveLayer (vla-get-ActiveLayer doc))
+    (setq originalPickAdd (getvar "PICKADD"))
+    (setq originalPickFirst (getvar "PICKFIRST"))
+
+	
+	;; create a new temporary layer
+	(setq tempLayerName 
+		(strcat
+			"tempLayer_"
+			(rtos (fix (* (getvar "date") 3600 24 1000)))
+		)
+	)
+	(setq tempLayer (vla-Add layers tempLayerName))
+    (vla-put-ActiveLayer doc tempLayer)
+	
+	;;store the original layer of hatch for later
+	(setq originalLayerOfHatch (vla-get-Layer hatch))
+	
+	;; move hatch to tempLayer, so that when we generate a region, the region will be on tempLayer.
+    ;; Actually, this is not strictly necessary because -hatchedit creates the region on the current layer.
+	(vla-put-Layer hatch tempLayerName)
+
+    (setvar "PICKADD" 0)
+    (setvar "PICKFIRST" 1)
+    ;select the hatch:
+    (sssetfirst 
+        nil
+        (ssadd  
+            (handent (vla-get-Handle hatch))
+            (ssadd)
+        )
+    )
+    (command-s
+        ".-hatchedit"
+        "boundary"
+        "region"
+        "no"
+    )	
+    ; the -hatchedit command creates the region on the current layer.
+    ;cleanup:
+    (setvar "PICKADD" originalPickAdd)
+    (setvar "PICKFIRST" originalPickFirst)
+    ;move the hatch to its original layer
+    (vla-put-Layer hatch originalLayerOfHatch)
+    (setq newRegionsSelectionSet
+        (ssget "_X" (list (cons 8 tempLayerName)))
+    )
+
+    (setq newRegions (list ))
+    (setq i 0)
+    (while (< i (sslength newRegionsSelectionSet))
+        (setq newRegions
+            (append
+                newRegions
+                (list (vlax-ename->vla-object (ssname newRegionsSelectionSet i)))
+            )
+        )
+        (setq i (+ 1 i))
+    )
+    ; (princ "created ")(princ (length newRegions)) (princ " new regions.\n")
+    
+    (foreach item newRegions
+        (vla-put-Layer item originalLayerOfHatch )
+    )
+    (vla-put-ActiveLayer doc originalActiveLayer)
+	(vla-Delete tempLayer)
+    (if (/= 1 (length newRegions))
+        (progn
+            (princ "Curiously, -hatchedit generated ")(princ (length newRegions))(princ " regions.  we were expecting exactly one.")(princ "\n")
+            (setq returnValue nil)
+        )
+        (progn
+            (setq returnValue (nth 0 newRegions))
+        )
+    )
+	returnValue
+)
 ;;the argument is a list, each element of which is either a polyline or a region or a list of the form (rank object).  If an element is of the latter form, the rank of the object that is stored in the object's xdata will be ignored and the object's rank will be taken to be rank.  This provides a way to override the rank attached to an object.
+
+(defun convertRegionToMesh (region /
+		acadObj
+		doc
+		modelSpace
+		originalPickFirst
+		originalPickAdd
+        originalFiledia
+        originalCmddia
+		i
+		originalLayerOfRegion
+		tempLayer
+		tempLayerName
+		layers
+		newMeshesSelectionSet
+		newMeshes
+		groups
+		item
+		originalActiveLayer
+        returnValue
+	)
+	(setq acadObj (vlax-get-acad-object))
+    (setq doc (vla-get-ActiveDocument acadObj))
+    (setq modelSpace (vla-get-ModelSpace doc))
+	(setq layers (vla-get-Layers doc))
+	(setq groups (vla-get-Groups doc))
+
+    ; save current values for later restoration:
+    (setq originalActiveLayer (vla-get-ActiveLayer doc))
+    (setq originalPickAdd (getvar "PICKADD"))
+    (setq originalPickFirst (getvar "PICKFIRST"))
+    (setq originalFiledia (getvar "FILEDIA"))
+    (setq originalCmddia (getvar "CMDDIA"))
+
+	;; create a new temporary layer
+	(setq tempLayerName 
+		(strcat
+			"tempLayer_"
+			(rtos (fix (* (getvar "date") 3600 24 1000)))
+		)
+	)
+   (setq tempGroupName 
+		(strcat
+			; "tempGroup"
+			(vl-string-subst
+                ""
+                "."
+                (rtos (fix (* (getvar "date") 3600 24 1000)))
+            )
+		)
+	) ; periods are, apparently not allowed in group names
+    (setq tempGroup (vla-Add groups tempGroupName))
+	(setq tempLayer (vla-Add layers tempLayerName))
+    (vla-put-ActiveLayer doc tempLayer)
+	
+	;;store the original layer of region for later
+	(setq originalLayerOfRegion (vla-get-Layer region))
+	
+	;; move region to tempLayer, so that when we generate a mesh, the mesh will be on tempLayer.
+    ;; this might not be strictly necessary depending on whether .-meshsmooth creates a mesh on the current layer or on the same layer as the input object.
+	(vla-put-Layer region tempLayerName)
+
+    (vla-AppendItems tempGroup (gc:ObjectListToVariant (list region))) 
+
+    (setvar "PICKADD" 1)
+    (setvar "PICKFIRST" 1)
+    (setvar "FILEDIA" 0)
+    (setvar "CMDDIA" 0)
+    ;; TO DO: adjust the variables that control mesh parameters as needed
+    
+    
+    ;select nothing
+    (sssetfirst 
+        nil
+        (ssadd)
+    )
+    ;select the region:
+    (sssetfirst 
+        nil
+        (ssadd  
+            (handent (vla-get-Handle region))
+            (ssadd)
+        )
+    )
+    ; (STD-SLEEP 2)
+
+    (princ "the pick first selection set contains ")(princ (vla-get-Count (vla-get-PickFirstSelectionSet doc)))(princ " items.\n")
+
+    ; (vla-Update region)
+    ; (vla-AddItems 
+        ; (vla-get-PickFirstSelectionSet doc)
+        ; (gc:ObjectListToVariant (list region))
+    ; )
+
+    ; (command-s
+        ; ".-meshsmooth"
+    ; )	
+
+    ; (command
+        ; ".-meshsmooth"
+    ; )
+    
+    ;select nothing
+    ; (sssetfirst 
+        ; nil
+        ; (ssadd)
+    ; )
+    
+    ; (command
+        ; "MESHSMOOTH"
+        ; "group"
+        ; tempGroupName
+        ; ""
+    ; )	
+    
+    ; (command-s
+        ; "MESHSMOOTH"
+    ; )	
+    
+    ; (command-s
+        ; "MESHSMOOTH"
+        ; "group"
+        ; tempGroupName
+        ; ""
+        ; ""
+    ; )	
+    
+    ; (command-s
+        ; "_MESHSMOOTH"
+    ; )	
+    ; (vla-SendCommand doc "REGEN ")
+    ; (vla-SendCommand doc "_MESHSMOOTH ")
+    ; (vl-cmdf "._MESHSMOOTH")
+
+     ; (command-s "CONVTOMESH" (handent (vla-get-Handle region)) "")
+    ; (setq theCommand 
+        ; (strcat
+            ; "MESHSMOOTH"
+            ; "\n" 
+            ; "(handent "
+                ; "\"" (vla-get-Handle region) "\""
+            ; ")" 
+        ; )
+    ; )
+    
+    (vl-cmdf "MESHSMOOTH")
+
+
+    ; ( command "MESHSMOOTH")
+    ; (command-s "CONVTOMESH" (handent (vla-get-Handle region)))
+    ; (command "SELECT" (handent (vla-get-Handle region)) "" "MESHSMOOTH" "p" )
+    
+    ; (command-s "MESHSMOOTH" "p" "")
+
+    ; In the UI, when I run -meshsmooth with a region selected, AutoCAD throws a warning pop up dialog box saying 
+    ; "One or more objects in the current selection set are not primitive 3D solids.  what do you want to do?"
+    ; the options are "Create mesh" "Do not convert objects to mesh" and "Cancel".
+    ; There is also a checkbox labeled "Always convert non-primitive solids to mesh objects."
+    ; I suspect that if I manually tick this box, the warning will thenceforth be suppressed, but I can't figure out how to 
+    ; programmatically pre-tick the checkbox (there does not seem to be an obvious system variable corresponding with that checkbox.
+
+    ; Another similar warning (similar in that it has a check box to "do not show me this message again" is
+    ; a popup warning dialog that appears when the selection set contains something that the meshsmooth does not know how to deal with.
+    ; The title of the pop up window is "Smooth Mesh - Invalid Selection"
+    ; the text is "A smooth mesh cannot be created from at least one of the selected objects.  Smooth meshes can be created only from 3D solids, 3D surfaces, 3D faces, polygon meshes, 
+    ; polyface meshes, regions, and closed polylines."
+    ; For purposes of experimentation, I havve manually caused this popup to appear, then ticked the "Do not show me this message again" checkbox, then
+    ; clicked "Close" in an attempt to make the meshsmooth command work when called programmatically with (command) or (command-s).
+
+    ;cleanup:
+    (setvar "PICKADD" originalPickAdd)
+    (setvar "PICKFIRST" originalPickFirst)
+    (setvar "FILEDIA" originalFiledia)
+    (setvar "CMDDIA" originalCmddia)
+    ;move the region to its original layer (if it still exists -- it was probably deleted as a side effect of the meshsmooth command)
+    (if (not (vlax-erased-p region))
+        (progn 
+            (setq result (vl-catch-all-apply 'vla-put-Layer (list region originalLayerOfRegion)))
+            (if (vl-catch-all-error-p result)
+                (progn
+                    ; in this case, there was an exception, presumably because region no longer exists
+                    (princ "encountered an exception when attempting to move region back to original layer\n")
+                )
+                (progn
+                    ; in this case, there was no error; the attempt to set the layer of region succeeded.
+                )
+            )
+        )
+    )
+    
+    
+    (setq newMeshesSelectionSet
+        (ssget "_X" (list (cons 8 tempLayerName)))
+    )
+    (setq newMeshes (list ))
+    (if 
+        (and 
+            newMeshesSelectionSet
+            (> (sslength newMeshesSelectionSet) 0)
+        )
+        (progn
+            (setq i 0)
+            (while (< i (sslength newMeshesSelectionSet))
+                (princ "\n\ncheckpoint1.1\n\n")
+                (setq newMeshes
+                    (append
+                        newMeshes
+                        (list (vlax-ename->vla-object (ssname newMeshesSelectionSet i)))
+                    )
+                )
+                (princ "\n\ncheckpoint1.2\n\n")
+                (setq i (+ 1 i))
+            )
+        )
+        (progn
+            (princ "newMeshesSelectionSet is empty.\n")
+        )
+    )
+    ; (princ "created ")(princ (length newMeshes)) (princ " new meshes.\n")
+    
+    (foreach item newMeshes
+        (vla-put-Layer item originalLayerOfRegion )
+    )
+    (vla-put-ActiveLayer doc originalActiveLayer)
+	(vla-Delete tempLayer)
+    (vla-Delete tempGroup)
+    (if (/= 1 (length newMeshes))
+        (progn
+            (princ "Curiously, .-meshsmooth generated ")(princ (length newRegions))(princ " meshes.  we were expecting exactly one.")(princ "\n")
+            (setq returnValue nil)
+        )
+        (progn
+            (setq returnValue (nth 0 newMeshes))
+        )
+    )
+	returnValue
+
+)
+
+
+
 (defun rankwiseCombineRegions
 	(
 		regionsArg
