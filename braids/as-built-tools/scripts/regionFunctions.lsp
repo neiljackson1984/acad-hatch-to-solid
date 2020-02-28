@@ -953,17 +953,24 @@
 	(vla-put-Layer hatch tempLayerName)
 
     (setvar "PICKADD" 0)
-    (setvar "PICKFIRST" 1)
-    ;select the hatch:
+    (setvar "PICKFIRST" 0)
+    ;make sure that nothing is selected:
     (sssetfirst 
         nil
-        (ssadd  
-            (handent (vla-get-Handle hatch))
-            (ssadd)
-        )
+        (ssadd)
     )
+    
+    ; ;select the hatch:
+    ; (sssetfirst 
+        ; nil
+        ; (ssadd  
+            ; (handent (vla-get-Handle hatch))
+            ; (ssadd)
+        ; )
+    ; )
     (command-s
         ".-hatchedit"
+        (handent (vla-get-Handle hatch))
         "boundary"
         "region"
         "no"
@@ -1009,7 +1016,7 @@
 )
 ;;the argument is a list, each element of which is either a polyline or a region or a list of the form (rank object).  If an element is of the latter form, the rank of the object that is stored in the object's xdata will be ignored and the object's rank will be taken to be rank.  This provides a way to override the rank attached to an object.
 
-(defun convertHatchToSolid (hatch /
+(defun convertHatchToSolids (hatch resultHandler /
 		acadObj
 		doc
 		modelSpace
@@ -1018,7 +1025,7 @@
         originalFiledia
         originalCmddia
 		i
-		originalLayerOfRegion
+		originalLayerOfHatch
 		tempLayer
 		tempLayerName
 		layers
@@ -1030,11 +1037,31 @@
         returnValue
         region
         ; myPrivateValue
+        originalColorOfHatch
 	)
-
-    (setq region (makeRegionFromHatch hatch))
+    ;;store the original layer of hatch for later
+	(setq originalLayerOfHatch (vla-get-Layer hatch))
+	(setq originalColorOfHatch (vla-get-Color hatch))
     
-	(setq acadObj (vlax-get-acad-object))
+    (setq region (makeRegionFromHatch hatch))
+    (if (not (vlax-erased-p hatch))
+        (progn 
+            (setq result (vl-catch-all-apply 'vla-Delete (list hatch)))
+            (if (vl-catch-all-error-p result)
+                (progn
+                    ; in this case, there was an exception, presumably because region no longer exists
+                    (princ "encountered an exception when attempting to delete the hatch.\n")
+                )
+                (progn
+                    ; in this case, there was no error; the attempt to set the layer of region succeeded.
+                )
+            )
+        )
+    )
+    ;;
+    
+    
+    (setq acadObj (vlax-get-acad-object))
     (setq doc (vla-get-ActiveDocument acadObj))
     (setq modelSpace (vla-get-ModelSpace doc))
 	(setq layers (vla-get-Layers doc))
@@ -1050,7 +1077,7 @@
 	;; create a new temporary layer
 	(setq tempLayerName 
 		(strcat
-			"tempLayer_"
+			"tempLayer_8ace6fe9554c48b1b165321921452a24_"
 			(rtos (fix (* (getvar "date") 3600 24 1000)))
 		)
 	)
@@ -1068,8 +1095,7 @@
 	(setq tempLayer (vla-Add layers tempLayerName))
     (vla-put-ActiveLayer doc tempLayer)
 	
-	;;store the original layer of region for later
-	(setq originalLayerOfRegion (vla-get-Layer region))
+
 	
 	;; move region to tempLayer, so that when we generate a mesh, the mesh will be on tempLayer.
     ;; this might not be strictly necessary depending on whether .-meshsmooth creates a mesh on the current layer or on the same layer as the input object.
@@ -1151,7 +1177,7 @@
     ; (setq state 
         ; (list
             ; (cons "tempLayerName"                tempLayerName               )
-            ; (cons "originalLayerOfRegion"        originalLayerOfRegion       )
+            ; (cons "originalLayerOfHatch"        originalLayerOfHatch       )
         ; )
     ; )
     (setq theCommand 
@@ -1164,8 +1190,10 @@
             "\n"
             "\n"
             "(apply "
-                "'continuationOfConvertRegionToMesh "
-                "savedState"
+                ; "'continuationOfConvertRegionToMesh "
+                ; "savedState"
+                "(nth 1 promise) "
+                "(nth 0 promise)"
             ")"
             "\n"
         )
@@ -1174,107 +1202,362 @@
     (setq symbolsToSave
         '(
             tempLayerName
-            originalLayerOfRegion
+            originalLayerOfHatch
             region
             doc
             originalActiveLayer
             tempLayer
+            resultHandler
+            originalColorOfHatch
         )
     )
-    (defun-q-list-set 'continuationOfConvertRegionToMesh
+    
+    
+    
+    
+    (setq promise
         (list
-            (append 
-                symbolsToSave
-                '( /
-                    ;local variables go here:
-                    myLocalVar
-                    result
-                    newMeshes
-                    newMeshesSelectionSet
-                    i
-                    item
-                    returnValue
+            (mapcar 'eval symbolsToSave)
+            (list
+                'lambda 
+                (append 
+                    symbolsToSave
+                    '( /
+                        ;local variables go here:
+                        myLocalVar
+                        result
+                        newMeshes
+                        newMeshesSelectionSet
+                        i
+                        item
+                        returnValue
+                        mesh
+                        facesSelectionSet
+                        faces
+                        regionsSelectionSet
+                        regions
+                        polylines
+                        simpleRegion
+                        solids
+                        polyline
+                        vertices
+                    )
                 )
-            )
+               
+                '(progn ; wrapping in progn is necessary in order to get local vars to behave correctly.
+                    (setq myLocalVar "INTERNAL VALUE BETTER NOT MAKE IT OUT")
+                    ; (alert (strcat (if myPrivateValue myPrivateValue "nothing") myLocalVar))
+                    ; (alert  myLocalVar)
 
-            '(progn ; wrapping in progn is necessary in order to get local vars to behave correctly.
-                (setq myLocalVar "INTERNAL VALUE BETTER NOT MAKE IT OUT")
-                ; (alert (strcat (if myPrivateValue myPrivateValue "nothing") myLocalVar))
-                (alert  myLocalVar)
-                ; move the region to its original layer (if it still exists -- it was probably deleted as a side effect of the meshsmooth command)
-                (if (not (vlax-erased-p region))
-                    (progn 
-                        (setq result (vl-catch-all-apply 'vla-put-Layer (list region originalLayerOfRegion)))
-                        (if (vl-catch-all-error-p result)
-                            (progn
-                                ; in this case, there was an exception, presumably because region no longer exists
-                                (princ "encountered an exception when attempting to move region back to original layer\n")
-                            )
-                            (progn
-                                ; in this case, there was no error; the attempt to set the layer of region succeeded.
+                    (setq newMeshesSelectionSet
+                        (ssget "_X" (list (cons 8 tempLayerName)))
+                    )
+                    (setq newMeshes (list ))
+                    (if 
+                        (and 
+                            newMeshesSelectionSet
+                            (> (sslength newMeshesSelectionSet) 0)
+                        )
+                        (progn
+                            (setq i 0)
+                            (while (< i (sslength newMeshesSelectionSet))
+                                ; (princ "\n\ncheckpoint1.1\n\n")
+                                (setq newMeshes
+                                    (append
+                                        newMeshes
+                                        (list (vlax-ename->vla-object (ssname newMeshesSelectionSet i)))
+                                    )
+                                )
+                                ; (princ "\n\ncheckpoint1.2\n\n")
+                                (setq i (+ 1 i))
                             )
                         )
+                        (progn
+                            (princ "newMeshesSelectionSet is empty.\n")
+                        )
                     )
-                )
-                
-                
-                (setq newMeshesSelectionSet
-                    (ssget "_X" (list (cons 8 tempLayerName)))
-                )
-                (setq newMeshes (list ))
-                (if 
-                    (and 
-                        newMeshesSelectionSet
-                        (> (sslength newMeshesSelectionSet) 0)
+                    (princ "created ")(princ (length newMeshes)) (princ " meshes.\n")
+                    
+                    ; (foreach item newMeshes
+                        ; (vla-put-Layer item originalLayerOfRegion )
+                    ; )
+
+
+                    ; convert meshes into faces by exploding
+                    (foreach mesh newMeshes
+                        (command-s "._explode" 
+                            (handent (vla-get-Handle mesh))
+                        )
                     )
-                    (progn
-                        (setq i 0)
-                        (while (< i (sslength newMeshesSelectionSet))
-                            ; (princ "\n\ncheckpoint1.1\n\n")
-                            (setq newMeshes
-                                (append
-                                    newMeshes
-                                    (list (vlax-ename->vla-object (ssname newMeshesSelectionSet i)))
+                    ; at this point, all the meshes have been exploded to produce faces, and the faces are all on tempLayer.
+
+                    (setq facesSelectionSet
+                        (ssget "_X" (list (cons 8 tempLayerName)))
+                    )
+                    (setq faces (list ))
+                    (if 
+                        (and 
+                            facesSelectionSet
+                            (> (sslength facesSelectionSet) 0)
+                        )
+                        (progn
+                            (setq i 0)
+                            (while (< i (sslength facesSelectionSet))
+                                (setq faces
+                                    (append
+                                        faces
+                                        (list (vlax-ename->vla-object (ssname facesSelectionSet i)))
+                                    )
+                                )
+                                (setq i (+ 1 i))
+                            )
+                        )
+                        (progn
+                            (princ "facesSelectionSet is empty.\n")
+                        )
+                    )
+                    (princ "created ")(princ (length faces)) (princ " faces.\n")
+                    
+                    
+                    ;; convert faces into regions
+                    (command-s "._region" facesSelectionSet "")
+                    ;; we assume that the region command will, as a side effect, delete all of the faces, leaving only regions.
+                    ;; we will not bother to explicitly delete the faces.
+                    
+                    (setq regionsSelectionSet
+                        (ssget "_X" (list (cons 8 tempLayerName)))
+                    )
+                    (setq regions (list ))
+                    (if 
+                        (and 
+                            regionsSelectionSet
+                            (> (sslength regionsSelectionSet) 0)
+                        )
+                        (progn
+                            (setq i 0)
+                            (while (< i (sslength regionsSelectionSet))
+                                (setq regions
+                                    (append
+                                        regions
+                                        (list (vlax-ename->vla-object (ssname regionsSelectionSet i)))
+                                    )
+                                )
+                                (setq i (+ 1 i))
+                            )
+                        )
+                        (progn
+                            (princ "regionsSelectionSet is empty.\n")
+                        )
+                    )
+                    (princ "created ")(princ (length regions)) (princ " regions.\n")
+                    ; each of the elements in regions is a region whose boundary is a 3-vertex or 4-vertex straight-sided polyline.
+                    
+                    (setq polylines (list))
+                    (foreach simpleRegion regions
+                        (setq polylines 
+                            (append 
+                                polylines 
+                                (convertRegionToPolylines simpleRegion)
+                            )
+                        )
+                        (if (not (vlax-erased-p simpleRegion))
+                            (progn 
+                                (setq result (vl-catch-all-apply 'vla-Delete (list simpleRegion)))
+                                (if (vl-catch-all-error-p result)
+                                    (progn
+                                        ; in this case, there was an exception, presumably because simpleRegion no longer exists
+                                        (princ "encountered an exception when attempting to delete simpleRegion.\n")
+                                    )
+                                    (progn
+                                        ; in this case, there was no error; the attempt to delete simpleRegion succeeded.
+                                    )
                                 )
                             )
-                            ; (princ "\n\ncheckpoint1.2\n\n")
-                            (setq i (+ 1 i))
-                        )
+                        )                        
                     )
-                    (progn
-                        (princ "newMeshesSelectionSet is empty.\n")
-                    )
-                )
-                (princ "created ")(princ (length newMeshes)) (princ " new meshes.\n")
-                
-                (foreach item newMeshes
-                    (vla-put-Layer item originalLayerOfRegion )
-                )
-                (vla-put-ActiveLayer doc originalActiveLayer)
-                (vla-Delete tempLayer)
-                (if (/= 1 (length newMeshes))
-                    (progn
-                        (princ "Curiously, .-meshsmooth generated ")(princ (length newRegions))(princ " meshes.  we were expecting exactly one.")(princ "\n")
-                        (setq returnValue nil)
-                    )
-                    (progn
-                        (setq returnValue (nth 0 newMeshes))
-                    )
-                )
-                (setq returnValue nil)
-                returnValue
-            )
+                    (princ "created ")(princ (length polylines)) (princ " polylines.\n")
+                    (setq solids (list))
+                    (foreach polyline polylines
+                        (setq vertices 
+                            (mapcar 
+                                '(lambda (twoDimensionalPoint) 
+                                    (list 
+                                        (nth 0 twoDimensionalPoint)
+                                        (nth 1 twoDimensionalPoint)
+                                        0
+                                    )
+                                )
+                                (gc:2dVariantToPointList (vla-get-Coordinates polyline))
+                            )
+                        ) 
+                        ; ; This needs to be improved to deal with the fact that the two dimensional points are given in terms of 
+                        ; ; a coordinate system that is not necessarily the same as the world coordinate system.
+                        ; ; see Document.Utility.TranslateCoordinates      
 
+                        (setq solid 
+                            (vla-AddSolid
+                                (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
+                                (vlax-3d-point (nth 0 vertices))
+                                (vlax-3d-point (nth 1 vertices))
+                                (if (> (length vertices) 3)
+                                    (vlax-3d-point (nth 3 vertices))
+                                    (vlax-3d-point (nth 2 vertices))
+                                )
+                                (vlax-3d-point (nth 2 vertices))
+                            )
+                        )
+                        (if solid
+                            (progn
+                                
+                                (vla-put-Layer solid originalLayerOfHatch)
+                                (vla-put-Color solid originalColorOfHatch)
+                                (setq solids
+                                    (append
+                                        solids
+                                        (list solid)
+                                    )
+                                )
+                            )
+                            (progn
+                                (princ "failed to a generate a solid with vertices ")(princ vertices)(princ "\n")
+                            )
+                        )
+                        (if (not (vlax-erased-p polyline))
+                            (progn 
+                                (setq result (vl-catch-all-apply 'vla-Delete (list polyline)))
+                                (if (vl-catch-all-error-p result)
+                                    (progn
+                                        ; in this case, there was an exception, presumably because polyline no longer exists
+                                        (princ (strcat "encountered an exception when attempting to delete polyline: " (vl-catch-all-error-message result) ".\n"))
+                                    )
+                                    (progn
+                                        ; in this case, there was no error; the attempt to delete polyline succeeded.
+                                    )
+                                )
+                            )
+                        )                       
+                    )
+                    (princ "created ")(princ (length solids)) (princ " solids.\n")
+                    (setq returnValue solids)
+                    (vla-put-ActiveLayer doc originalActiveLayer)
+                    (vla-Delete tempLayer)
+                    
+                    (if (not (vlax-erased-p tempLayer))
+                        (progn 
+                            (setq result (vl-catch-all-apply 'vla-Delete (list tempLayer)))
+                            (if (vl-catch-all-error-p result)
+                                (progn
+                                    ; in this case, there was an exception, presumably because tempLayer no longer exists
+                                    (princ (strcat "encountered an exception when attempting to delete the tempLayer: " (vl-catch-all-error-message result) ".\n"))
+                                )
+                                (progn
+                                    ; in this case, there was no error; the attempt to delete tempLayer succeeded.
+                                )
+                            )
+                        )
+                    )         
+                
+                    (apply resultHandler (list returnValue))
+                )
+                ; ;;
+            )
         )
     )
-    ; (alert "this better happen first")
+    
+    ; (defun-q-list-set 'continuationOfConvertRegionToMesh
+        ; (list
+            ; (append 
+                ; symbolsToSave
+                ; '( /
+                    ; ;local variables go here:
+                    ; myLocalVar
+                    ; result
+                    ; newMeshes
+                    ; newMeshesSelectionSet
+                    ; i
+                    ; item
+                    ; returnValue
+                ; )
+            ; )
+
+            ; '(progn ; wrapping in progn is necessary in order to get local vars to behave correctly.
+                ; (setq myLocalVar "INTERNAL VALUE BETTER NOT MAKE IT OUT")
+                ; ; (alert (strcat (if myPrivateValue myPrivateValue "nothing") myLocalVar))
+                ; (alert  myLocalVar)
+                ; ; move the region to its original layer (if it still exists -- it was probably deleted as a side effect of the meshsmooth command)
+                ; (if (not (vlax-erased-p region))
+                    ; (progn 
+                        ; (setq result (vl-catch-all-apply 'vla-put-Layer (list region originalLayerOfRegion)))
+                        ; (if (vl-catch-all-error-p result)
+                            ; (progn
+                                ; ; in this case, there was an exception, presumably because region no longer exists
+                                ; (princ "encountered an exception when attempting to move region back to original layer\n")
+                            ; )
+                            ; (progn
+                                ; ; in this case, there was no error; the attempt to set the layer of region succeeded.
+                            ; )
+                        ; )
+                    ; )
+                ; )
+                
+                
+                ; (setq newMeshesSelectionSet
+                    ; (ssget "_X" (list (cons 8 tempLayerName)))
+                ; )
+                ; (setq newMeshes (list ))
+                ; (if 
+                    ; (and 
+                        ; newMeshesSelectionSet
+                        ; (> (sslength newMeshesSelectionSet) 0)
+                    ; )
+                    ; (progn
+                        ; (setq i 0)
+                        ; (while (< i (sslength newMeshesSelectionSet))
+                            ; ; (princ "\n\ncheckpoint1.1\n\n")
+                            ; (setq newMeshes
+                                ; (append
+                                    ; newMeshes
+                                    ; (list (vlax-ename->vla-object (ssname newMeshesSelectionSet i)))
+                                ; )
+                            ; )
+                            ; ; (princ "\n\ncheckpoint1.2\n\n")
+                            ; (setq i (+ 1 i))
+                        ; )
+                    ; )
+                    ; (progn
+                        ; (princ "newMeshesSelectionSet is empty.\n")
+                    ; )
+                ; )
+                ; (princ "created ")(princ (length newMeshes)) (princ " new meshes.\n")
+                
+                ; (foreach item newMeshes
+                    ; (vla-put-Layer item originalLayerOfRegion )
+                ; )
+                ; (vla-put-ActiveLayer doc originalActiveLayer)
+                ; (vla-Delete tempLayer)
+                ; (if (/= 1 (length newMeshes))
+                    ; (progn
+                        ; (princ "Curiously, .-meshsmooth generated ")(princ (length newRegions))(princ " meshes.  we were expecting exactly one.")(princ "\n")
+                        ; (setq returnValue nil)
+                    ; )
+                    ; (progn
+                        ; (setq returnValue (nth 0 newMeshes))
+                    ; )
+                ; )
+                ; (setq returnValue nil)
+                ; returnValue
+            ; )
+
+        ; )
+    ; )
+    ; ; (alert "this better happen first")
     
         
-    ; savedState is a global variable, a list of objects, that we will use to save state for 
-    ; use by continuationOfConvertRegionToMesh
-    (setq savedState
-        (mapcar 'eval symbolsToSave)
-    )
+    ; ; savedState is a global variable, a list of objects, that we will use to save state for 
+    ; ; use by continuationOfConvertRegionToMesh
+    ; (setq savedState
+        ; (mapcar 'eval symbolsToSave)
+    ; )
     ; (princ "savedState: " )(princ savedState)(princ "\n")
 
     ; (setq continuationOfConvertRegionToMesh 

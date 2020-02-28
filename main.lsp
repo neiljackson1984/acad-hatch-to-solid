@@ -24,6 +24,18 @@
     ; )
 ; )
 
+; (setq foo '(lambda (x / a b c) (alert x)))
+
+
+
+; (apply
+    ; foo
+    ; (list 
+        ; "hey there"
+    ; )
+; )
+
+; (quit)
 
 (command "._UNDO" "_Begin")
 
@@ -1595,192 +1607,206 @@
 )
 
 
+(vlax-for entity (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
+    (if
+        (and 
+            (= (vla-get-ObjectName entity) "AcDbHatch")
+        )
+        (progn
+            (convertHatchToSolids entity
+                '(lambda (result)
+                    (setq solids result)
+                    (command "._UNDO" "_End")
+                    (princ "\n\n\nCOMPLETED\n")
+                    (princ)
+                )
+            )
+            ; (setq mesh (convertRegionToMesh region))
+            ; (vla-Delete entity)
+        )
+    )
+)
+
+(princ "ahoy")(princ "\n")
+
+(princ)
+
+
+
+; (quit 0)
+
 ; (vlax-for entity (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
     ; (if
         ; (and 
-            ; (= (vla-get-ObjectName entity) "AcDbHatch")
+            ; (= (vla-get-ObjectName entity) "AcDbRegion")
         ; )
         ; (progn
-            ; (setq region (makeRegionFromHatch entity))
-            ; (princ "finsihed creating region\n")
-            ; (setq mesh (convertRegionToMesh region))
+            ; (setq myRegion entity)
+        ; )
+    ; )
+; )
+
+
+; (princ "(vla-get-Handle myRegion): " ) (princ (vla-get-Handle myRegion)) (princ "\n")
+
+; (setq mesh (convertRegionToMesh myRegion))
+; (princ "ahoy")(princ "\n")
+; (command "._UNDO" "_End")
+; (princ)
+; (quit 0)
+
+
+; (command "SELECT" (handent (vla-get-Handle myRegion)) "")
+; (command-s "SELECT" (handent (vla-get-Handle myRegion)) "" "MESHSMOOTH" "p" "")(princ)
+; (command "SELECT" (handent (vla-get-Handle myRegion)) "" )
+
+; (command "MESHSMOOTH" (handent (vla-get-Handle myRegion)) (strcat (chr 13) (chr 10)))(princ)
+
+; (command "MESHSMOOTH" (handent (vla-get-Handle myRegion)) "")
+; (command "._delay" 1000)
+; (princ)
+
+; (command "SELECT" (handent (vla-get-Handle myRegion)) "")
+
+
+
+; (command "MESHSMOOTH")
+; (command (handent (vla-get-Handle myRegion)))
+; (vla-SendCommand (vla-get-ActiveDocument (vlax-get-acad-object)) "\n")
+; (setq theCommand 
+    ; (strcat
+        ; "(vla-SendCommand "
+            ; "(vla-get-ActiveDocument (vlax-get-acad-object)) "
+            ; "\""
+                ; "MESHSMOOTH"
+                ; "\\n" 
+                ; "(handent "
+                    ; "\\\"" (vla-get-Handle myRegion) "\\\""
+                ; ")" 
+                ; "\\n"
+                ; "\\n"
+            ; "\""
+        ; ")"
+    ; )
+; )
+; (princ "theCommand: ")(princ theCommand)(princ "\n")(princ)
+; (command theCommand)
+
+
+; (command-s "MESHSMOOTH" "0,0,0" "")(princ)
+
+; (princ "ahoy")(princ "\n")
+; (command "._UNDO" "_End")
+; (princ)
+; (quit 0)
+
+
+
+; ; For each such region, convert it into a solid
+; (setq polylines (list ))
+; (vlax-for entity (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
+    ; (if
+        ; (and 
+            ; (= (vla-get-ObjectName entity) "AcDbRegion")
+        ; )
+        ; (progn
+            ; (setq polylines 
+                ; (append 
+                    ; polylines 
+                    ; (convertRegionToPolylines entity)
+                ; )
+            ; )
             ; (vla-Delete entity)
         ; )
     ; )
 ; )
 
-(vlax-for entity (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
-    (if
-        (and 
-            (= (vla-get-ObjectName entity) "AcDbRegion")
-        )
-        (progn
-            (setq myRegion entity)
-        )
-    )
-)
+; (princ "we have ")(princ (length polylines))(princ " polylines.\n") 
 
-
-(princ "(vla-get-Handle myRegion): " ) (princ (vla-get-Handle myRegion)) (princ "\n")
-
-(setq mesh (convertRegionToMesh myRegion))
-(princ "ahoy")(princ "\n")
-(command "._UNDO" "_End")
-(princ)
-(quit 0)
-
-
-(command "SELECT" (handent (vla-get-Handle myRegion)) "")
-(command-s "SELECT" (handent (vla-get-Handle myRegion)) "" "MESHSMOOTH" "p" "")(princ)
-(command "SELECT" (handent (vla-get-Handle myRegion)) "" )
-
-(command "MESHSMOOTH" (handent (vla-get-Handle myRegion)) (strcat (chr 13) (chr 10)))(princ)
-
-(command "MESHSMOOTH" (handent (vla-get-Handle myRegion)) "")
-(command "._delay" 1000)
-(princ)
-
-(command "SELECT" (handent (vla-get-Handle myRegion)) "")
-
-
-
-(command "MESHSMOOTH")
-(command (handent (vla-get-Handle myRegion)))
-(vla-SendCommand (vla-get-ActiveDocument (vlax-get-acad-object)) "\n")
-(setq theCommand 
-    (strcat
-        "(vla-SendCommand "
-            "(vla-get-ActiveDocument (vlax-get-acad-object)) "
-            "\""
-                "MESHSMOOTH"
-                "\\n" 
-                "(handent "
-                    "\\\"" (vla-get-Handle myRegion) "\\\""
-                ")" 
-                "\\n"
-                "\\n"
-            "\""
-        ")"
-    )
-)
-(princ "theCommand: ")(princ theCommand)(princ "\n")(princ)
-(command theCommand)
-
-
-(command-s "MESHSMOOTH" "0,0,0" "")(princ)
-
-(princ "ahoy")(princ "\n")
-(command "._UNDO" "_End")
-(princ)
-(quit 0)
-
-
-
-; For each such region, convert it into a solid
-(setq polylines (list ))
-(vlax-for entity (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
-    (if
-        (and 
-            (= (vla-get-ObjectName entity) "AcDbRegion")
-        )
-        (progn
-            (setq polylines 
-                (append 
-                    polylines 
-                    (convertRegionToPolylines entity)
-                )
-            )
-            (vla-Delete entity)
-        )
-    )
-)
-
-(princ "we have ")(princ (length polylines))(princ " polylines.\n") 
-
-(setq solids (list ))
-(foreach polyline polylines
-    ; we assume that the polyline is closed and is composed entirely of straight segments, and has exactly 3 vertices or has exactly 4 vertices.
-    (princ "polyline ")(princ (vla-get-Handle polyline))(princ " has ")
-    (princ (length (gc:2dVariantToPointList (vla-get-Coordinates polyline))))
-    (princ " vertices.\n")
-    ; convert to a solid
-    
-    
-    (setq vertices 
-        (mapcar 
-            '(lambda (twoDimensionalPoint) 
-                (list 
-                    (nth 0 twoDimensionalPoint)
-                    (nth 1 twoDimensionalPoint)
-                    0
-                )
-            )
-            (gc:2dVariantToPointList (vla-get-Coordinates polyline))
-        )
-    )
-    ; This needs to be improved to deal with the fact that the two dimensional points are given in terms of 
-    ; a coordinate system that is not necessarily the same as the world coordinate system.
-    ; see Document.Utility.TranslateCoordinates 
-    
+; (setq solids (list ))
+; (foreach polyline polylines
+    ; ; we assume that the polyline is closed and is composed entirely of straight segments, and has exactly 3 vertices or has exactly 4 vertices.
     ; (princ "polyline ")(princ (vla-get-Handle polyline))(princ " has ")
-    ; (princ (length vertices))
+    ; (princ (length (gc:2dVariantToPointList (vla-get-Coordinates polyline))))
     ; (princ " vertices.\n")
+    ; ; convert to a solid
+    
+    
+    ; (setq vertices 
+        ; (mapcar 
+            ; '(lambda (twoDimensionalPoint) 
+                ; (list 
+                    ; (nth 0 twoDimensionalPoint)
+                    ; (nth 1 twoDimensionalPoint)
+                    ; 0
+                ; )
+            ; )
+            ; (gc:2dVariantToPointList (vla-get-Coordinates polyline))
+        ; )
+    ; )
+    ; ; This needs to be improved to deal with the fact that the two dimensional points are given in terms of 
+    ; ; a coordinate system that is not necessarily the same as the world coordinate system.
+    ; ; see Document.Utility.TranslateCoordinates 
+    
+    ; ; (princ "polyline ")(princ (vla-get-Handle polyline))(princ " has ")
+    ; ; (princ (length vertices))
+    ; ; (princ " vertices.\n")
     
     
     
-    (setq solid 
-        (vla-AddSolid
-            (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
-            (vlax-3d-point (nth 0 vertices))
-            (vlax-3d-point (nth 1 vertices))
-            (if (> (length vertices) 3)
-                (vlax-3d-point (nth 3 vertices))
-                (vlax-3d-point (nth 2 vertices))
-            )
-            (vlax-3d-point (nth 2 vertices))
-        )
-    )
-    (if solid
-        (progn
-            (vla-Delete polyline)
-            (setq solids
-                (append
-                    solids
-                    (list solid)
-                )
-            )
-        )
-    ) 
-)
-
-(princ "\ngenerated ")(princ (length solids))(princ " solids.\n")
-
-
-
-
-; (vlax-dump-object (vlax-ename->vla-object (car (entsel))))
-
-; (setq myPolyline  (vlax-ename->vla-object (car (entsel))))
-; (setq coordinates 
-    ; (vlax-safearray->list (vlax-variant-value (vla-get-Coordinates myPolyline)))
+    ; (setq solid 
+        ; (vla-AddSolid
+            ; (vla-get-ModelSpace (vla-get-ActiveDocument (vlax-get-acad-object)))
+            ; (vlax-3d-point (nth 0 vertices))
+            ; (vlax-3d-point (nth 1 vertices))
+            ; (if (> (length vertices) 3)
+                ; (vlax-3d-point (nth 3 vertices))
+                ; (vlax-3d-point (nth 2 vertices))
+            ; )
+            ; (vlax-3d-point (nth 2 vertices))
+        ; )
+    ; )
+    ; (if solid
+        ; (progn
+            ; (vla-Delete polyline)
+            ; (setq solids
+                ; (append
+                    ; solids
+                    ; (list solid)
+                ; )
+            ; )
+        ; )
+    ; ) 
 ; )
 
-  ; (defun foo (lst)
-    ; (if lst
-      ; (cons (list (car lst) (cadr lst)) (foo (cddr lst)))
-    ; )
-  ; )
-; (setq coordinates (foo coordinates))
+; (princ "\ngenerated ")(princ (length solids))(princ " solids.\n")
 
-; (princ "\nwe have ")(princ (length coordinates))(princ " vertices.\n")
 
-; (setq coordinates 
-    ; (gc:2dVariantToPointList
-        ; (vla-get-Coordinates myPolyline)
-    ; )
-; )
 
-; (princ "\nwe have ")(princ (length coordinates))(princ " vertices.\n")
 
-(command "._UNDO" "_End")
-(princ)
+; ; (vlax-dump-object (vlax-ename->vla-object (car (entsel))))
+
+; ; (setq myPolyline  (vlax-ename->vla-object (car (entsel))))
+; ; (setq coordinates 
+    ; ; (vlax-safearray->list (vlax-variant-value (vla-get-Coordinates myPolyline)))
+; ; )
+
+  ; ; (defun foo (lst)
+    ; ; (if lst
+      ; ; (cons (list (car lst) (cadr lst)) (foo (cddr lst)))
+    ; ; )
+  ; ; )
+; ; (setq coordinates (foo coordinates))
+
+; ; (princ "\nwe have ")(princ (length coordinates))(princ " vertices.\n")
+
+; ; (setq coordinates 
+    ; ; (gc:2dVariantToPointList
+        ; ; (vla-get-Coordinates myPolyline)
+    ; ; )
+; ; )
+
+; ; (princ "\nwe have ")(princ (length coordinates))(princ " vertices.\n")
+
+; (command "._UNDO" "_End")
+; (princ)
