@@ -2,7 +2,7 @@
 ; doing hatch -> (convert to region using -hatchedit) -> <CONVTOMESH> -> <EXPLODE> -> <REGION> )
 (load "variantArrayConversion.lsp")
 (load "regionFunctions.lsp")
-(load "std-sleep.lsp")
+
 
 ; (setq acadObj (vlax-get-acad-object))
 ; (setq doc (vla-get-ActiveDocument acadObj))
