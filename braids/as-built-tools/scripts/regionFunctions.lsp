@@ -2,7 +2,12 @@
 (load "variantArrayConversion.lsp")
 (load "polygonRanking.lsp")
 
-
+;; thanks to https://www.theswamp.org/index.php?topic=41820.0
+(defun GUID  (/ tl g)
+  (if (setq tl (vlax-get-or-create-object "Scriptlet.TypeLib"))
+    (progn (setq g (vlax-get tl 'Guid)) (vlax-release-object tl) (substr g 2 36)))
+)
+;============
 
 (defun c:Example_AddRegion ()
 
@@ -245,12 +250,13 @@
 
 	
 	;; create a new temporary layer
-	(setq tempLayerName 
-		(strcat
-			"tempLayer_"
-			(rtos (fix (* (getvar "date") 3600 24 1000)))
-		)
-	)
+	; (setq tempLayerName 
+		; (strcat
+			; "tempLayer_"
+			; (rtos (fix (* (getvar "date") 3600 24 1000)))
+		; )
+	; )
+    (setq tempLayerName (GUID))
 	; (setq tempGroupName 
 		; (strcat
 			; "tempGroup_"
@@ -1038,6 +1044,8 @@
         region
         ; myPrivateValue
         originalColorOfHatch
+        promise
+        promiseId
 	)
     ;;store the original layer of hatch for later
 	(setq originalLayerOfHatch (vla-get-Layer hatch))
@@ -1075,12 +1083,15 @@
     (setq originalCmddia (getvar "CMDDIA"))
 
 	;; create a new temporary layer
-	(setq tempLayerName 
-		(strcat
-			"tempLayer_8ace6fe9554c48b1b165321921452a24_"
-			(rtos (fix (* (getvar "date") 3600 24 1000)))
-		)
-	)
+	; (setq tempLayerName 
+		; (strcat
+			; "tempLayer_8ace6fe9554c48b1b165321921452a24_"
+			; (rtos (fix (* (getvar "date") 3600 24 1000)))
+		; )
+	; )
+    
+    (setq tempLayerName (GUID))
+    
    ; (setq tempGroupName 
 		; (strcat
 			; ; "tempGroup"
@@ -1180,6 +1191,7 @@
             ; (cons "originalLayerOfHatch"        originalLayerOfHatch       )
         ; )
     ; )
+    (setq promiseId (GUID))
     (setq theCommand 
         (strcat
             "._MESHSMOOTH"
@@ -1189,11 +1201,15 @@
             ")"
             "\n"
             "\n"
-            "(apply "
-                ; "'continuationOfConvertRegionToMesh "
-                ; "savedState"
-                "(nth 1 promise) "
-                "(nth 0 promise)"
+            ;;process the promise: 
+            "(progn "
+                "(princ \"now fulfilling promise " promiseId ", with \")  (princ (- (length promises) 1)) (princ \" promises remaining.\\n\")"
+                "(setq promise (cdr (assoc \"" promiseId "\" promises))) "
+                "(setq promises (vl-remove (cdr (assoc \"" promiseId "\" promises)) promises)) "
+                "(apply "
+                    "(nth 1 promise) "
+                    "(nth 0 promise) "
+                ") "
             ")"
             "\n"
         )
@@ -1248,7 +1264,8 @@
                     (setq myLocalVar "INTERNAL VALUE BETTER NOT MAKE IT OUT")
                     ; (alert (strcat (if myPrivateValue myPrivateValue "nothing") myLocalVar))
                     ; (alert  myLocalVar)
-
+                    (princ "promised function is running.\n")
+                    (vla-put-ActiveLayer doc tempLayer)
                     (setq newMeshesSelectionSet
                         (ssget "_X" (list (cons 8 tempLayerName)))
                     )
@@ -1463,7 +1480,8 @@
             )
         )
     )
-    
+    (setq promises (append promises (list (cons promiseId promise))))
+    (vla-put-ActiveLayer doc originalActiveLayer)
     ; (defun-q-list-set 'continuationOfConvertRegionToMesh
         ; (list
             ; (append 
